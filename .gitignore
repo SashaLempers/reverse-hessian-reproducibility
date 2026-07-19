@@ -1,0 +1,17 @@
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.work/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+.DS_Store
+runtime_logs/
+!01_CANONICAL/reverse_hessian/core/runtime_logs/
+!01_CANONICAL/reverse_hessian/core/runtime_logs/reproduce_all.exit

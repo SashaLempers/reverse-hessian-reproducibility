@@ -1,0 +1,36 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{8.4cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.0cm}@{}}
+\toprule
+ID & Énoncé abrégé & Statut & Nouveauté \\
+\midrule
+\endfirsthead
+\toprule ID & Énoncé abrégé & Statut & Nouveauté \\ \midrule
+\endhead
+CORE-THM-001 & Pour n>=3, le manuscrit canonique affirme l'incomparabilité des clôtures d'orbites de D(det\_n) et D(per\_n), où D(f)=det Hess(f). & calcul reproduit & non auditée \\
+CORE-CERT-001 & Pour n=3, les rangs catalectiques certifiés de D(det\_3) et D(per\_3) sont respectivement (1,9,45,165,270,270,165,45,9,1) et (1,9,45,165,414,414,165,45,9,1). & calcul reproduit & non revendiquée \\
+CORE-LIMIT-001 & Le noyau ne revendique ni obstruction standard pour le permanent paddé, ni borne super-polynomiale, ni VP!=VNP. & limite explicite & non revendiquée \\
+COMP-001 & Pour det\_4 et z·per\_3, Phi\_2 survit au padding; les nombres de coordonnées non nulles sont 4032 et 540, avec 1152 et 213 générateurs distincts à scalaire près. & calcul reproduit & non revendiquée \\
+COMP-002 & Les rangs catalectiques exacts d'ordres 0,1,2 sont [1,16,136] pour det\_4 et [1,10,55] pour z·per\_3. & calcul reproduit & non revendiquée \\
+COMP-003 & Les dimensions exactes des pièces graduées de I\_2 en degrés 4,5,6 sont [625,5312,27608] pour det\_4 et [166,1908,12156] pour z·per\_3. & calcul reproduit & non revendiquée \\
+COMP-SYZ-001 & Les dimensions des premières syzygies linéaires de I\_2 en degré 5, déduites exactement de la fonction de Hilbert, valent 4688 pour det\_4 et 748 pour z·per\_3. & calcul reproduit & non revendiquée \\
+COMP-SYZ-002 & Les dimensions des noyaux quadratiques avant minimalisation en degré 6 valent 57392 pour det\_4 et 10420 pour z·per\_3. & calcul reproduit & non revendiquée \\
+COMP-004 & Pour r=2, l'unique irréductible commun au domaine Sym\textasciicircum{}2(Sym\textasciicircum{}4 V) et à la cible composée est S\_(6,2)V; pour r=3 et r=4, les intersections exactes sont S\_(8,2,2)V et S\_(10,2,2,2)V, chacune de multiplicité un. & calcul reproduit & non revendiquée \\
+COMP-005 & Les quatre flattenings de Young à deux cases donnent les rangs det/per: 136/55, 36/18, 136/55 et 120/45. & calcul reproduit & non revendiquée \\
+COMP-006 & Pour I\_3 en degré 6, le rang exact côté z·per\_3 vaut 849 et le rang côté det\_4 est au moins 6832 sur Q, certifié par un rang modulo 1009. & calcul reproduit & non revendiquée \\
+COMP-007 & Aucun des tests calculés dans cette branche ne fournit le saut de rang requis; tous les rangs certifiés sont plus faibles côté permanent paddé. & calcul reproduit & non revendiquée \\
+RANK-001 & Au point entier X*=((-2,-1,-1),(-1,1,1),(-1,1,1)), per\_3(X*)=0 et det Hess(per\_3)(X*)=-128, donc le bloc hessien 9×9 de z·per\_3 est non nul sur son hypersurface. & calcul reproduit & non revendiquée \\
+RANK-002 & Les rangs exacts du Hessien de det\_4 sur les strates de rang matriciel 0,1,2,3,4 sont 0,0,4,8,16; le rang maximal sur det\_4=0 est 8. & calcul reproduit & non revendiquée \\
+RANK-003 & Pour le covariant quotient-Fitting d'ordre 9, le rang augmenté vaut N pour det\_4 et N+1 pour z·per\_3, avec N=10 150 394 132 736 000. & calcul reproduit & non revendiquée \\
+RANK-004 & Il en résulte [z·per\_3]  not in  closure(GL\_16·[det\_4]). & preuve + certificat & non revendiquée \\
+ASYM-001 & Sur l'hypersurface det\_n=0, le rang du Hessien est au plus 2n; les mineurs d'ordre 2n+1 sont donc divisibles par det\_n. & preuve incluse & non revendiquée \\
+ASYM-002 & Pour X\_m(t)=J\_m+(t-1)E\_11, per\_m(X\_m(t))=(m-1)!(t+m-1) et det Hess(per\_m)(X\_m(t))=K\_m(t+m-3)\textasciicircum{}((m-2)\textasciicircum{}2), avec K\_m non nul. & borne modulaire & non revendiquée \\
+ASYM-003 & Pour F\_\{n,m\}=ell\textasciicircum{}(n-m)per\_m, le covariant critique Theta\_\{2n+1\}(F\_\{n,m\}) est non nul si et seulement si 2n<m\textasciicircum{}2. & preuve incluse & non revendiquée \\
+ASYM-004 & Si 2n<m\textasciicircum{}2, alors [ell\textasciicircum{}(n-m)per\_m]  not in  closure(GL\_\{n\textasciicircum{}2\}·[det\_n]). & preuve incluse & non revendiquée \\
+ASYM-005 & La conséquence est la borne de complexité déterminantale bordée overline\{dc\}(per\_m) >= ceil(m\textasciicircum{}2/2). & preuve incluse & known result reconstructed \\
+ASYM-006 & La méthode est sharp pour ce covariant: à 2n=m\textasciicircum{}2 le mineur actif maximal est divisible par la forme paddée, et pour 2n>m\textasciicircum{}2 tous les mineurs critiques s'annulent. & preuve incluse & non revendiquée \\
+JET-001 & Pour n>=3 et 3<=t<=n, le flattening 1|(t-1) du t-ième jet de det\_n au point diag(I\_\{n-1\},0) a rang n\textasciicircum{}2. & preuve incluse & non auditée \\
+JET-002 & Dans le cas det\_4 contre ell·per\_3, les rangs exacts des jets (ordre/split 2:1|1, 3:1|2, 4:1|3, 4:2|2) sont 8,16,16,36 contre 9,10,10,18. & calcul reproduit & non revendiquée \\
+JET-003 & Les dimensions exactes des syzygies jacobiennes linéaires sont 30 pour det\_4 et 101 brutes pour ell·per\_3; après retrait des 96 sommants triviaux dus aux six générateurs nuls, il reste 5. & calcul reproduit & non revendiquée \\
+JET-004 & Les premiers brins non saturés du graphe conormal ont été sondés modulo 1009, 10007 et 32003; les valeurs sont des bornes inférieures de rang, non des égalités rationnelles automatiques. & borne modulaire & non revendiquée \\
+JET-005 & Les Hessiennes supérieures brutes saturent déjà côté déterminant dès l'ordre 3; la piste recommandée devient la résolution bigraduée de la Rees-algèbre jacobienne et les voisinages conormaux, décomposés par blocs de Schur. & proved first part exploratory second part & non revendiquée \\
+\bottomrule
+\end{longtable}

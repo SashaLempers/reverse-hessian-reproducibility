@@ -1,0 +1,28 @@
+{
+  "input": "certificates/young_contractions/z_per3_wedge_cross_sym.bin",
+  "matrix_nnz": 81000,
+  "matrix_shape": [
+    136,
+    64800
+  ],
+  "partition": [
+    5,
+    1
+  ],
+  "rank_Q_exact": 18,
+  "schema": "reverse_hessian.exact_projected_rank.v1",
+  "tableau_index": 0,
+  "tableau_rows": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "young_terms": 240
+}

@@ -1,0 +1,112 @@
+{
+  "deterministic": true,
+  "interpretation": "A rank test obstructs Ddet in closure(GL.Dper) only when rank(Ddet)>rank(Dper). None of the tested SPD parameters has that direction.",
+  "schema": "reverse_hessian.exploratory_flattenings.v1",
+  "tests": [
+    {
+      "forms": {
+        "Ddet": {
+          "matrix_sha256": "61f6131eca713e3a72aa7f10c6ef7ced86b78dd2cd30daf42f5161c6c3779385",
+          "nnz": 2754,
+          "rank_Q": 65,
+          "ranks_mod_p": {
+            "1009": 65,
+            "32003": 65
+          },
+          "shape": [
+            81,
+            24310
+          ]
+        },
+        "Dper": {
+          "matrix_sha256": "bb62287cb9e8b31858fef49d1175cd3637d0555e2d8e7c442627422a322c6127",
+          "nnz": 2835,
+          "rank_Q": 77,
+          "ranks_mod_p": {
+            "1009": 77,
+            "32003": 77
+          },
+          "shape": [
+            81,
+            24310
+          ]
+        }
+      },
+      "order": 1,
+      "separates_reverse_direction": false,
+      "shift": 1,
+      "status": "CERTIFIED-COMP",
+      "test": "SPD(k=1,l=1)"
+    },
+    {
+      "forms": {
+        "Ddet": {
+          "matrix_sha256": "438b706f8c8faa98d1a1f8d116bfe7e4417c3c04bc9c5a574143d72ac7ead803",
+          "nnz": 8100,
+          "rank_Q": 270,
+          "ranks_mod_p": {
+            "1009": 270,
+            "32003": 270
+          },
+          "shape": [
+            405,
+            12870
+          ]
+        },
+        "Dper": {
+          "matrix_sha256": "16c2b653853a7d95eaf3e7debf2b66440c967537c46a095be0aa5c21dac2fb33",
+          "nnz": 8424,
+          "rank_Q": 369,
+          "ranks_mod_p": {
+            "1009": 369,
+            "32003": 369
+          },
+          "shape": [
+            405,
+            12870
+          ]
+        }
+      },
+      "order": 2,
+      "separates_reverse_direction": false,
+      "shift": 1,
+      "status": "CERTIFIED-COMP",
+      "test": "SPD(k=2,l=1)"
+    },
+    {
+      "forms": {
+        "Ddet": {
+          "matrix_sha256": "c2b6b749c38a4a733f200e7978a8c8d05cfd80122a63387f80ca31ed33202636",
+          "nnz": 13770,
+          "rank_Q": 270,
+          "ranks_mod_p": {
+            "1009": 270,
+            "32003": 270
+          },
+          "shape": [
+            405,
+            43758
+          ]
+        },
+        "Dper": {
+          "matrix_sha256": "d2abcf75f8453dd54d878899f096c0c45eabdc17855d2304bdefae59ef38a0f5",
+          "nnz": 14175,
+          "rank_Q": 369,
+          "ranks_mod_p": {
+            "1009": 369,
+            "32003": 369
+          },
+          "shape": [
+            405,
+            43758
+          ]
+        }
+      },
+      "order": 1,
+      "separates_reverse_direction": false,
+      "shift": 2,
+      "status": "CERTIFIED-COMP",
+      "test": "SPD(k=1,l=2)"
+    }
+  ]
+}

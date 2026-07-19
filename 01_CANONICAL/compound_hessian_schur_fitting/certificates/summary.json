@@ -1,0 +1,129 @@
+{
+  "case": {
+    "ambient": "Sym^4(C^16)^*",
+    "interpretation": "first standard padded case M=4, m=3 (determinant size 4, permanent size 3)",
+    "source_form": "det_4",
+    "target_form": "z*per_3 with six unused ambient variables"
+  },
+  "claim_discipline": [
+    "No orbit-closure separation is claimed.",
+    "No VP versus VNP consequence is claimed.",
+    "The r=2 exact ranks are certified over Q as described in the referenced certificates.",
+    "The r=3 determinant value is a rigorous lower bound over Q obtained from rank over F_1009; it is not claimed to be the exact rational rank."
+  ],
+  "compound_r2": {
+    "catalecticant_ranks_Q_exact": {
+      "det4": [
+        1,
+        16,
+        136
+      ],
+      "orders": [
+        0,
+        1,
+        2
+      ],
+      "z_per3": [
+        1,
+        10,
+        55
+      ]
+    },
+    "fitting_ideal_graded_piece_dimensions_Q_exact": {
+      "degrees": [
+        4,
+        5,
+        6
+      ],
+      "det4": [
+        625,
+        5312,
+        27608
+      ],
+      "z_per3": [
+        166,
+        1908,
+        12156
+      ]
+    },
+    "nonzero_symmetric_coordinates": {
+      "det4": 4032,
+      "z_per3": 540
+    },
+    "representation_bottleneck": {
+      "compound_target_decomposition": "S_(2,2)V tensor Sym^4 V = S_(6,2)V + S_(5,2,1)V + S_(4,2,2)V",
+      "consequence": "ordinary Schur projection of Phi_2 has only one nonzero isotypic component",
+      "domain_decomposition": "Sym^2(Sym^4 V)=S_(8)V + S_(6,2)V + S_(4,4)V",
+      "unique_common_irrep": "S_(6,2)V"
+    },
+    "two_slot_young_flattenings_Q_exact": [
+      {
+        "det4_rank": 136,
+        "source_partition": [
+          2
+        ],
+        "status": "wrong direction",
+        "target_partition": [
+          4,
+          2
+        ],
+        "z_per3_rank": 55
+      },
+      {
+        "det4_rank": 36,
+        "source_partition": [
+          2
+        ],
+        "status": "wrong direction",
+        "target_partition": [
+          5,
+          1
+        ],
+        "z_per3_rank": 18
+      },
+      {
+        "det4_rank": 136,
+        "source_partition": [
+          2
+        ],
+        "status": "wrong direction",
+        "target_partition": [
+          6
+        ],
+        "z_per3_rank": 55
+      },
+      {
+        "det4_rank": 120,
+        "source_partition": [
+          1,
+          1
+        ],
+        "status": "wrong direction",
+        "target_partition": [
+          5,
+          1
+        ],
+        "z_per3_rank": 45
+      }
+    ],
+    "unique_nonzero_entries_up_to_scalar": {
+      "det4": 1152,
+      "z_per3": 213
+    }
+  },
+  "compound_r3": {
+    "degree_6_fitting_span": {
+      "det4_rank_Q_lower_bound": 6832,
+      "det4_rank_mod_1009": 6832,
+      "status": "wrong direction",
+      "z_per3_rank_Q_exact": 849
+    },
+    "representation_intersection": "S_(8,2,2)V (multiplicity one in the exact plethysm/Pieri calculation)"
+  },
+  "main_verdict": {
+    "scope": "r=2 catalecticants through order 2; all four two-slot LR/Young flattening types of the S_(6,2) tensor; exact degree 4,5,6 pieces of the r=2 Hessian-minor ideal; degree-6 r=3 Hessian-minor span.",
+    "separation_found": false,
+    "statement": "The compound Hessian survives padding, but every certified rank obstruction tested has rank(z*per_3) < rank(det_4), hence none excludes z*per_3 from the determinant orbit closure."
+  },
+  "schema": "reverse_hessian.compound_schur_fitting_summary.v1"
+}

@@ -1,0 +1,58 @@
+{
+  "claim": "Every reconstructed rank in the tested family is smaller on z*per_3 than on det_4; no padded orbit-closure separation is obtained.",
+  "date": "2026-07-17",
+  "environment": {
+    "gxx": "g++ (Debian 14.2.0-19) 14.2.0",
+    "platform": "Linux-4.4.0-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "fresh_reconstruction": {
+    "compound_hessian_r2": true,
+    "compound_hessian_r3_det_modular_pivot_witness": true,
+    "compound_hessian_r3_per_exact_Q": true,
+    "exceptional_S2_to_S51_ranks_certified_exact_Q": true,
+    "fitting_r2_degrees_4_5_6_exact_Q": true,
+    "four_two_slot_young_types_recomputed": true,
+    "schur_decomposition_r2_r3_r4": true,
+    "twelve_polarized_contraction_binaries_rebuilt": true
+  },
+  "schema": "reverse_hessian.compound_extension_reproduction_attestation.v1",
+  "verification": "PASS",
+  "verified_values": {
+    "catalecticants_det4": [
+      1,
+      16,
+      136
+    ],
+    "catalecticants_z_per3": [
+      1,
+      10,
+      55
+    ],
+    "fitting_det4_degrees_4_5_6": [
+      625,
+      5312,
+      27608
+    ],
+    "fitting_z_per3_degrees_4_5_6": [
+      166,
+      1908,
+      12156
+    ],
+    "r3_degree6_det4_Q_lower_bound": 6832,
+    "r3_degree6_z_per3_Q_exact": 849,
+    "young_flattenings_det4": [
+      136,
+      36,
+      136,
+      120
+    ],
+    "young_flattenings_z_per3": [
+      55,
+      18,
+      55,
+      45
+    ]
+  }
+}

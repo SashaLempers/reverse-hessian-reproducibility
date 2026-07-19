@@ -1,0 +1,239 @@
+{
+  "forms": [
+    {
+      "active_variable_count": 16,
+      "active_variables": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "ambient_variables": 16,
+      "catalecticants": [
+        {
+          "active_domain_upper_bound": 1,
+          "ambient_domain_dimension": 1,
+          "exactness_reason": "modular rank reaches the a priori active-variable domain upper bound",
+          "nonzero_rows": 1,
+          "order": 0,
+          "rank_over_Q_exact": 1,
+          "ranks_mod_p": {
+            "10007": 1,
+            "1009": 1,
+            "32003": 1
+          }
+        },
+        {
+          "active_domain_upper_bound": 16,
+          "ambient_domain_dimension": 16,
+          "exactness_reason": "modular rank reaches the a priori active-variable domain upper bound",
+          "nonzero_rows": 16,
+          "order": 1,
+          "rank_over_Q_exact": 16,
+          "ranks_mod_p": {
+            "10007": 16,
+            "1009": 16,
+            "32003": 16
+          }
+        },
+        {
+          "active_domain_upper_bound": 136,
+          "ambient_domain_dimension": 136,
+          "exactness_reason": "modular rank reaches the a priori active-variable domain upper bound",
+          "nonzero_rows": 136,
+          "order": 2,
+          "rank_over_Q_exact": 136,
+          "ranks_mod_p": {
+            "10007": 136,
+            "1009": 136,
+            "32003": 136
+          }
+        }
+      ],
+      "compound_coordinates_symmetric": 7260,
+      "compound_entry_degree": 4,
+      "compound_nonzero_coordinates": 4032,
+      "compound_r": 2,
+      "compound_sha256": "52d8c410c12fd8e9f13ecaa28edb964b4f308d8d7accbd09e9f1c31e8736a7b9",
+      "compound_unique_nonzero_polynomials_up_to_scalar": 1152,
+      "fitting_graded_pieces": [
+        {
+          "ambient_polynomial_dimension": 3876,
+          "exactness_reason": null,
+          "graded_degree": 4,
+          "number_of_generated_rows": 1152,
+          "number_of_reduced_generators": 1152,
+          "rank_over_Q_exact": null,
+          "ranks_mod_p": {
+            "10007": 625,
+            "1009": 625,
+            "32003": 625
+          },
+          "shift_degree_s": 0
+        },
+        {
+          "ambient_polynomial_dimension": 15504,
+          "exactness_reason": null,
+          "graded_degree": 5,
+          "number_of_generated_rows": 18432,
+          "number_of_reduced_generators": 1152,
+          "rank_over_Q_exact": null,
+          "ranks_mod_p": {
+            "10007": 5312,
+            "1009": 5312,
+            "32003": 5312
+          },
+          "shift_degree_s": 1
+        },
+        {
+          "ambient_polynomial_dimension": 54264,
+          "exactness_reason": null,
+          "graded_degree": 6,
+          "number_of_generated_rows": 156672,
+          "number_of_reduced_generators": 1152,
+          "rank_over_Q_exact": null,
+          "ranks_mod_p": {
+            "10007": 27608,
+            "1009": 27608,
+            "32003": 27608
+          },
+          "shift_degree_s": 2
+        }
+      ],
+      "form": "det4",
+      "input_monomials": 24
+    },
+    {
+      "active_variable_count": 10,
+      "active_variables": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ambient_variables": 16,
+      "catalecticants": [
+        {
+          "active_domain_upper_bound": 1,
+          "ambient_domain_dimension": 1,
+          "exactness_reason": "modular rank reaches the a priori active-variable domain upper bound",
+          "nonzero_rows": 1,
+          "order": 0,
+          "rank_over_Q_exact": 1,
+          "ranks_mod_p": {
+            "10007": 1,
+            "1009": 1,
+            "32003": 1
+          }
+        },
+        {
+          "active_domain_upper_bound": 10,
+          "ambient_domain_dimension": 16,
+          "exactness_reason": "modular rank reaches the a priori active-variable domain upper bound",
+          "nonzero_rows": 10,
+          "order": 1,
+          "rank_over_Q_exact": 10,
+          "ranks_mod_p": {
+            "10007": 10,
+            "1009": 10,
+            "32003": 10
+          }
+        },
+        {
+          "active_domain_upper_bound": 55,
+          "ambient_domain_dimension": 136,
+          "exactness_reason": "modular rank reaches the a priori active-variable domain upper bound",
+          "nonzero_rows": 55,
+          "order": 2,
+          "rank_over_Q_exact": 55,
+          "ranks_mod_p": {
+            "10007": 55,
+            "1009": 55,
+            "32003": 55
+          }
+        }
+      ],
+      "compound_coordinates_symmetric": 7260,
+      "compound_entry_degree": 4,
+      "compound_nonzero_coordinates": 540,
+      "compound_r": 2,
+      "compound_sha256": "1b576d43eb574d023fc89c6d3266d478b0b0834b4ce428c04d943424fe38f421",
+      "compound_unique_nonzero_polynomials_up_to_scalar": 213,
+      "fitting_graded_pieces": [
+        {
+          "ambient_polynomial_dimension": 3876,
+          "exactness_reason": null,
+          "graded_degree": 4,
+          "number_of_generated_rows": 213,
+          "number_of_reduced_generators": 213,
+          "rank_over_Q_exact": null,
+          "ranks_mod_p": {
+            "10007": 166,
+            "1009": 166,
+            "32003": 166
+          },
+          "shift_degree_s": 0
+        },
+        {
+          "ambient_polynomial_dimension": 15504,
+          "exactness_reason": null,
+          "graded_degree": 5,
+          "number_of_generated_rows": 3408,
+          "number_of_reduced_generators": 213,
+          "rank_over_Q_exact": null,
+          "ranks_mod_p": {
+            "10007": 1908,
+            "1009": 1908,
+            "32003": 1908
+          },
+          "shift_degree_s": 1
+        },
+        {
+          "ambient_polynomial_dimension": 54264,
+          "exactness_reason": null,
+          "graded_degree": 6,
+          "number_of_generated_rows": 28968,
+          "number_of_reduced_generators": 213,
+          "rank_over_Q_exact": null,
+          "ranks_mod_p": {
+            "10007": 12156,
+            "1009": 12156,
+            "32003": 12156
+          },
+          "shift_degree_s": 2
+        }
+      ],
+      "form": "z_per3",
+      "input_monomials": 6
+    }
+  ],
+  "primes": [
+    1009,
+    10007,
+    32003
+  ],
+  "schema": "reverse_hessian.compound_hessian_r2.v1",
+  "status": "EXPLORATORY-COMP; exact polynomial construction, modular ranks unless explicitly certified exact",
+  "variable_convention": {
+    "det4": "variables 0..15 are the 4x4 matrix entries in row-major order",
+    "z_per3": "variable 0 is z, variables 1..9 are per_3 entries, variables 10..15 are unused"
+  }
+}

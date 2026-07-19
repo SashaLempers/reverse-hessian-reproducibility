@@ -1,0 +1,150 @@
+{
+  "arithmetic": "exact over Q via SymPy",
+  "records": [
+    {
+      "ambient_variables": 16,
+      "form": "det4_at_rank3",
+      "point": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probes": [
+        {
+          "rank_Q_exact": 8,
+          "shape": [
+            16,
+            16
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "total_order": 2
+        },
+        {
+          "rank_Q_exact": 16,
+          "shape": [
+            16,
+            136
+          ],
+          "split": [
+            1,
+            2
+          ],
+          "total_order": 3
+        },
+        {
+          "rank_Q_exact": 16,
+          "shape": [
+            16,
+            816
+          ],
+          "split": [
+            1,
+            3
+          ],
+          "total_order": 4
+        },
+        {
+          "rank_Q_exact": 36,
+          "shape": [
+            136,
+            136
+          ],
+          "split": [
+            2,
+            2
+          ],
+          "total_order": 4
+        }
+      ]
+    },
+    {
+      "ambient_variables": 16,
+      "form": "ell_per3_at_uniform_zero",
+      "point": [
+        1,
+        -2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probes": [
+        {
+          "rank_Q_exact": 9,
+          "shape": [
+            16,
+            16
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "total_order": 2
+        },
+        {
+          "rank_Q_exact": 10,
+          "shape": [
+            16,
+            136
+          ],
+          "split": [
+            1,
+            2
+          ],
+          "total_order": 3
+        },
+        {
+          "rank_Q_exact": 10,
+          "shape": [
+            16,
+            816
+          ],
+          "split": [
+            1,
+            3
+          ],
+          "total_order": 4
+        },
+        {
+          "rank_Q_exact": 18,
+          "shape": [
+            136,
+            136
+          ],
+          "split": [
+            2,
+            2
+          ],
+          "total_order": 4
+        }
+      ]
+    }
+  ],
+  "schema": "reverse_hessian.mixed_jet_pointwise.v1"
+}

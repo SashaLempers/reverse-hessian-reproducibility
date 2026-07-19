@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "form": "det4",
+      "matrix_shape": [
+        156672,
+        54264
+      ],
+      "nnz": 758880,
+      "rank_Q_exact": 27608,
+      "rank_seconds": 3.487,
+      "s": 2
+    },
+    {
+      "form": "z_per3",
+      "matrix_shape": [
+        28968,
+        54264
+      ],
+      "nnz": 62832,
+      "rank_Q_exact": 12156,
+      "rank_seconds": 0.157,
+      "s": 2
+    }
+  ],
+  "schema": "reverse_hessian.fitting_s2_exact.v1"
+}

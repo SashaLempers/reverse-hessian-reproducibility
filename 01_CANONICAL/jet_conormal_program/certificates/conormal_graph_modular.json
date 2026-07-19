@@ -1,0 +1,145 @@
+{
+  "primes": [
+    1009,
+    10007,
+    32003
+  ],
+  "records": [
+    {
+      "base_generators_nonzero": 120,
+      "base_generators_total": 120,
+      "form": "det4",
+      "pieces": [
+        {
+          "number_of_nonzero_rows": 120,
+          "ranks_mod_p": {
+            "10007": 120,
+            "1009": 120,
+            "32003": 120
+          },
+          "x_shift": 0,
+          "y_shift": 0
+        },
+        {
+          "number_of_nonzero_rows": 1920,
+          "ranks_mod_p": {
+            "10007": 1904,
+            "1009": 1904,
+            "32003": 1904
+          },
+          "x_shift": 1,
+          "y_shift": 0
+        },
+        {
+          "number_of_nonzero_rows": 16320,
+          "ranks_mod_p": {
+            "10007": 15660,
+            "1009": 15660,
+            "32003": 15660
+          },
+          "x_shift": 2,
+          "y_shift": 0
+        },
+        {
+          "number_of_nonzero_rows": 1920,
+          "ranks_mod_p": {
+            "10007": 1360,
+            "1009": 1360,
+            "32003": 1360
+          },
+          "x_shift": 0,
+          "y_shift": 1
+        },
+        {
+          "number_of_nonzero_rows": 30720,
+          "ranks_mod_p": {
+            "10007": 21504,
+            "1009": 21504,
+            "32003": 21504
+          },
+          "x_shift": 1,
+          "y_shift": 1
+        },
+        {
+          "number_of_nonzero_rows": 16320,
+          "ranks_mod_p": {
+            "10007": 9180,
+            "1009": 9180,
+            "32003": 9180
+          },
+          "x_shift": 0,
+          "y_shift": 2
+        }
+      ]
+    },
+    {
+      "base_generators_nonzero": 105,
+      "base_generators_total": 120,
+      "form": "ell_per3",
+      "pieces": [
+        {
+          "number_of_nonzero_rows": 105,
+          "ranks_mod_p": {
+            "10007": 105,
+            "1009": 105,
+            "32003": 105
+          },
+          "x_shift": 0,
+          "y_shift": 0
+        },
+        {
+          "number_of_nonzero_rows": 1680,
+          "ranks_mod_p": {
+            "10007": 1650,
+            "1009": 1650,
+            "32003": 1650
+          },
+          "x_shift": 1,
+          "y_shift": 0
+        },
+        {
+          "number_of_nonzero_rows": 14280,
+          "ranks_mod_p": {
+            "10007": 13490,
+            "1009": 13490,
+            "32003": 13490
+          },
+          "x_shift": 2,
+          "y_shift": 0
+        },
+        {
+          "number_of_nonzero_rows": 1680,
+          "ranks_mod_p": {
+            "10007": 1140,
+            "1009": 1140,
+            "32003": 1140
+          },
+          "x_shift": 0,
+          "y_shift": 1
+        },
+        {
+          "number_of_nonzero_rows": 26880,
+          "ranks_mod_p": {
+            "10007": 17835,
+            "1009": 17835,
+            "32003": 17835
+          },
+          "x_shift": 1,
+          "y_shift": 1
+        },
+        {
+          "number_of_nonzero_rows": 14280,
+          "ranks_mod_p": {
+            "10007": 7445,
+            "1009": 7445,
+            "32003": 7445
+          },
+          "x_shift": 0,
+          "y_shift": 2
+        }
+      ]
+    }
+  ],
+  "schema": "reverse_hessian.unsaturated_conormal_graph_probe.v1",
+  "status": "exploratory modular lower bounds"
+}

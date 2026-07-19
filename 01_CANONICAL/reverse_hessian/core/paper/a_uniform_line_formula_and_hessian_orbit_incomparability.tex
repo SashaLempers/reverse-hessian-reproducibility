@@ -1,0 +1,416 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[11pt]{article}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Dcal}{\mathcal D}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{A Uniform Line Formula for the Hessian Determinant of the Permanent\\
+and Equal-Size Hessian-Orbit Incomparability}
+\author{Sasha Lempers}
+\date{July 16, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $V=M_n(\C)$ and let $\GL(V)$ act on forms by linear change of variables.  For the relative Hessian covariant
+\[
+ \Dcal(f)=\det\Hess(f),
+\]
+we prove the exact restriction formula
+\[
+ \Dcal(\per_n)\bigl(J_n+(t-1)E_{11}\bigr)
+ =\frac{((n-2)!)^{n^2}(n-1)^{2n}}{(n-2)^{(n-2)^2}}
+   (t+n-3)^{(n-2)^2}
+\]
+for every $n\geq3$.  Combined with the identity
+\[
+ \Dcal(\det_n)
+ =(n-1)(-1)^{(n-1)(n+2)/2}\det_n^{\,n(n-2)},
+\]
+a closed power cone, and a verified GIT polystability criterion, this yields both equal-size noncontainments
+\[
+ \Dcal(\det_n)\notin\overline{\GL(V)\cdot\Dcal(\per_n)},
+ \qquad
+ \Dcal(\per_n)\notin\overline{\GL(V)\cdot\Dcal(\det_n)}.
+\]
+A relative-covariant transfer principle then recovers the corresponding equal-size determinant/permanent noncontainments.  That latter corollary is not claimed as new: it is already an immediate inference from published stabilizer and polystability results.  No priority claim is made for the line formula or the Hessian-orbit theorem pending a broader specialist literature review.
+
+The accompanying repository reconstructs the size-three identities with three distinct computational engines.  It confirms $\Dcal(\det_3)=-2\det_3^3$, $\Dcal(\per_3)(J_3+(t-1)E_{11})=64t$, squarefreeness of $\Dcal(\per_3)$, and the two complete ordinary catalecticant rank vectors.  The result is equal-size and unpadded.  It gives no determinantal-complexity lower bound and no separation of $\mathrm{VP}$ from $\mathrm{VNP}$; the full ambient Hessian determinant vanishes on the standard padded permanent whenever unused variables are present.
+\end{abstract}
+
+\section{Statement, conventions, and claims}
+Set
+\[
+ V=M_n(\C),\qquad N=n^2,\qquad q=N(n-2),\qquad r=n(n-2).
+\]
+For $f\in\Sym^nV^*$, define $\Dcal(f)=\det\Hess(f)\in\Sym^qV^*$.  The main result concerns the images under $\Dcal$, not the padded permanent orbit closure used in the standard GCT formulation.
+
+\begin{theorem}[Equal-size Hessian-orbit incomparability]\label{thm:main}
+For every $n\geq3$,
+\[
+ \Dcal(\det_n)\notin\overline{\GL(V)\cdot\Dcal(\per_n)}
+ \quad\text{and}\quad
+ \Dcal(\per_n)\notin\overline{\GL(V)\cdot\Dcal(\det_n)}.
+\]
+Consequently the two Hessian-image orbit closures are incomparable.
+\end{theorem}
+
+The proof is entirely symbolic.  Finite computations are recorded separately and are not substituted for any uniform argument.
+
+\section{Relative covariance and transfer of containment}\label{sec:transfer}
+
+\begin{lemma}[Hessian covariance]\label{lem:covariance}
+For $g\in\GL(V)$, under $(g\cdot f)(x)=f(g^{-1}x)$,
+\[
+ \Dcal(g\cdot f)=\det(g)^{-2}\,g\cdot\Dcal(f).
+\]
+\end{lemma}
+\begin{proof}
+The chain rule gives
+\[
+ \Hess(g\cdot f)(x)=g^{-T}\Hess(f)(g^{-1}x)g^{-1}.
+\]
+Taking determinants proves the formula.
+\end{proof}
+
+\begin{lemma}[Twisted and ordinary nonzero orbits]\label{lem:twisted}
+Let $0\neq u\in\Sym^qV^*$, where $q>0$.  Then
+\[
+ \{\det(g)^{-2}g\cdot u:g\in\GL(V)\}=\GL(V)\cdot u.
+\]
+\end{lemma}
+\begin{proof}
+For one inclusion, fix $g$ and choose $\lambda\in\C^*$ with $\lambda^{-q}=\det(g)^{-2}$.  Since $(\lambda I)\cdot u=\lambda^{-q}u$,
+\[
+ \det(g)^{-2}g\cdot u=(\lambda I)g\cdot u.
+\]
+Conversely, choose $\lambda\in\C^*$ satisfying $\lambda^{q+2N}=\det(g)^{-2}$.  Then
+\[
+ \det(\lambda g)^{-2}(\lambda g)\cdot u=g\cdot u.
+\]
+All required roots exist over $\C$.
+\end{proof}
+
+\begin{proposition}[Relative-covariant transfer principle]\label{prop:transfer}
+For $f,p\in\Sym^nV^*$,
+\[
+ f\in\overline{\GL(V)\cdot p}
+ \quad\Longrightarrow\quad
+ \Dcal(f)\in\overline{\GL(V)\cdot\Dcal(p)}.
+\]
+\end{proposition}
+\begin{proof}
+The map $\Dcal$ is polynomial in the coefficients, hence Zariski-continuous.  If $\Dcal(p)=0$, covariance shows that $\Dcal$ vanishes on $\GL(V)\cdot p$, and continuity therefore gives $\Dcal(f)=0$; the conclusion is immediate.  Assume henceforth that $\Dcal(p)\neq0$.  Applying $\Dcal$ to the assumed containment, using \cref{lem:covariance}, and then using \cref{lem:twisted}, identifies the closure of the twisted image orbit with the ordinary $\GL(V)$-orbit closure of $\Dcal(p)$.
+\end{proof}
+
+\section{The determinant identity and the permanent line formula}\label{sec:formulas}
+
+\begin{theorem}[Hessian determinant of the determinant]\label{thm:detformula}
+For every $n\geq2$,
+\[
+ \Dcal(\det_n)=c_n\det_n^{\,r},
+ \qquad
+ c_n=(n-1)(-1)^{(n-1)(n+2)/2}.
+\]
+\end{theorem}
+\begin{proof}
+For $X\in\GL_n$ and $U,W\in M_n$, Jacobi's formula yields
+\[
+ d^2(\det)_X(U,W)
+ =\det(X)\bigl(\operatorname{tr}(X^{-1}U)\operatorname{tr}(X^{-1}W)
+ -\operatorname{tr}(X^{-1}UX^{-1}W)\bigr).
+\]
+At $I$, the Hessian bilinear form is
+\[
+ B(U,W)=\operatorname{tr}(U)\operatorname{tr}(W)-\operatorname{tr}(UW).
+\]
+At $X$, the Hessian is $\det(X)$ times the pullback of $B$ under left multiplication by $X^{-1}$.  Since $\det(L_{X^{-1}})=\det(X)^{-n}$,
+\[
+ \det\Hess(\det_n)(X)=\det(B)\det(X)^{n^2-2n}.
+\]
+On diagonal matrices, $B$ has matrix $J_n-I_n$, whose determinant is $(n-1)(-1)^{n-1}$.  Each subspace $\langle E_{ij},E_{ji}\rangle$, $i<j$, contributes the block
+\[
+ \begin{pmatrix}0&-1\\-1&0\end{pmatrix}
+\]
+of determinant $-1$.  There are $n(n-1)/2$ such blocks, giving the stated sign.  Equality on the dense set $\GL_n$ extends polynomially to all $M_n$.
+\end{proof}
+
+Let $X(t)=J_n+(t-1)E_{11}$, and set
+\[
+ A=J_n-I_n,
+ \qquad
+ C=0\oplus(J_{n-1}-I_{n-1}).
+\]
+
+\begin{theorem}[Uniform permanent line formula]\label{thm:line}
+For every $n\geq3$,
+\[
+ \Dcal(\per_n)(X(t))=K_n(t+n-3)^{(n-2)^2},
+\]
+where
+\[
+ K_n=\frac{((n-2)!)^{n^2}(n-1)^{2n}}{(n-2)^{(n-2)^2}}\neq0.
+\]
+\end{theorem}
+\begin{proof}
+A mixed second derivative of $\per_n$ is zero when the two differentiated entries share a row or a column; otherwise it equals the permanent of the complementary $(n-2)\times(n-2)$ minor.  Evaluating at $X(t)$ gives
+\[
+ \Hess(\per_n)(X(t))
+ =(n-2)!A\otimes A+(t-1)(n-3)!C\otimes C.
+\]
+Put $B=A^{-1}C$.  We now prove the spectrum rather than merely assert it.  Let
+\[
+ W=\{x\in\C^n:x_1=0,\ \sum_{i=2}^n x_i=0\},
+ \qquad u=(0,1,\ldots,1)^T.
+\]
+For $x\in W$, one has $Ax=Cx=-x$, and therefore $Bx=x$.  Moreover $Be_1=0$.  Since $Cu=(n-2)u$ and $A^{-1}u=e_1$,
+\[
+ Bu=(n-2)e_1.
+\]
+Thus $B$ is the identity on the $(n-2)$-dimensional space $W$ and has a nilpotent $2\times2$ block on $\langle e_1,u\rangle$.  Its spectrum is consequently $1$ with algebraic multiplicity $n-2$ and $0$ with algebraic multiplicity $2$.
+
+Factoring the first Kronecker term gives
+\[
+ \det\Hess(\per_n)(X(t))
+ =((n-2)!)^{n^2}\det(A\otimes A)
+ \det\left(I+\frac{t-1}{n-2}B\otimes B\right).
+\]
+Now $\det(A\otimes A)=\det(A)^{2n}=(n-1)^{2n}$.  The operator $B\otimes B$ has eigenvalue $1$ with algebraic multiplicity $(n-2)^2$, and all its other eigenvalues are zero.  Hence
+\[
+ \det\left(I+\frac{t-1}{n-2}B\otimes B\right)
+ =\left(\frac{t+n-3}{n-2}\right)^{(n-2)^2},
+\]
+which is the claimed formula.
+\end{proof}
+
+\begin{corollary}[Nonpower property]\label{cor:nonpower}
+The form $\Dcal(\per_n)$ is not a nonzero scalar multiple of an $r$-th power, where $r=n(n-2)$.
+\end{corollary}
+\begin{proof}
+A nonzero scalar multiple of an $r$-th power has, on every line where it is not identically zero, root multiplicities divisible by $r$.  The restriction in \cref{thm:line} has one root of multiplicity $(n-2)^2$, and
+\[
+ 0<(n-2)^2<n(n-2)=r.
+\]
+\end{proof}
+
+\begin{lemma}[Closed power cone]\label{lem:powercone}
+The set
+\[
+ \mathcal P_r=\{h^r:h\in\Sym^nV^*\}\subseteq\Sym^qV^*
+\]
+is a closed $\GL(V)$-stable affine cone.
+\end{lemma}
+\begin{proof}
+Its projectivization is the image of the Veronese embedding $[h]\mapsto[h^r]$, hence is closed.  Taking the affine cone preserves closedness.  Stability follows from $g\cdot h^r=(g\cdot h)^r$.
+\end{proof}
+
+\section{Polystability of the Hessian forms}\label{sec:polystability}
+We use the support-cone criterion of B\"urgisser and Ikenmeyer: a form is $\SL$-polystable when it has a reductive stabilizer subgroup with diagonal centralizer and when the cone generated by its monomial support contains the all-ones vector \cite[Proposition~2.8]{BI}.
+
+\begin{proposition}[Polystability]\label{prop:polystability}
+For every $n\geq3$, both $\Dcal(\det_n)$ and $\Dcal(\per_n)$ have closed $\SL(V)$-orbits.
+\end{proposition}
+\begin{proof}
+Let $R\subseteq\SL(V)$ be the row-column torus acting on $E_{ij}$ through the character $(a,b)\mapsto a_i b_j$, with $\prod_i a_i=\prod_j b_j=1$.  It fixes $\det_n$ and $\per_n$, and therefore fixes their Hessian determinants by \cref{lem:covariance}.
+
+The characters are pairwise distinct.  Indeed, for $(i,j)\neq(k,l)$, if $i\neq k$ vary the two relevant row parameters by $a_i=s$, $a_k=s^{-1}$ and leave the column parameters equal to one.  If $i=k$, then $j\neq l$ and the analogous variation of $b_j,b_l$ separates the characters.  Therefore the $R$-weight spaces in $V$ are exactly the coordinate lines $\C E_{ij}$, so the centralizer of $R$ is contained in the diagonal torus.
+
+The two Hessian forms are nonzero by \cref{thm:detformula,thm:line}.  Row and column permutations preserve each monomial support up to an overall scalar and act transitively on the $N=n^2$ variables.  Averaging any support exponent vector of total degree $q$ over this finite group yields
+\[
+ (q/N)(1,\ldots,1)=(n-2)(1,\ldots,1).
+\]
+Thus the support cone contains $(1,\ldots,1)$, and the cited criterion applies.
+\end{proof}
+
+\begin{lemma}[Polystable degeneration]\label{lem:closedorbit}
+Let $0\neq u,v\in\Sym^qV^*$ be $\SL(V)$-polystable.  If $u\in\overline{\GL(V)\cdot v}$, then $u\in\GL(V)\cdot v$.
+\end{lemma}
+\begin{proof}
+A point in the Zariski closure of a complex orbit is a Euclidean limit of orbit points.  Hence, after absorbing the central action into a scalar, there are $a_k\in\C^*$ and $s_k\in\SL(V)$ with
+\[
+ a_k s_k\cdot v\longrightarrow u.
+\]
+Because $u$ is nonzero and polystable, some homogeneous $\SL(V)$-invariant polynomial $P$ of degree $e>0$ satisfies $P(u)\neq0$.  Then
+\[
+ a_k^eP(v)\longrightarrow P(u),
+\]
+so $P(v)\neq0$ and $a_k^e$ converges to the nonzero number $P(u)/P(v)$.  Therefore $(a_k)$ is bounded and bounded away from zero.  After taking a subsequence, $a_k$ converges to a nonzero $e$-th root $a$ of that limit.  It follows that
+\[
+ s_k\cdot v\longrightarrow a^{-1}u.
+\]
+Since $\SL(V)\cdot v$ is closed, $a^{-1}u\in\SL(V)\cdot v$, and hence $u\in\GL(V)\cdot v$.
+\end{proof}
+
+\section{Proof of the Hessian-orbit theorem}
+\begin{proof}[Proof of \cref{thm:main}]
+By \cref{thm:detformula}, $\Dcal(\det_n)$ belongs to the closed $\GL(V)$-stable cone $\mathcal P_r$.  Consequently
+\[
+ \overline{\GL(V)\cdot\Dcal(\det_n)}\subseteq\mathcal P_r.
+\]
+By \cref{cor:nonpower}, $\Dcal(\per_n)\notin\mathcal P_r$.  This proves
+\[
+ \Dcal(\per_n)\notin\overline{\GL(V)\cdot\Dcal(\det_n)}.
+\]
+
+The two Hessian forms are not orbit-equivalent, since one is an $r$-th power up to scalar and the other is not.  They are both polystable by \cref{prop:polystability}.  If
+\[
+ \Dcal(\det_n)\in\overline{\GL(V)\cdot\Dcal(\per_n)},
+\]
+then \cref{lem:closedorbit} would force orbit equivalence, a contradiction.  The reverse noncontainment follows.
+\end{proof}
+
+\section{The original equal-size corollary and its prior status}
+
+\begin{corollary}[Equal-size determinant/permanent incomparability]\label{cor:original}
+For every $n\geq3$,
+\[
+ \det_n\notin\overline{\GL(V)\cdot\per_n}
+ \quad\text{and}\quad
+ \per_n\notin\overline{\GL(V)\cdot\det_n}.
+\]
+\end{corollary}
+\begin{proof}
+Apply the contrapositive of \cref{prop:transfer} to the two noncontainments in \cref{thm:main}.
+\end{proof}
+
+\begin{remark}[No novelty claim for \cref{cor:original}]
+B\"urgisser and Ikenmeyer record the classical stabilizers of $\det_n$ and $\per_n$ and prove their polystability \cite[Theorems~2.5--2.6 and Section~2.2]{BI}.  The identity components of the two stabilizers have dimensions $2(n^2-1)$ and $2(n-1)$, respectively, so the forms are not orbit-equivalent for $n\geq3$.  The same closed-orbit argument as \cref{lem:closedorbit} then already gives \cref{cor:original}.  Thus the corollary is included only for logical completeness and is not presented as a new theorem.
+\end{remark}
+
+\section{Padding barrier and exact relation to GCT}\label{sec:padding}
+For $m>n$, the standard homogeneous comparison uses
+\[
+ P_{n,m}=\ell^{m-n}\per_n
+\]
+as a degree-$m$ form in the $m^2$-variable determinant ambient space.
+
+\begin{proposition}[Ambient Hessian padding barrier]\label{prop:padding}
+For $m>n$,
+\[
+ \det\Hess_{\C^{m^2}}(P_{n,m})=0.
+\]
+\end{proposition}
+\begin{proof}
+The padded form depends on at most $n^2+1$ variables.  Since $m>n$ implies $m^2>n^2+1$, at least one ambient direction is unused.  The corresponding Hessian row and column are zero.
+\end{proof}
+
+The GCT determinant-versus-padded-permanent formulation compares orbit closures in this larger ambient space \cite{MS1,MS2,BI}.  Occurrence-obstruction no-go theorems and shifted-partial-derivative limitations apply to that padded regime \cite{BIP,ELSW}.  The present Hessian theorem neither contradicts nor bypasses them.  In particular, it establishes none of the following:
+\begin{itemize}[leftmargin=2em]
+\item a superpolynomial lower bound for determinantal or border determinantal complexity;
+\item a noncontainment for the padded permanent orbit closure;
+\item a separation of $\mathrm{VP}$ from $\mathrm{VNP}$.
+\end{itemize}
+
+\section{Exact size-three reconstruction}
+The repository supplies three distinct catalecticant engines: a primary exact SymPy implementation, a clean-room exponent-dictionary implementation with an independent polynomial determinant, and a pure-Python modular implementation with its own sparse elimination.  Their script hashes are distinct.  They agree on the canonical polynomial hashes, all direct integer matrix hashes for orders $0$ through $4$, and all rank vectors.
+
+The exact reconstructed identities are
+\[
+ \Dcal(\det_3)=-2\det_3^3,
+ \qquad
+ \Dcal(\per_3)(J_3+(t-1)E_{11})=64t.
+\]
+The form $\Dcal(\per_3)$ has degree $9$ and $55$ monomials.  Exact factorization over $\Q$ returns one degree-$9$ factor of multiplicity one; no absolute irreducibility claim is made.  The exact gcd over $\Q$ of its nine first partial derivatives is $1$, which proves squarefreeness after extension to $\C$.
+
+The complete ordinary catalecticant rank vectors are
+\begin{align*}
+ (\operatorname{rank}C_a(\Dcal(\det_3)))_{a=0}^{9}
+   &=(1,9,45,165,270,270,165,45,9,1),\\
+ (\operatorname{rank}C_a(\Dcal(\per_3)))_{a=0}^{9}
+   &=(1,9,45,165,414,414,165,45,9,1).
+\end{align*}
+Therefore every closed condition obtained solely by imposing upper bounds on ordinary catalecticant ranks and containing the permanent-Hessian orbit closure also contains $\Dcal(\det_3)$.  This is a statement about these rank loci only; it is not an orbit-containment theorem and says nothing by itself about Young or Koszul flattenings, syzygies, or multiplicity obstructions.
+
+\section{Reproducibility contract}
+The canonical serialization uses the fixed variable order
+\[
+ x_{11},x_{12},x_{13},x_{21},x_{22},x_{23},x_{31},x_{32},x_{33},
+\]
+Exponent vectors are ordered lexicographically in descending order.  Rational coefficients are serialized as numerator--denominator pairs in compact UTF-8 JSON.  Catalecticant bases are weak compositions with the first coordinate increasing recursively.  Certificates contain no elapsed times, absolute paths, host names, or timestamps.
+
+From the repository root, the complete check is
+\begin{verbatim}
+./reproduce_all.sh
+\end{verbatim}
+It rebuilds the certificates, compares two fresh runs byte for byte, executes the consistency tests, and verifies \texttt{certificates/SHA256SUMS.txt}.  The term ``computational certificate'' here means an exact, deterministic, independently reconstructed calculation; it does not mean a kernel-checked formal proof.
+
+\section{Claim and priority audit}
+\begin{center}
+\small
+\begin{tabular}{@{}L{.43\linewidth}L{.20\linewidth}L{.28\linewidth}@{}}
+\toprule
+Claim & Status & Exact scope \\
+\midrule
+Determinant Hessian identity & proved & all $n\geq2$ \\
+Permanent line formula & proved & all $n\geq3$ \\
+Nonpower property & proved & all $n\geq3$ \\
+Polystability of Hessian forms & proved using published criterion & all $n\geq3$ \\
+Hessian-orbit incomparability & proved & equal-size, unpadded \\
+Original equal-size incomparability & literature-level inference; reproved here & not claimed new \\
+Size-three ranks and squarefreeness & exact reproducible computation & three distinct engines for ranks \\
+Priority of line formula/theorem & unknown & no ``first'' or ``new'' claim \\
+Padded lower bound or $\mathrm{VP}\neq\mathrm{VNP}$ & not obtained & ambient Hessian vanishes \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{MS1}
+K.~D. Mulmuley and M. Sohoni,
+\emph{Geometric Complexity Theory I: An Approach to the P vs. NP and Related Problems},
+SIAM J. Comput. 31 (2001), 496--526.
+DOI: \href{https://doi.org/10.1137/S009753970038715X}{10.1137/S009753970038715X}.
+
+\bibitem{MS2}
+K.~D. Mulmuley and M. Sohoni,
+\emph{Geometric Complexity Theory II: Towards Explicit Obstructions for Embeddings among Class Varieties},
+SIAM J. Comput. 38 (2008), 1175--1206.
+DOI: \href{https://doi.org/10.1137/080718115}{10.1137/080718115}.
+
+\bibitem{BI}
+P. B\"urgisser and C. Ikenmeyer,
+\emph{Fundamental invariants of orbit closures},
+J. Algebra 477 (2017), 390--434.
+DOI: \href{https://doi.org/10.1016/j.jalgebra.2016.12.035}{10.1016/j.jalgebra.2016.12.035}; arXiv:1511.02927.
+
+\bibitem{BIP}
+P. B\"urgisser, C. Ikenmeyer, and G. Panova,
+\emph{No occurrence obstructions in geometric complexity theory},
+J. Amer. Math. Soc. 32 (2019), 163--193.
+DOI: \href{https://doi.org/10.1090/jams/908}{10.1090/jams/908}; arXiv:1604.06431.
+
+\bibitem{ELSW}
+K. Efremenko, J.~M. Landsberg, H. Schenck, and J. Weyman,
+\emph{The method of shifted partial derivatives cannot separate the permanent from the determinant},
+Math. Comp. 87 (2018), 2037--2045.
+DOI: \href{https://doi.org/10.1090/mcom/3284}{10.1090/mcom/3284}; arXiv:1504.05171.
+
+\bibitem{Fox}
+D.~J.~F. Fox,
+\emph{Functions dividing their Hessian determinants and affine spheres},
+Asian J. Math. 20 (2016), 503--530; arXiv:1307.5394.
+\end{thebibliography}
+
+\end{document}

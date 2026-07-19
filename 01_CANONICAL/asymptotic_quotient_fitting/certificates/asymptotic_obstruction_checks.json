@@ -1,0 +1,6227 @@
+{
+  "schema": "reverse_hessian.asymptotic_quotient_fitting.v1",
+  "field": "characteristic zero (stated over C)",
+  "theorem": {
+    "critical_order": "r_n=2n+1",
+    "determinant_side": "Theta_{r_n}(det_n)=0 for every n>=3",
+    "padded_permanent_side": "Theta_{r_n}(ell^(n-m) per_m) != 0 iff 2n<m^2, for m>=3 and n>=m",
+    "orbit_closure": "If 2n<m^2 then [ell^(n-m) per_m] is not in closure(GL_{n^2}.[det_n]).",
+    "complexity_corollary": "border determinantal complexity(per_m) >= ceil(m^2/2)",
+    "sharp_method_barrier": "At 2n=m^2 the full active Hessian determinant is divisible by the padded form; for 2n>m^2 all critical minors vanish identically."
+  },
+  "finite_checks_are_not_the_general_proof": true,
+  "checked_primes": [
+    1000003,
+    1000033
+  ],
+  "determinant_strata_checks": [
+    {
+      "n": 3,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        4,
+        6,
+        9
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 6
+    },
+    {
+      "n": 4,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        4,
+        8,
+        16
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 8
+    },
+    {
+      "n": 5,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        0,
+        4,
+        10,
+        25
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 10
+    },
+    {
+      "n": 6,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        12,
+        36
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 12
+    },
+    {
+      "n": 7,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        14,
+        49
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 14
+    },
+    {
+      "n": 8,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        16,
+        64
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 16
+    },
+    {
+      "n": 9,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        18,
+        81
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 18
+    },
+    {
+      "n": 10,
+      "ranks_on_strata_s_0_to_n": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        20,
+        100
+      ],
+      "expected_formula": "0 for s<=n-3; 4 for s=n-2; 2n for s=n-1; n^2 for s=n",
+      "max_rank_on_det_zero": 20
+    }
+  ],
+  "permanent_line_checks": [
+    {
+      "m": 3,
+      "t_witness": -2,
+      "x11": -2,
+      "permanent_value_formula": 0,
+      "hessian_size": 9,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 9,
+          "determinant_mod_prime": 999875,
+          "formula_mod_prime": 999875
+        },
+        {
+          "prime": 1000033,
+          "rank": 9,
+          "determinant_mod_prime": 999905,
+          "formula_mod_prime": 999905
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "t_witness": -3,
+      "x11": -3,
+      "permanent_value_formula": 0,
+      "hessian_size": 16,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 16,
+          "determinant_mod_prime": 980409,
+          "formula_mod_prime": 980409
+        },
+        {
+          "prime": 1000033,
+          "rank": 16,
+          "determinant_mod_prime": 967539,
+          "formula_mod_prime": 967539
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "t_witness": -4,
+      "x11": -4,
+      "permanent_value_formula": 0,
+      "hessian_size": 25,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 25,
+          "determinant_mod_prime": 543791,
+          "formula_mod_prime": 543791
+        },
+        {
+          "prime": 1000033,
+          "rank": 25,
+          "determinant_mod_prime": 475578,
+          "formula_mod_prime": 475578
+        }
+      ]
+    },
+    {
+      "m": 6,
+      "t_witness": -5,
+      "x11": -5,
+      "permanent_value_formula": 0,
+      "hessian_size": 36,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 36,
+          "determinant_mod_prime": 307404,
+          "formula_mod_prime": 307404
+        },
+        {
+          "prime": 1000033,
+          "rank": 36,
+          "determinant_mod_prime": 218790,
+          "formula_mod_prime": 218790
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "t_witness": -6,
+      "x11": -6,
+      "permanent_value_formula": 0,
+      "hessian_size": 49,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 49,
+          "determinant_mod_prime": 355905,
+          "formula_mod_prime": 355905
+        },
+        {
+          "prime": 1000033,
+          "rank": 49,
+          "determinant_mod_prime": 745595,
+          "formula_mod_prime": 745595
+        }
+      ]
+    },
+    {
+      "m": 8,
+      "t_witness": -7,
+      "x11": -7,
+      "permanent_value_formula": 0,
+      "hessian_size": 64,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 64,
+          "determinant_mod_prime": 557255,
+          "formula_mod_prime": 557255
+        },
+        {
+          "prime": 1000033,
+          "rank": 64,
+          "determinant_mod_prime": 550252,
+          "formula_mod_prime": 550252
+        }
+      ]
+    },
+    {
+      "m": 9,
+      "t_witness": -8,
+      "x11": -8,
+      "permanent_value_formula": 0,
+      "hessian_size": 81,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 81,
+          "determinant_mod_prime": 609628,
+          "formula_mod_prime": 609628
+        },
+        {
+          "prime": 1000033,
+          "rank": 81,
+          "determinant_mod_prime": 580344,
+          "formula_mod_prime": 580344
+        }
+      ]
+    },
+    {
+      "m": 10,
+      "t_witness": -9,
+      "x11": -9,
+      "permanent_value_formula": 0,
+      "hessian_size": 100,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 100,
+          "determinant_mod_prime": 277104,
+          "formula_mod_prime": 277104
+        },
+        {
+          "prime": 1000033,
+          "rank": 100,
+          "determinant_mod_prime": 852409,
+          "formula_mod_prime": 852409
+        }
+      ]
+    },
+    {
+      "m": 11,
+      "t_witness": -10,
+      "x11": -10,
+      "permanent_value_formula": 0,
+      "hessian_size": 121,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 121,
+          "determinant_mod_prime": 921145,
+          "formula_mod_prime": 921145
+        },
+        {
+          "prime": 1000033,
+          "rank": 121,
+          "determinant_mod_prime": 264825,
+          "formula_mod_prime": 264825
+        }
+      ]
+    },
+    {
+      "m": 12,
+      "t_witness": -11,
+      "x11": -11,
+      "permanent_value_formula": 0,
+      "hessian_size": 144,
+      "prime_checks": [
+        {
+          "prime": 1000003,
+          "rank": 144,
+          "determinant_mod_prime": 64912,
+          "formula_mod_prime": 64912
+        },
+        {
+          "prime": 1000033,
+          "rank": 144,
+          "determinant_mod_prime": 67549,
+          "formula_mod_prime": 67549
+        }
+      ]
+    }
+  ],
+  "pair_classification_checks": [
+    {
+      "m": 3,
+      "n": 3,
+      "padding_exponent": 0,
+      "critical_minor_order": 7,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 3,
+      "n": 4,
+      "padding_exponent": 1,
+      "critical_minor_order": 9,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 3,
+      "n": 5,
+      "padding_exponent": 2,
+      "critical_minor_order": 11,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 3,
+      "n": 6,
+      "padding_exponent": 3,
+      "critical_minor_order": 13,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 4,
+      "n": 4,
+      "padding_exponent": 0,
+      "critical_minor_order": 9,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 4,
+      "n": 5,
+      "padding_exponent": 1,
+      "critical_minor_order": 11,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 4,
+      "n": 6,
+      "padding_exponent": 2,
+      "critical_minor_order": 13,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 4,
+      "n": 7,
+      "padding_exponent": 3,
+      "critical_minor_order": 15,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 4,
+      "n": 8,
+      "padding_exponent": 4,
+      "critical_minor_order": 17,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 62
+    },
+    {
+      "m": 4,
+      "n": 9,
+      "padding_exponent": 5,
+      "critical_minor_order": 19,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 4,
+      "n": 10,
+      "padding_exponent": 6,
+      "critical_minor_order": 21,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 5,
+      "n": 5,
+      "padding_exponent": 0,
+      "critical_minor_order": 11,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 6,
+      "padding_exponent": 1,
+      "critical_minor_order": 13,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 7,
+      "padding_exponent": 2,
+      "critical_minor_order": 15,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 8,
+      "padding_exponent": 3,
+      "critical_minor_order": 17,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 9,
+      "padding_exponent": 4,
+      "critical_minor_order": 19,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 10,
+      "padding_exponent": 5,
+      "critical_minor_order": 21,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 11,
+      "padding_exponent": 6,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 12,
+      "padding_exponent": 7,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 5,
+      "n": 13,
+      "padding_exponent": 8,
+      "critical_minor_order": 27,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 5,
+      "n": 14,
+      "padding_exponent": 9,
+      "critical_minor_order": 29,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 6,
+      "n": 6,
+      "padding_exponent": 0,
+      "critical_minor_order": 13,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 7,
+      "padding_exponent": 1,
+      "critical_minor_order": 15,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 8,
+      "padding_exponent": 2,
+      "critical_minor_order": 17,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 9,
+      "padding_exponent": 3,
+      "critical_minor_order": 19,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 10,
+      "padding_exponent": 4,
+      "critical_minor_order": 21,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 11,
+      "padding_exponent": 5,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 12,
+      "padding_exponent": 6,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 13,
+      "padding_exponent": 7,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 14,
+      "padding_exponent": 8,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 15,
+      "padding_exponent": 9,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 16,
+      "padding_exponent": 10,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 17,
+      "padding_exponent": 11,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 6,
+      "n": 18,
+      "padding_exponent": 12,
+      "critical_minor_order": 37,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 430
+    },
+    {
+      "m": 6,
+      "n": 19,
+      "padding_exponent": 13,
+      "critical_minor_order": 39,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 6,
+      "n": 20,
+      "padding_exponent": 14,
+      "critical_minor_order": 41,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 7,
+      "n": 7,
+      "padding_exponent": 0,
+      "critical_minor_order": 15,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 8,
+      "padding_exponent": 1,
+      "critical_minor_order": 17,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 9,
+      "padding_exponent": 2,
+      "critical_minor_order": 19,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 10,
+      "padding_exponent": 3,
+      "critical_minor_order": 21,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 11,
+      "padding_exponent": 4,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 12,
+      "padding_exponent": 5,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 13,
+      "padding_exponent": 6,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 14,
+      "padding_exponent": 7,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 15,
+      "padding_exponent": 8,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 16,
+      "padding_exponent": 9,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 17,
+      "padding_exponent": 10,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 18,
+      "padding_exponent": 11,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 19,
+      "padding_exponent": 12,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 20,
+      "padding_exponent": 13,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 21,
+      "padding_exponent": 14,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 22,
+      "padding_exponent": 15,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 23,
+      "padding_exponent": 16,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 24,
+      "padding_exponent": 17,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 7,
+      "n": 25,
+      "padding_exponent": 18,
+      "critical_minor_order": 51,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 7,
+      "n": 26,
+      "padding_exponent": 19,
+      "critical_minor_order": 53,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 8,
+      "n": 8,
+      "padding_exponent": 0,
+      "critical_minor_order": 17,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 9,
+      "padding_exponent": 1,
+      "critical_minor_order": 19,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 10,
+      "padding_exponent": 2,
+      "critical_minor_order": 21,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 11,
+      "padding_exponent": 3,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 12,
+      "padding_exponent": 4,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 13,
+      "padding_exponent": 5,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 14,
+      "padding_exponent": 6,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 15,
+      "padding_exponent": 7,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 16,
+      "padding_exponent": 8,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 17,
+      "padding_exponent": 9,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 18,
+      "padding_exponent": 10,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 19,
+      "padding_exponent": 11,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 20,
+      "padding_exponent": 12,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 21,
+      "padding_exponent": 13,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 22,
+      "padding_exponent": 14,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 23,
+      "padding_exponent": 15,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 24,
+      "padding_exponent": 16,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 25,
+      "padding_exponent": 17,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 26,
+      "padding_exponent": 18,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 27,
+      "padding_exponent": 19,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 28,
+      "padding_exponent": 20,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 29,
+      "padding_exponent": 21,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 30,
+      "padding_exponent": 22,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 31,
+      "padding_exponent": 23,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 8,
+      "n": 32,
+      "padding_exponent": 24,
+      "critical_minor_order": 65,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 1534
+    },
+    {
+      "m": 8,
+      "n": 33,
+      "padding_exponent": 25,
+      "critical_minor_order": 67,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 8,
+      "n": 34,
+      "padding_exponent": 26,
+      "critical_minor_order": 69,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 9,
+      "n": 9,
+      "padding_exponent": 0,
+      "critical_minor_order": 19,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 10,
+      "padding_exponent": 1,
+      "critical_minor_order": 21,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 11,
+      "padding_exponent": 2,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 12,
+      "padding_exponent": 3,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 13,
+      "padding_exponent": 4,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 14,
+      "padding_exponent": 5,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 15,
+      "padding_exponent": 6,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 16,
+      "padding_exponent": 7,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 17,
+      "padding_exponent": 8,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 18,
+      "padding_exponent": 9,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 19,
+      "padding_exponent": 10,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 20,
+      "padding_exponent": 11,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 21,
+      "padding_exponent": 12,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 22,
+      "padding_exponent": 13,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 23,
+      "padding_exponent": 14,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 24,
+      "padding_exponent": 15,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 25,
+      "padding_exponent": 16,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 26,
+      "padding_exponent": 17,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 27,
+      "padding_exponent": 18,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 28,
+      "padding_exponent": 19,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 29,
+      "padding_exponent": 20,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 30,
+      "padding_exponent": 21,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 31,
+      "padding_exponent": 22,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 32,
+      "padding_exponent": 23,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 33,
+      "padding_exponent": 24,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 34,
+      "padding_exponent": 25,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 35,
+      "padding_exponent": 26,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 36,
+      "padding_exponent": 27,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 37,
+      "padding_exponent": 28,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 38,
+      "padding_exponent": 29,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 39,
+      "padding_exponent": 30,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 40,
+      "padding_exponent": 31,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 9,
+      "n": 41,
+      "padding_exponent": 32,
+      "critical_minor_order": 83,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 9,
+      "n": 42,
+      "padding_exponent": 33,
+      "critical_minor_order": 85,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 10,
+      "n": 10,
+      "padding_exponent": 0,
+      "critical_minor_order": 21,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 11,
+      "padding_exponent": 1,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 12,
+      "padding_exponent": 2,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 13,
+      "padding_exponent": 3,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 14,
+      "padding_exponent": 4,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 15,
+      "padding_exponent": 5,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 16,
+      "padding_exponent": 6,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 17,
+      "padding_exponent": 7,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 18,
+      "padding_exponent": 8,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 19,
+      "padding_exponent": 9,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 20,
+      "padding_exponent": 10,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 21,
+      "padding_exponent": 11,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 22,
+      "padding_exponent": 12,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 23,
+      "padding_exponent": 13,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 24,
+      "padding_exponent": 14,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 25,
+      "padding_exponent": 15,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 26,
+      "padding_exponent": 16,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 27,
+      "padding_exponent": 17,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 28,
+      "padding_exponent": 18,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 29,
+      "padding_exponent": 19,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 30,
+      "padding_exponent": 20,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 31,
+      "padding_exponent": 21,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 32,
+      "padding_exponent": 22,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 33,
+      "padding_exponent": 23,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 34,
+      "padding_exponent": 24,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 35,
+      "padding_exponent": 25,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 36,
+      "padding_exponent": 26,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 37,
+      "padding_exponent": 27,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 38,
+      "padding_exponent": 28,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 39,
+      "padding_exponent": 29,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 40,
+      "padding_exponent": 30,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 41,
+      "padding_exponent": 31,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 42,
+      "padding_exponent": 32,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 43,
+      "padding_exponent": 33,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 44,
+      "padding_exponent": 34,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 45,
+      "padding_exponent": 35,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 46,
+      "padding_exponent": 36,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 47,
+      "padding_exponent": 37,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 48,
+      "padding_exponent": 38,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 49,
+      "padding_exponent": 39,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 10,
+      "n": 50,
+      "padding_exponent": 40,
+      "critical_minor_order": 101,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 3998
+    },
+    {
+      "m": 10,
+      "n": 51,
+      "padding_exponent": 41,
+      "critical_minor_order": 103,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 10,
+      "n": 52,
+      "padding_exponent": 42,
+      "critical_minor_order": 105,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 11,
+      "n": 11,
+      "padding_exponent": 0,
+      "critical_minor_order": 23,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 12,
+      "padding_exponent": 1,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 13,
+      "padding_exponent": 2,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 14,
+      "padding_exponent": 3,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 15,
+      "padding_exponent": 4,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 16,
+      "padding_exponent": 5,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 17,
+      "padding_exponent": 6,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 18,
+      "padding_exponent": 7,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 19,
+      "padding_exponent": 8,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 20,
+      "padding_exponent": 9,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 21,
+      "padding_exponent": 10,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 22,
+      "padding_exponent": 11,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 23,
+      "padding_exponent": 12,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 24,
+      "padding_exponent": 13,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 25,
+      "padding_exponent": 14,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 26,
+      "padding_exponent": 15,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 27,
+      "padding_exponent": 16,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 28,
+      "padding_exponent": 17,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 29,
+      "padding_exponent": 18,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 30,
+      "padding_exponent": 19,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 31,
+      "padding_exponent": 20,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 32,
+      "padding_exponent": 21,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 33,
+      "padding_exponent": 22,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 34,
+      "padding_exponent": 23,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 35,
+      "padding_exponent": 24,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 36,
+      "padding_exponent": 25,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 37,
+      "padding_exponent": 26,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 38,
+      "padding_exponent": 27,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 39,
+      "padding_exponent": 28,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 40,
+      "padding_exponent": 29,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 41,
+      "padding_exponent": 30,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 42,
+      "padding_exponent": 31,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 43,
+      "padding_exponent": 32,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 44,
+      "padding_exponent": 33,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 45,
+      "padding_exponent": 34,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 46,
+      "padding_exponent": 35,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 47,
+      "padding_exponent": 36,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 48,
+      "padding_exponent": 37,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 49,
+      "padding_exponent": 38,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 50,
+      "padding_exponent": 39,
+      "critical_minor_order": 101,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 51,
+      "padding_exponent": 40,
+      "critical_minor_order": 103,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 52,
+      "padding_exponent": 41,
+      "critical_minor_order": 105,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 53,
+      "padding_exponent": 42,
+      "critical_minor_order": 107,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 54,
+      "padding_exponent": 43,
+      "critical_minor_order": 109,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 55,
+      "padding_exponent": 44,
+      "critical_minor_order": 111,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 56,
+      "padding_exponent": 45,
+      "critical_minor_order": 113,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 57,
+      "padding_exponent": 46,
+      "critical_minor_order": 115,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 58,
+      "padding_exponent": 47,
+      "critical_minor_order": 117,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 59,
+      "padding_exponent": 48,
+      "critical_minor_order": 119,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 60,
+      "padding_exponent": 49,
+      "critical_minor_order": 121,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 11,
+      "n": 61,
+      "padding_exponent": 50,
+      "critical_minor_order": 123,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 11,
+      "n": 62,
+      "padding_exponent": 51,
+      "critical_minor_order": 125,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 12,
+      "n": 12,
+      "padding_exponent": 0,
+      "critical_minor_order": 25,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 13,
+      "padding_exponent": 1,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 14,
+      "padding_exponent": 2,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 15,
+      "padding_exponent": 3,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 16,
+      "padding_exponent": 4,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 17,
+      "padding_exponent": 5,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 18,
+      "padding_exponent": 6,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 19,
+      "padding_exponent": 7,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 20,
+      "padding_exponent": 8,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 21,
+      "padding_exponent": 9,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 22,
+      "padding_exponent": 10,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 23,
+      "padding_exponent": 11,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 24,
+      "padding_exponent": 12,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 25,
+      "padding_exponent": 13,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 26,
+      "padding_exponent": 14,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 27,
+      "padding_exponent": 15,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 28,
+      "padding_exponent": 16,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 29,
+      "padding_exponent": 17,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 30,
+      "padding_exponent": 18,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 31,
+      "padding_exponent": 19,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 32,
+      "padding_exponent": 20,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 33,
+      "padding_exponent": 21,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 34,
+      "padding_exponent": 22,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 35,
+      "padding_exponent": 23,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 36,
+      "padding_exponent": 24,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 37,
+      "padding_exponent": 25,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 38,
+      "padding_exponent": 26,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 39,
+      "padding_exponent": 27,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 40,
+      "padding_exponent": 28,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 41,
+      "padding_exponent": 29,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 42,
+      "padding_exponent": 30,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 43,
+      "padding_exponent": 31,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 44,
+      "padding_exponent": 32,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 45,
+      "padding_exponent": 33,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 46,
+      "padding_exponent": 34,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 47,
+      "padding_exponent": 35,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 48,
+      "padding_exponent": 36,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 49,
+      "padding_exponent": 37,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 50,
+      "padding_exponent": 38,
+      "critical_minor_order": 101,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 51,
+      "padding_exponent": 39,
+      "critical_minor_order": 103,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 52,
+      "padding_exponent": 40,
+      "critical_minor_order": 105,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 53,
+      "padding_exponent": 41,
+      "critical_minor_order": 107,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 54,
+      "padding_exponent": 42,
+      "critical_minor_order": 109,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 55,
+      "padding_exponent": 43,
+      "critical_minor_order": 111,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 56,
+      "padding_exponent": 44,
+      "critical_minor_order": 113,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 57,
+      "padding_exponent": 45,
+      "critical_minor_order": 115,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 58,
+      "padding_exponent": 46,
+      "critical_minor_order": 117,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 59,
+      "padding_exponent": 47,
+      "critical_minor_order": 119,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 60,
+      "padding_exponent": 48,
+      "critical_minor_order": 121,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 61,
+      "padding_exponent": 49,
+      "critical_minor_order": 123,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 62,
+      "padding_exponent": 50,
+      "critical_minor_order": 125,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 63,
+      "padding_exponent": 51,
+      "critical_minor_order": 127,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 64,
+      "padding_exponent": 52,
+      "critical_minor_order": 129,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 65,
+      "padding_exponent": 53,
+      "critical_minor_order": 131,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 66,
+      "padding_exponent": 54,
+      "critical_minor_order": 133,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 67,
+      "padding_exponent": 55,
+      "critical_minor_order": 135,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 68,
+      "padding_exponent": 56,
+      "critical_minor_order": 137,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 69,
+      "padding_exponent": 57,
+      "critical_minor_order": 139,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 70,
+      "padding_exponent": 58,
+      "critical_minor_order": 141,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 71,
+      "padding_exponent": 59,
+      "critical_minor_order": 143,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 12,
+      "n": 72,
+      "padding_exponent": 60,
+      "critical_minor_order": 145,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 8638
+    },
+    {
+      "m": 12,
+      "n": 73,
+      "padding_exponent": 61,
+      "critical_minor_order": 147,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 12,
+      "n": 74,
+      "padding_exponent": 62,
+      "critical_minor_order": 149,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 13,
+      "n": 13,
+      "padding_exponent": 0,
+      "critical_minor_order": 27,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 14,
+      "padding_exponent": 1,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 15,
+      "padding_exponent": 2,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 16,
+      "padding_exponent": 3,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 17,
+      "padding_exponent": 4,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 18,
+      "padding_exponent": 5,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 19,
+      "padding_exponent": 6,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 20,
+      "padding_exponent": 7,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 21,
+      "padding_exponent": 8,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 22,
+      "padding_exponent": 9,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 23,
+      "padding_exponent": 10,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 24,
+      "padding_exponent": 11,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 25,
+      "padding_exponent": 12,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 26,
+      "padding_exponent": 13,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 27,
+      "padding_exponent": 14,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 28,
+      "padding_exponent": 15,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 29,
+      "padding_exponent": 16,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 30,
+      "padding_exponent": 17,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 31,
+      "padding_exponent": 18,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 32,
+      "padding_exponent": 19,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 33,
+      "padding_exponent": 20,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 34,
+      "padding_exponent": 21,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 35,
+      "padding_exponent": 22,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 36,
+      "padding_exponent": 23,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 37,
+      "padding_exponent": 24,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 38,
+      "padding_exponent": 25,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 39,
+      "padding_exponent": 26,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 40,
+      "padding_exponent": 27,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 41,
+      "padding_exponent": 28,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 42,
+      "padding_exponent": 29,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 43,
+      "padding_exponent": 30,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 44,
+      "padding_exponent": 31,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 45,
+      "padding_exponent": 32,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 46,
+      "padding_exponent": 33,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 47,
+      "padding_exponent": 34,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 48,
+      "padding_exponent": 35,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 49,
+      "padding_exponent": 36,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 50,
+      "padding_exponent": 37,
+      "critical_minor_order": 101,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 51,
+      "padding_exponent": 38,
+      "critical_minor_order": 103,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 52,
+      "padding_exponent": 39,
+      "critical_minor_order": 105,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 53,
+      "padding_exponent": 40,
+      "critical_minor_order": 107,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 54,
+      "padding_exponent": 41,
+      "critical_minor_order": 109,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 55,
+      "padding_exponent": 42,
+      "critical_minor_order": 111,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 56,
+      "padding_exponent": 43,
+      "critical_minor_order": 113,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 57,
+      "padding_exponent": 44,
+      "critical_minor_order": 115,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 58,
+      "padding_exponent": 45,
+      "critical_minor_order": 117,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 59,
+      "padding_exponent": 46,
+      "critical_minor_order": 119,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 60,
+      "padding_exponent": 47,
+      "critical_minor_order": 121,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 61,
+      "padding_exponent": 48,
+      "critical_minor_order": 123,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 62,
+      "padding_exponent": 49,
+      "critical_minor_order": 125,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 63,
+      "padding_exponent": 50,
+      "critical_minor_order": 127,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 64,
+      "padding_exponent": 51,
+      "critical_minor_order": 129,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 65,
+      "padding_exponent": 52,
+      "critical_minor_order": 131,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 66,
+      "padding_exponent": 53,
+      "critical_minor_order": 133,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 67,
+      "padding_exponent": 54,
+      "critical_minor_order": 135,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 68,
+      "padding_exponent": 55,
+      "critical_minor_order": 137,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 69,
+      "padding_exponent": 56,
+      "critical_minor_order": 139,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 70,
+      "padding_exponent": 57,
+      "critical_minor_order": 141,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 71,
+      "padding_exponent": 58,
+      "critical_minor_order": 143,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 72,
+      "padding_exponent": 59,
+      "critical_minor_order": 145,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 73,
+      "padding_exponent": 60,
+      "critical_minor_order": 147,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 74,
+      "padding_exponent": 61,
+      "critical_minor_order": 149,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 75,
+      "padding_exponent": 62,
+      "critical_minor_order": 151,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 76,
+      "padding_exponent": 63,
+      "critical_minor_order": 153,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 77,
+      "padding_exponent": 64,
+      "critical_minor_order": 155,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 78,
+      "padding_exponent": 65,
+      "critical_minor_order": 157,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 79,
+      "padding_exponent": 66,
+      "critical_minor_order": 159,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 80,
+      "padding_exponent": 67,
+      "critical_minor_order": 161,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 81,
+      "padding_exponent": 68,
+      "critical_minor_order": 163,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 82,
+      "padding_exponent": 69,
+      "critical_minor_order": 165,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 83,
+      "padding_exponent": 70,
+      "critical_minor_order": 167,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 84,
+      "padding_exponent": 71,
+      "critical_minor_order": 169,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 13,
+      "n": 85,
+      "padding_exponent": 72,
+      "critical_minor_order": 171,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 13,
+      "n": 86,
+      "padding_exponent": 73,
+      "critical_minor_order": 173,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 14,
+      "n": 14,
+      "padding_exponent": 0,
+      "critical_minor_order": 29,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 15,
+      "padding_exponent": 1,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 16,
+      "padding_exponent": 2,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 17,
+      "padding_exponent": 3,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 18,
+      "padding_exponent": 4,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 19,
+      "padding_exponent": 5,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 20,
+      "padding_exponent": 6,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 21,
+      "padding_exponent": 7,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 22,
+      "padding_exponent": 8,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 23,
+      "padding_exponent": 9,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 24,
+      "padding_exponent": 10,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 25,
+      "padding_exponent": 11,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 26,
+      "padding_exponent": 12,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 27,
+      "padding_exponent": 13,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 28,
+      "padding_exponent": 14,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 29,
+      "padding_exponent": 15,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 30,
+      "padding_exponent": 16,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 31,
+      "padding_exponent": 17,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 32,
+      "padding_exponent": 18,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 33,
+      "padding_exponent": 19,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 34,
+      "padding_exponent": 20,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 35,
+      "padding_exponent": 21,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 36,
+      "padding_exponent": 22,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 37,
+      "padding_exponent": 23,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 38,
+      "padding_exponent": 24,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 39,
+      "padding_exponent": 25,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 40,
+      "padding_exponent": 26,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 41,
+      "padding_exponent": 27,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 42,
+      "padding_exponent": 28,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 43,
+      "padding_exponent": 29,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 44,
+      "padding_exponent": 30,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 45,
+      "padding_exponent": 31,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 46,
+      "padding_exponent": 32,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 47,
+      "padding_exponent": 33,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 48,
+      "padding_exponent": 34,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 49,
+      "padding_exponent": 35,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 50,
+      "padding_exponent": 36,
+      "critical_minor_order": 101,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 51,
+      "padding_exponent": 37,
+      "critical_minor_order": 103,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 52,
+      "padding_exponent": 38,
+      "critical_minor_order": 105,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 53,
+      "padding_exponent": 39,
+      "critical_minor_order": 107,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 54,
+      "padding_exponent": 40,
+      "critical_minor_order": 109,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 55,
+      "padding_exponent": 41,
+      "critical_minor_order": 111,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 56,
+      "padding_exponent": 42,
+      "critical_minor_order": 113,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 57,
+      "padding_exponent": 43,
+      "critical_minor_order": 115,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 58,
+      "padding_exponent": 44,
+      "critical_minor_order": 117,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 59,
+      "padding_exponent": 45,
+      "critical_minor_order": 119,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 60,
+      "padding_exponent": 46,
+      "critical_minor_order": 121,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 61,
+      "padding_exponent": 47,
+      "critical_minor_order": 123,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 62,
+      "padding_exponent": 48,
+      "critical_minor_order": 125,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 63,
+      "padding_exponent": 49,
+      "critical_minor_order": 127,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 64,
+      "padding_exponent": 50,
+      "critical_minor_order": 129,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 65,
+      "padding_exponent": 51,
+      "critical_minor_order": 131,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 66,
+      "padding_exponent": 52,
+      "critical_minor_order": 133,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 67,
+      "padding_exponent": 53,
+      "critical_minor_order": 135,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 68,
+      "padding_exponent": 54,
+      "critical_minor_order": 137,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 69,
+      "padding_exponent": 55,
+      "critical_minor_order": 139,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 70,
+      "padding_exponent": 56,
+      "critical_minor_order": 141,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 71,
+      "padding_exponent": 57,
+      "critical_minor_order": 143,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 72,
+      "padding_exponent": 58,
+      "critical_minor_order": 145,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 73,
+      "padding_exponent": 59,
+      "critical_minor_order": 147,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 74,
+      "padding_exponent": 60,
+      "critical_minor_order": 149,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 75,
+      "padding_exponent": 61,
+      "critical_minor_order": 151,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 76,
+      "padding_exponent": 62,
+      "critical_minor_order": 153,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 77,
+      "padding_exponent": 63,
+      "critical_minor_order": 155,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 78,
+      "padding_exponent": 64,
+      "critical_minor_order": 157,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 79,
+      "padding_exponent": 65,
+      "critical_minor_order": 159,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 80,
+      "padding_exponent": 66,
+      "critical_minor_order": 161,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 81,
+      "padding_exponent": 67,
+      "critical_minor_order": 163,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 82,
+      "padding_exponent": 68,
+      "critical_minor_order": 165,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 83,
+      "padding_exponent": 69,
+      "critical_minor_order": 167,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 84,
+      "padding_exponent": 70,
+      "critical_minor_order": 169,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 85,
+      "padding_exponent": 71,
+      "critical_minor_order": 171,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 86,
+      "padding_exponent": 72,
+      "critical_minor_order": 173,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 87,
+      "padding_exponent": 73,
+      "critical_minor_order": 175,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 88,
+      "padding_exponent": 74,
+      "critical_minor_order": 177,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 89,
+      "padding_exponent": 75,
+      "critical_minor_order": 179,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 90,
+      "padding_exponent": 76,
+      "critical_minor_order": 181,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 91,
+      "padding_exponent": 77,
+      "critical_minor_order": 183,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 92,
+      "padding_exponent": 78,
+      "critical_minor_order": 185,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 93,
+      "padding_exponent": 79,
+      "critical_minor_order": 187,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 94,
+      "padding_exponent": 80,
+      "critical_minor_order": 189,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 95,
+      "padding_exponent": 81,
+      "critical_minor_order": 191,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 96,
+      "padding_exponent": 82,
+      "critical_minor_order": 193,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 97,
+      "padding_exponent": 83,
+      "critical_minor_order": 195,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 14,
+      "n": 98,
+      "padding_exponent": 84,
+      "critical_minor_order": 197,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 16462
+    },
+    {
+      "m": 14,
+      "n": 99,
+      "padding_exponent": 85,
+      "critical_minor_order": 199,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 14,
+      "n": 100,
+      "padding_exponent": 86,
+      "critical_minor_order": 201,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 15,
+      "n": 15,
+      "padding_exponent": 0,
+      "critical_minor_order": 31,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 16,
+      "padding_exponent": 1,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 17,
+      "padding_exponent": 2,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 18,
+      "padding_exponent": 3,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 19,
+      "padding_exponent": 4,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 20,
+      "padding_exponent": 5,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 21,
+      "padding_exponent": 6,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 22,
+      "padding_exponent": 7,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 23,
+      "padding_exponent": 8,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 24,
+      "padding_exponent": 9,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 25,
+      "padding_exponent": 10,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 26,
+      "padding_exponent": 11,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 27,
+      "padding_exponent": 12,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 28,
+      "padding_exponent": 13,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 29,
+      "padding_exponent": 14,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 30,
+      "padding_exponent": 15,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 31,
+      "padding_exponent": 16,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 32,
+      "padding_exponent": 17,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 33,
+      "padding_exponent": 18,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 34,
+      "padding_exponent": 19,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 35,
+      "padding_exponent": 20,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 36,
+      "padding_exponent": 21,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 37,
+      "padding_exponent": 22,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 38,
+      "padding_exponent": 23,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 39,
+      "padding_exponent": 24,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 40,
+      "padding_exponent": 25,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 41,
+      "padding_exponent": 26,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 42,
+      "padding_exponent": 27,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 43,
+      "padding_exponent": 28,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 44,
+      "padding_exponent": 29,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 45,
+      "padding_exponent": 30,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 46,
+      "padding_exponent": 31,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 47,
+      "padding_exponent": 32,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 48,
+      "padding_exponent": 33,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 49,
+      "padding_exponent": 34,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 50,
+      "padding_exponent": 35,
+      "critical_minor_order": 101,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 51,
+      "padding_exponent": 36,
+      "critical_minor_order": 103,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 52,
+      "padding_exponent": 37,
+      "critical_minor_order": 105,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 53,
+      "padding_exponent": 38,
+      "critical_minor_order": 107,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 54,
+      "padding_exponent": 39,
+      "critical_minor_order": 109,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 55,
+      "padding_exponent": 40,
+      "critical_minor_order": 111,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 56,
+      "padding_exponent": 41,
+      "critical_minor_order": 113,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 57,
+      "padding_exponent": 42,
+      "critical_minor_order": 115,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 58,
+      "padding_exponent": 43,
+      "critical_minor_order": 117,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 59,
+      "padding_exponent": 44,
+      "critical_minor_order": 119,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 60,
+      "padding_exponent": 45,
+      "critical_minor_order": 121,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 61,
+      "padding_exponent": 46,
+      "critical_minor_order": 123,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 62,
+      "padding_exponent": 47,
+      "critical_minor_order": 125,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 63,
+      "padding_exponent": 48,
+      "critical_minor_order": 127,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 64,
+      "padding_exponent": 49,
+      "critical_minor_order": 129,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 65,
+      "padding_exponent": 50,
+      "critical_minor_order": 131,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 66,
+      "padding_exponent": 51,
+      "critical_minor_order": 133,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 67,
+      "padding_exponent": 52,
+      "critical_minor_order": 135,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 68,
+      "padding_exponent": 53,
+      "critical_minor_order": 137,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 69,
+      "padding_exponent": 54,
+      "critical_minor_order": 139,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 70,
+      "padding_exponent": 55,
+      "critical_minor_order": 141,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 71,
+      "padding_exponent": 56,
+      "critical_minor_order": 143,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 72,
+      "padding_exponent": 57,
+      "critical_minor_order": 145,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 73,
+      "padding_exponent": 58,
+      "critical_minor_order": 147,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 74,
+      "padding_exponent": 59,
+      "critical_minor_order": 149,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 75,
+      "padding_exponent": 60,
+      "critical_minor_order": 151,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 76,
+      "padding_exponent": 61,
+      "critical_minor_order": 153,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 77,
+      "padding_exponent": 62,
+      "critical_minor_order": 155,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 78,
+      "padding_exponent": 63,
+      "critical_minor_order": 157,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 79,
+      "padding_exponent": 64,
+      "critical_minor_order": 159,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 80,
+      "padding_exponent": 65,
+      "critical_minor_order": 161,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 81,
+      "padding_exponent": 66,
+      "critical_minor_order": 163,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 82,
+      "padding_exponent": 67,
+      "critical_minor_order": 165,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 83,
+      "padding_exponent": 68,
+      "critical_minor_order": 167,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 84,
+      "padding_exponent": 69,
+      "critical_minor_order": 169,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 85,
+      "padding_exponent": 70,
+      "critical_minor_order": 171,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 86,
+      "padding_exponent": 71,
+      "critical_minor_order": 173,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 87,
+      "padding_exponent": 72,
+      "critical_minor_order": 175,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 88,
+      "padding_exponent": 73,
+      "critical_minor_order": 177,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 89,
+      "padding_exponent": 74,
+      "critical_minor_order": 179,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 90,
+      "padding_exponent": 75,
+      "critical_minor_order": 181,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 91,
+      "padding_exponent": 76,
+      "critical_minor_order": 183,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 92,
+      "padding_exponent": 77,
+      "critical_minor_order": 185,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 93,
+      "padding_exponent": 78,
+      "critical_minor_order": 187,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 94,
+      "padding_exponent": 79,
+      "critical_minor_order": 189,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 95,
+      "padding_exponent": 80,
+      "critical_minor_order": 191,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 96,
+      "padding_exponent": 81,
+      "critical_minor_order": 193,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 97,
+      "padding_exponent": 82,
+      "critical_minor_order": 195,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 98,
+      "padding_exponent": 83,
+      "critical_minor_order": 197,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 99,
+      "padding_exponent": 84,
+      "critical_minor_order": 199,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 100,
+      "padding_exponent": 85,
+      "critical_minor_order": 201,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 101,
+      "padding_exponent": 86,
+      "critical_minor_order": 203,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 102,
+      "padding_exponent": 87,
+      "critical_minor_order": 205,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 103,
+      "padding_exponent": 88,
+      "critical_minor_order": 207,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 104,
+      "padding_exponent": 89,
+      "critical_minor_order": 209,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 105,
+      "padding_exponent": 90,
+      "critical_minor_order": 211,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 106,
+      "padding_exponent": 91,
+      "critical_minor_order": 213,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 107,
+      "padding_exponent": 92,
+      "critical_minor_order": 215,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 108,
+      "padding_exponent": 93,
+      "critical_minor_order": 217,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 109,
+      "padding_exponent": 94,
+      "critical_minor_order": 219,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 110,
+      "padding_exponent": 95,
+      "critical_minor_order": 221,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 111,
+      "padding_exponent": 96,
+      "critical_minor_order": 223,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 112,
+      "padding_exponent": 97,
+      "critical_minor_order": 225,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 15,
+      "n": 113,
+      "padding_exponent": 98,
+      "critical_minor_order": 227,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 15,
+      "n": 114,
+      "padding_exponent": 99,
+      "critical_minor_order": 229,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 16,
+      "n": 16,
+      "padding_exponent": 0,
+      "critical_minor_order": 33,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 17,
+      "padding_exponent": 1,
+      "critical_minor_order": 35,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 18,
+      "padding_exponent": 2,
+      "critical_minor_order": 37,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 19,
+      "padding_exponent": 3,
+      "critical_minor_order": 39,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 20,
+      "padding_exponent": 4,
+      "critical_minor_order": 41,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 21,
+      "padding_exponent": 5,
+      "critical_minor_order": 43,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 22,
+      "padding_exponent": 6,
+      "critical_minor_order": 45,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 23,
+      "padding_exponent": 7,
+      "critical_minor_order": 47,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 24,
+      "padding_exponent": 8,
+      "critical_minor_order": 49,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 25,
+      "padding_exponent": 9,
+      "critical_minor_order": 51,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 26,
+      "padding_exponent": 10,
+      "critical_minor_order": 53,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 27,
+      "padding_exponent": 11,
+      "critical_minor_order": 55,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 28,
+      "padding_exponent": 12,
+      "critical_minor_order": 57,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 29,
+      "padding_exponent": 13,
+      "critical_minor_order": 59,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 30,
+      "padding_exponent": 14,
+      "critical_minor_order": 61,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 31,
+      "padding_exponent": 15,
+      "critical_minor_order": 63,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 32,
+      "padding_exponent": 16,
+      "critical_minor_order": 65,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 33,
+      "padding_exponent": 17,
+      "critical_minor_order": 67,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 34,
+      "padding_exponent": 18,
+      "critical_minor_order": 69,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 35,
+      "padding_exponent": 19,
+      "critical_minor_order": 71,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 36,
+      "padding_exponent": 20,
+      "critical_minor_order": 73,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 37,
+      "padding_exponent": 21,
+      "critical_minor_order": 75,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 38,
+      "padding_exponent": 22,
+      "critical_minor_order": 77,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 39,
+      "padding_exponent": 23,
+      "critical_minor_order": 79,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 40,
+      "padding_exponent": 24,
+      "critical_minor_order": 81,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 41,
+      "padding_exponent": 25,
+      "critical_minor_order": 83,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 42,
+      "padding_exponent": 26,
+      "critical_minor_order": 85,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 43,
+      "padding_exponent": 27,
+      "critical_minor_order": 87,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 44,
+      "padding_exponent": 28,
+      "critical_minor_order": 89,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 45,
+      "padding_exponent": 29,
+      "critical_minor_order": 91,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 46,
+      "padding_exponent": 30,
+      "critical_minor_order": 93,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 47,
+      "padding_exponent": 31,
+      "critical_minor_order": 95,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 48,
+      "padding_exponent": 32,
+      "critical_minor_order": 97,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 49,
+      "padding_exponent": 33,
+      "critical_minor_order": 99,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 50,
+      "padding_exponent": 34,
+      "critical_minor_order": 101,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 51,
+      "padding_exponent": 35,
+      "critical_minor_order": 103,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 52,
+      "padding_exponent": 36,
+      "critical_minor_order": 105,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 53,
+      "padding_exponent": 37,
+      "critical_minor_order": 107,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 54,
+      "padding_exponent": 38,
+      "critical_minor_order": 109,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 55,
+      "padding_exponent": 39,
+      "critical_minor_order": 111,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 56,
+      "padding_exponent": 40,
+      "critical_minor_order": 113,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 57,
+      "padding_exponent": 41,
+      "critical_minor_order": 115,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 58,
+      "padding_exponent": 42,
+      "critical_minor_order": 117,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 59,
+      "padding_exponent": 43,
+      "critical_minor_order": 119,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 60,
+      "padding_exponent": 44,
+      "critical_minor_order": 121,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 61,
+      "padding_exponent": 45,
+      "critical_minor_order": 123,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 62,
+      "padding_exponent": 46,
+      "critical_minor_order": 125,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 63,
+      "padding_exponent": 47,
+      "critical_minor_order": 127,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 64,
+      "padding_exponent": 48,
+      "critical_minor_order": 129,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 65,
+      "padding_exponent": 49,
+      "critical_minor_order": 131,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 66,
+      "padding_exponent": 50,
+      "critical_minor_order": 133,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 67,
+      "padding_exponent": 51,
+      "critical_minor_order": 135,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 68,
+      "padding_exponent": 52,
+      "critical_minor_order": 137,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 69,
+      "padding_exponent": 53,
+      "critical_minor_order": 139,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 70,
+      "padding_exponent": 54,
+      "critical_minor_order": 141,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 71,
+      "padding_exponent": 55,
+      "critical_minor_order": 143,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 72,
+      "padding_exponent": 56,
+      "critical_minor_order": 145,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 73,
+      "padding_exponent": 57,
+      "critical_minor_order": 147,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 74,
+      "padding_exponent": 58,
+      "critical_minor_order": 149,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 75,
+      "padding_exponent": 59,
+      "critical_minor_order": 151,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 76,
+      "padding_exponent": 60,
+      "critical_minor_order": 153,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 77,
+      "padding_exponent": 61,
+      "critical_minor_order": 155,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 78,
+      "padding_exponent": 62,
+      "critical_minor_order": 157,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 79,
+      "padding_exponent": 63,
+      "critical_minor_order": 159,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 80,
+      "padding_exponent": 64,
+      "critical_minor_order": 161,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 81,
+      "padding_exponent": 65,
+      "critical_minor_order": 163,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 82,
+      "padding_exponent": 66,
+      "critical_minor_order": 165,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 83,
+      "padding_exponent": 67,
+      "critical_minor_order": 167,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 84,
+      "padding_exponent": 68,
+      "critical_minor_order": 169,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 85,
+      "padding_exponent": 69,
+      "critical_minor_order": 171,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 86,
+      "padding_exponent": 70,
+      "critical_minor_order": 173,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 87,
+      "padding_exponent": 71,
+      "critical_minor_order": 175,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 88,
+      "padding_exponent": 72,
+      "critical_minor_order": 177,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 89,
+      "padding_exponent": 73,
+      "critical_minor_order": 179,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 90,
+      "padding_exponent": 74,
+      "critical_minor_order": 181,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 91,
+      "padding_exponent": 75,
+      "critical_minor_order": 183,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 92,
+      "padding_exponent": 76,
+      "critical_minor_order": 185,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 93,
+      "padding_exponent": 77,
+      "critical_minor_order": 187,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 94,
+      "padding_exponent": 78,
+      "critical_minor_order": 189,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 95,
+      "padding_exponent": 79,
+      "critical_minor_order": 191,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 96,
+      "padding_exponent": 80,
+      "critical_minor_order": 193,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 97,
+      "padding_exponent": 81,
+      "critical_minor_order": 195,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 98,
+      "padding_exponent": 82,
+      "critical_minor_order": 197,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 99,
+      "padding_exponent": 83,
+      "critical_minor_order": 199,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 100,
+      "padding_exponent": 84,
+      "critical_minor_order": 201,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 101,
+      "padding_exponent": 85,
+      "critical_minor_order": 203,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 102,
+      "padding_exponent": 86,
+      "critical_minor_order": 205,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 103,
+      "padding_exponent": 87,
+      "critical_minor_order": 207,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 104,
+      "padding_exponent": 88,
+      "critical_minor_order": 209,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 105,
+      "padding_exponent": 89,
+      "critical_minor_order": 211,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 106,
+      "padding_exponent": 90,
+      "critical_minor_order": 213,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 107,
+      "padding_exponent": 91,
+      "critical_minor_order": 215,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 108,
+      "padding_exponent": 92,
+      "critical_minor_order": 217,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 109,
+      "padding_exponent": 93,
+      "critical_minor_order": 219,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 110,
+      "padding_exponent": 94,
+      "critical_minor_order": 221,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 111,
+      "padding_exponent": 95,
+      "critical_minor_order": 223,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 112,
+      "padding_exponent": 96,
+      "critical_minor_order": 225,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 113,
+      "padding_exponent": 97,
+      "critical_minor_order": 227,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 114,
+      "padding_exponent": 98,
+      "critical_minor_order": 229,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 115,
+      "padding_exponent": 99,
+      "critical_minor_order": 231,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 116,
+      "padding_exponent": 100,
+      "critical_minor_order": 233,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 117,
+      "padding_exponent": 101,
+      "critical_minor_order": 235,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 118,
+      "padding_exponent": 102,
+      "critical_minor_order": 237,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 119,
+      "padding_exponent": 103,
+      "critical_minor_order": 239,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 120,
+      "padding_exponent": 104,
+      "critical_minor_order": 241,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 121,
+      "padding_exponent": 105,
+      "critical_minor_order": 243,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 122,
+      "padding_exponent": 106,
+      "critical_minor_order": 245,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 123,
+      "padding_exponent": 107,
+      "critical_minor_order": 247,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 124,
+      "padding_exponent": 108,
+      "critical_minor_order": 249,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 125,
+      "padding_exponent": 109,
+      "critical_minor_order": 251,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 126,
+      "padding_exponent": 110,
+      "critical_minor_order": 253,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 127,
+      "padding_exponent": 111,
+      "critical_minor_order": 255,
+      "relation": "reversal",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": true
+    },
+    {
+      "m": 16,
+      "n": 128,
+      "padding_exponent": 112,
+      "critical_minor_order": 257,
+      "relation": "boundary",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false,
+      "full_active_hessian_divisible_by_padding": true,
+      "quotient_z_exponent": 28670
+    },
+    {
+      "m": 16,
+      "n": 129,
+      "padding_exponent": 113,
+      "critical_minor_order": 259,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    },
+    {
+      "m": 16,
+      "n": 130,
+      "padding_exponent": 114,
+      "critical_minor_order": 261,
+      "relation": "vanishing",
+      "theta_det_zero": true,
+      "theta_padded_permanent_nonzero": false
+    }
+  ],
+  "literature_status": {
+    "quadratic_determinantal_complexity_bound": "known: Mignon-Ressayre (2004)",
+    "quadratic_border_determinantal_complexity_bound_and_hessian-divisibility equations": "known: Landsberg-Manivel-Ressayre (2013)",
+    "present_contribution_status": "reformulation/reconstruction; no novelty claim"
+  }
+}

@@ -1,0 +1,12 @@
+
+cff-version: 1.2.0
+message: "Please cite the exact manuscript, module, and release tag used."
+title: "Reverse-Hessian Reproducibility: Corrective Scientific Release"
+type: software
+authors:
+  - family-names: Lempers
+    given-names: Sasha
+version: 2.1.0-corrective
+date-released: 2026-07-19
+license: MIT
+repository-code: "https://github.com/SashaLempers/reverse-hessian-reproducibility"

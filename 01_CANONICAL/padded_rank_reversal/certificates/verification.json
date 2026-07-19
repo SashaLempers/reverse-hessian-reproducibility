@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": {
+    "permanent_zero_at_witness": true,
+    "permanent_hessian_rank_9": true,
+    "permanent_hessian_determinant_minus_128": true,
+    "det4_rank_strata_exact": true,
+    "det4_singular_hessian_rank_at_most_8": true,
+    "augmented_rank_difference_is_one": true
+  },
+  "certificate_sha256": {
+    "padded_permanent_nondivisibility_witness.json": "93dcc26cf51a2641d06837ce4f253daecdc20d58915536b282c1a78d2ba62bc6",
+    "det4_singular_hessian_rank_certificate.json": "71d4b271c5fecf2cb4a459039bffae2db3b9d590a9e80662f9629b1183929b6b",
+    "rank_reversal_summary.json": "b3e515b00cb0ef09de04dedfe99ee2bd877b37bd1d9be7e5964fad31a3b5761a"
+  }
+}

@@ -1,0 +1,47 @@
+
+name: verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: Reproduction profile
+        type: choice
+        required: true
+        default: quick
+        options: [quick, full]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: System dependencies
+        run: sudo apt-get update && sudo apt-get install -y g++ libgmp-dev latexmk texlive-latex-extra texlive-lang-french
+      - name: Python dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+      - name: Immutable reproduction
+        shell: bash
+        run: |
+          PROFILE="${{ github.event.inputs.profile }}"
+          if [ -z "$PROFILE" ]; then PROFILE=quick; fi
+          python3 -B 03_REPRODUCE/verify_immutable.py \
+            --profile "$PROFILE" \
+            --workspace "$RUNNER_TEMP/reverse-hessian-$PROFILE" \
+            --jobs 1
+      - name: Upload attestation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reproduction-attestation
+          path: ${{ runner.temp }}/reverse-hessian-*/

@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "build_seconds": 1.471,
+      "form": "z_per3",
+      "generator_nnz": 5178,
+      "matrix_shape": [
+        1731,
+        54264
+      ],
+      "nonzero_coordinates": 4509,
+      "r": 3,
+      "rank_Q_exact": 849,
+      "rank_seconds": 0.014,
+      "symmetric_coordinates": 157080,
+      "unique_nonzero_up_to_scalar": 1731
+    }
+  ],
+  "schema": "reverse_hessian.compound_hessian_r3_s0.v1"
+}

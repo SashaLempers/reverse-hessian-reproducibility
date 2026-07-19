@@ -1,0 +1,167 @@
+{
+  "Dper3_polynomial_sha256": "d49eb99c92b98dbc46be82d7ed22db6fada2423c437bfdd6eaeced0de2af4494",
+  "certified_statement": "Dper3 is squarefree over Q and therefore geometrically squarefree over C in characteristic zero.",
+  "characteristic": 0,
+  "factor_unit": "-2",
+  "factorization_over_Q": [
+    {
+      "factor_sha256": "0a2c93a6a89aec9e7873a53009f328b6cbc2066b7185d8c3c85400c3863df18b",
+      "monomial_count": 55,
+      "multiplicity": 1,
+      "total_degree": 9
+    }
+  ],
+  "form": "Dper3 = det Hess(per_3)",
+  "gcd_all_partials_over_Q": "1",
+  "integer_content_gcd_of_partials": 2,
+  "irreducibility_statement": "SymPy factor_list over Q returns one degree-9 factor of multiplicity one; no absolute irreducibility claim is made.",
+  "line_restriction_at_J3_plus_t_minus_1_E11": "64*t",
+  "mathematical_output_sha256": "001cbb53d8dce0493e53ecfeb097af2d5c760538868fd9513a3828a6a5bd94fb",
+  "method": "exact factorization over Q plus exact gcd of all nine first partial derivatives",
+  "modular_evaluation_fingerprints": [
+    {
+      "evaluations": [
+        {
+          "Dper_mod_p": 77,
+          "partials_mod_p": [
+            77,
+            89,
+            93,
+            95,
+            76,
+            97,
+            11,
+            98,
+            31
+          ]
+        },
+        {
+          "Dper_mod_p": 16,
+          "partials_mod_p": [
+            38,
+            20,
+            66,
+            37,
+            52,
+            84,
+            91,
+            91,
+            4
+          ]
+        }
+      ],
+      "prime": 101
+    },
+    {
+      "evaluations": [
+        {
+          "Dper_mod_p": 167,
+          "partials_mod_p": [
+            167,
+            588,
+            392,
+            294,
+            437,
+            196,
+            168,
+            147,
+            467
+          ]
+        },
+        {
+          "Dper_mod_p": 67,
+          "partials_mod_p": [
+            538,
+            178,
+            297,
+            867,
+            999,
+            618,
+            94,
+            393,
+            999
+          ]
+        }
+      ],
+      "prime": 1009
+    },
+    {
+      "evaluations": [
+        {
+          "Dper_mod_p": 22145,
+          "partials_mod_p": [
+            22145,
+            27074,
+            28717,
+            13537,
+            4429,
+            30360,
+            21451,
+            22770,
+            20240
+          ]
+        },
+        {
+          "Dper_mod_p": 30979,
+          "partials_mod_p": [
+            146,
+            1920,
+            15532,
+            14683,
+            23876,
+            588,
+            15585,
+            5270,
+            1959
+          ]
+        }
+      ],
+      "prime": 32003
+    },
+    {
+      "evaluations": [
+        {
+          "Dper_mod_p": 29886,
+          "partials_mod_p": [
+            29886,
+            14943,
+            9962,
+            40232,
+            58394,
+            4981,
+            41710,
+            20116,
+            25161
+          ]
+        },
+        {
+          "Dper_mod_p": 41288,
+          "partials_mod_p": [
+            60747,
+            40773,
+            56588,
+            8238,
+            22768,
+            5953,
+            42089,
+            13839,
+            12313
+          ]
+        }
+      ],
+      "prime": 65521
+    }
+  ],
+  "monomial_count": 55,
+  "number_of_variables": 9,
+  "primes_used_for_sanity_checks": [
+    101,
+    1009,
+    32003,
+    65521
+  ],
+  "schema": "reverse-hessian.squarefree-Dper3.v3",
+  "script_sha256": "6227b03cf6dde0240e8416857d24a5927f7fb3c1050cb29c764bd2858f842d78",
+  "status": "CERTIFIED-COMP (exact reproducible computation; not a proof-assistant certificate)",
+  "total_degree": 9
+}

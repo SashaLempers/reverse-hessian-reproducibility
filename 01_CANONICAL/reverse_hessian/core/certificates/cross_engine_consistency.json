@@ -1,0 +1,62 @@
+{
+  "direct_integer_matrix_hash_agreement_orders": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "line_formula_multiplicities_n_3_to_8": [
+    1,
+    4,
+    9,
+    16,
+    25,
+    36
+  ],
+  "modular_primes": [
+    101,
+    1009,
+    32003,
+    65521
+  ],
+  "polynomial_hash_agreement": {
+    "Ddet": "b5cbf2f3af5e3c5c744b83916042bb4334ec05f643c77528bd5b9374c4169121",
+    "Dper": "d49eb99c92b98dbc46be82d7ed22db6fada2423c437bfdd6eaeced0de2af4494"
+  },
+  "rank_vectors": {
+    "Ddet": [
+      1,
+      9,
+      45,
+      165,
+      270,
+      270,
+      165,
+      45,
+      9,
+      1
+    ],
+    "Dper": [
+      1,
+      9,
+      45,
+      165,
+      414,
+      414,
+      165,
+      45,
+      9,
+      1
+    ]
+  },
+  "schema": "reverse-hessian.cross-engine-consistency.v3",
+  "script_sha256": "7d8418a1c80afa4df45dd222b1d75a05ba5ff005eec86f5a8034202a0cff3294",
+  "squarefree_Dper3_gcd_partials": "1",
+  "status": "PASS",
+  "three_distinct_engine_script_sha256": {
+    "independent_exact": "da345d735e5f729bd4c030340249576b165c39ae3af98a3689bdcf03ec729c06",
+    "independent_modular": "9f123ebbbb0d304f771032faf8cbb712caba250d7e78f94e2227beb8cb4d603c",
+    "primary": "d038e0af7ae9e662e7f5d451394bbc8dbb3975452902bb79239ed4f769b42c48"
+  }
+}

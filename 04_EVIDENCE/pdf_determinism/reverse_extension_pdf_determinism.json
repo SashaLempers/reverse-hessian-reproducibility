@@ -1,0 +1,15 @@
+{
+  "builds": 2,
+  "byte_for_byte_identical": true,
+  "command": "03_REPRODUCE/build_reverse_extension_pdf.sh <EXTERNAL_WORKSPACE>",
+  "creation_date": "Sat Jul 18 00:00:00 2026 UTC",
+  "mod_date": "Sat Jul 18 00:00:00 2026 UTC",
+  "pages": 13,
+  "pdf_version": "1.7",
+  "producer": "pdfTeX-1.40.26",
+  "schema": "nvsnvp.reverse_extension_pdf_determinism.v2",
+  "sha256_a": "1ef6b38542c90581687fd484906adb159e14f18e4d6b36a23af967535053b4ca",
+  "sha256_b": "1ef6b38542c90581687fd484906adb159e14f18e4d6b36a23af967535053b4ca",
+  "source_date_epoch": "1784332800",
+  "status": "PASS"
+}

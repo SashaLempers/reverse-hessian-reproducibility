@@ -1,0 +1,10 @@
+
+[project]
+name = "reverse-hessian-reproducibility"
+version = "2.1.0"
+description = "Auditable sources, deterministic certificates, and manuscripts for the Reverse-Hessian research program"
+requires-python = ">=3.13"
+dependencies = ["sympy==1.14.0"]
+
+[tool.pytest.ini_options]
+addopts = "-q"

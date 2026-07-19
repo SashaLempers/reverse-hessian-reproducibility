@@ -1,0 +1,192 @@
+{
+  "Ddet_identity": "det Hess(det_3) = -2 det_3^3",
+  "base_field": "Q",
+  "catalecticants": [
+    {
+      "a": 0,
+      "matrix_sha256_Ddet": "078023fc60f96c3fe8d55c28163a20b1538a9804ece766dcd3f9592bc37ec565",
+      "matrix_sha256_Dperm": "ee39733a59d3fb9793f9618c3098c773ce6e1d488814e078aec93e91ea5744e8",
+      "nnz_Ddet": 54,
+      "nnz_Dperm": 55,
+      "rank_Ddet": 1,
+      "rank_Dperm": 1,
+      "rank_source": "exact_Q_DomainMatrix",
+      "shape": [
+        1,
+        24310
+      ]
+    },
+    {
+      "a": 1,
+      "matrix_sha256_Ddet": "91bd07831cd0512ffe12fdd9963d8f4da097f269a5799f02c4fd5b3503e1199f",
+      "matrix_sha256_Dperm": "78bbe34e9bf04d05e603096d4637a89e60c76b1d4e7912bb238915dd84da43a5",
+      "nnz_Ddet": 306,
+      "nnz_Dperm": 315,
+      "rank_Ddet": 9,
+      "rank_Dperm": 9,
+      "rank_source": "exact_Q_DomainMatrix",
+      "shape": [
+        9,
+        12870
+      ]
+    },
+    {
+      "a": 2,
+      "matrix_sha256_Ddet": "dfddfb02fa8c3ea097f9fa2c31a68175476821435ce70f9eec964fe6488a9e18",
+      "matrix_sha256_Dperm": "48d4a0ddd4649963f99f44b7f5c507b4bdbcd0b199f4c53dc8611f3b5037d5fc",
+      "nnz_Ddet": 900,
+      "nnz_Dperm": 936,
+      "rank_Ddet": 45,
+      "rank_Dperm": 45,
+      "rank_source": "exact_Q_DomainMatrix",
+      "shape": [
+        45,
+        6435
+      ]
+    },
+    {
+      "a": 3,
+      "matrix_sha256_Ddet": "86a79eafaa7166d4a31c3f6d42c19011aa0529604739e5819128bd9a89186aeb",
+      "matrix_sha256_Dperm": "08f4850499873af7a46d714d88711cba40b2b1760d9b8989d0ce57c4ca7a0c5c",
+      "nnz_Ddet": 1740,
+      "nnz_Dperm": 1824,
+      "rank_Ddet": 165,
+      "rank_Dperm": 165,
+      "rank_source": "exact_Q_DomainMatrix",
+      "shape": [
+        165,
+        3003
+      ]
+    },
+    {
+      "a": 4,
+      "matrix_sha256_Ddet": "97f6aebc0965bda40ed1f3014f66be9502055fb293c49b1d311bdd2c311a44b4",
+      "matrix_sha256_Dperm": "db0491bc961574d5ffd136419342a6f784f1ac327a7a8cdc1cbb829d8f67e578",
+      "nnz_Ddet": 2376,
+      "nnz_Dperm": 2502,
+      "rank_Ddet": 270,
+      "rank_Dperm": 414,
+      "rank_source": "exact_Q_DomainMatrix",
+      "shape": [
+        495,
+        1287
+      ]
+    },
+    {
+      "a": 5,
+      "nnz_Ddet": 2376,
+      "nnz_Dperm": 2502,
+      "rank_Ddet": 270,
+      "rank_Dperm": 414,
+      "rank_source": "proved_duality_with_C_4",
+      "shape": [
+        1287,
+        495
+      ]
+    },
+    {
+      "a": 6,
+      "nnz_Ddet": 1740,
+      "nnz_Dperm": 1824,
+      "rank_Ddet": 165,
+      "rank_Dperm": 165,
+      "rank_source": "proved_duality_with_C_3",
+      "shape": [
+        3003,
+        165
+      ]
+    },
+    {
+      "a": 7,
+      "nnz_Ddet": 900,
+      "nnz_Dperm": 936,
+      "rank_Ddet": 45,
+      "rank_Dperm": 45,
+      "rank_source": "proved_duality_with_C_2",
+      "shape": [
+        6435,
+        45
+      ]
+    },
+    {
+      "a": 8,
+      "nnz_Ddet": 306,
+      "nnz_Dperm": 315,
+      "rank_Ddet": 9,
+      "rank_Dperm": 9,
+      "rank_source": "proved_duality_with_C_1",
+      "shape": [
+        12870,
+        9
+      ]
+    },
+    {
+      "a": 9,
+      "nnz_Ddet": 54,
+      "nnz_Dperm": 55,
+      "rank_Ddet": 1,
+      "rank_Dperm": 1,
+      "rank_source": "proved_duality_with_C_0",
+      "shape": [
+        24310,
+        1
+      ]
+    }
+  ],
+  "certified_statement": "rank C_a(Ddet)<=rank C_a(Dper) for a=0,...,9",
+  "degree": 9,
+  "deterministic": true,
+  "duality_statement": "rank C_a(F)=rank C_{9-a}(F); matrices differ by transpose and invertible factorial diagonal scalings",
+  "hessian_convention": "ordinary 9x9 Hessian in row-major variable order",
+  "polynomial_hashes": {
+    "Ddet3": "b5cbf2f3af5e3c5c744b83916042bb4334ec05f643c77528bd5b9374c4169121",
+    "Dper3": "d49eb99c92b98dbc46be82d7ed22db6fada2423c437bfdd6eaeced0de2af4494",
+    "det3": "32ac7f65cd15ca25f4bffdca0a1302b16cdcb2b88782bfa28d01b69ad65e74f3",
+    "per3": "2dd8fd4018c49a94f1e0be6a78a06e84cb5376e8b505c7d5d1dc4a62af59b0fa"
+  },
+  "polynomial_monomial_counts": {
+    "Ddet3": 54,
+    "Dper3": 55,
+    "det3": 6,
+    "per3": 6
+  },
+  "rank_engine": "SymPy DomainMatrix exact rank over ZZ/Q",
+  "rank_vectors": {
+    "Ddet": [
+      1,
+      9,
+      45,
+      165,
+      270,
+      270,
+      165,
+      45,
+      9,
+      1
+    ],
+    "Dper": [
+      1,
+      9,
+      45,
+      165,
+      414,
+      414,
+      165,
+      45,
+      9,
+      1
+    ]
+  },
+  "schema": "reverse_hessian.catalecticant_exact.v3",
+  "variables": [
+    "x11",
+    "x12",
+    "x13",
+    "x21",
+    "x22",
+    "x23",
+    "x31",
+    "x32",
+    "x33"
+  ]
+}

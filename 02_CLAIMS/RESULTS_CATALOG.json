@@ -1,0 +1,249 @@
+{
+  "count": 27,
+  "results": [
+    {
+      "evidence_path": "01_CANONICAL/reverse_hessian/core/paper/a_uniform_line_formula_and_hessian_orbit_incomparability.tex",
+      "limitations": "La nouveauté bibliographique n’est pas établie ici; l’audit ne remplace pas une revue experte.",
+      "novelty_status": "not_audited_or_requires_independent_specialist_review",
+      "proof_status": "textual_proof",
+      "result_id": "CORE-THM-001",
+      "status": "AUDITED_AND_REPRODUCIBLE_PACKAGE",
+      "title": "Pour n≥3, le manuscrit canonique affirme l’incomparabilité des clôtures d’orbites de D(det_n) et D(per_n), où D(f)=det H"
+    },
+    {
+      "evidence_path": "01_CANONICAL/reverse_hessian/core/certificates/primary_exact_catalecticants.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "CORE-CERT-001",
+      "status": "BYTE_FOR_BYTE_REPRODUCIBLE",
+      "title": "Pour n=3, les rangs catalectiques certifiés de D(det_3) et D(per_3) sont respectivement (1,9,45,165,270,270,165,45,9,1) "
+    },
+    {
+      "evidence_path": "01_CANONICAL/reverse_hessian/core/paper/a_uniform_line_formula_and_hessian_orbit_incomparability.tex",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "CORE-LIMIT-001",
+      "status": "EXPLICIT_IN_SOURCE",
+      "title": "Le noyau ne revendique ni obstruction standard pour le permanent paddé, ni borne super-polynomiale, ni VP≠VNP."
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-001",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Pour det_4 et z·per_3, Phi_2 survit au padding; les nombres de coordonnées non nulles sont 4032 et 540, avec 1152 et 213"
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-002",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Les rangs catalectiques exacts d’ordres 0,1,2 sont [1,16,136] pour det_4 et [1,10,55] pour z·per_3."
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-003",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Les dimensions exactes des pièces graduées de I_2 en degrés 4,5,6 sont [625,5312,27608] pour det_4 et [166,1908,12156] p"
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/report/rapport_resultats.md",
+      "limitations": "Ces dimensions sont déterminées par dim([I2]_4)×16−dim([I2]_5); elles ne suffisent pas à elles seules à produire une obstruction de clôture.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-SYZ-001",
+      "status": "REPRODUCED_PASS",
+      "title": "Les dimensions des premières syzygies linéaires de I_2 en degré 5, déduites exactement de la fonction de Hilbert, valent"
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/report/rapport_resultats.md",
+      "limitations": "Ce sont des noyaux avant minimalisation, pas des nombres de Betti minimaux: les produits des syzygies linéaires n’ont pas été quotientés.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-SYZ-002",
+      "status": "REPRODUCED_PASS",
+      "title": "Les dimensions des noyaux quadratiques avant minimalisation en degré 6 valent 57392 pour det_4 et 10420 pour z·per_3."
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "Le script historique contient un contrôle de caractères jusqu’au degré 12 inutilement lent; la reproduction maîtresse réduit seulement ce contrôle de cohérence au degré 8, sans changer les décompositions exactes de degrés 8,12,16.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-004",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Pour r=2, l’unique irréductible commun au domaine Sym^2(Sym^4 V) et à la cible composée est S_(6,2)V; pour r=3 et r=4, l"
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-005",
+      "status": "SEALED_CERTIFICATE_VALIDATED; FULL_REGENERATION_PROTOCOL_AVAILABLE",
+      "title": "Les quatre flattenings de Young à deux cases donnent les rangs det/per: 136/55, 36/18, 136/55 et 120/45."
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-006",
+      "status": "SEALED_CERTIFICATE_VALIDATED; FULL_REGENERATION_PROTOCOL_AVAILABLE",
+      "title": "Pour I_3 en degré 6, le rang exact côté z·per_3 vaut 849 et le rang côté det_4 est au moins 6832 sur Q, certifié par un "
+    },
+    {
+      "evidence_path": "01_CANONICAL/compound_hessian_schur_fitting/certificates/summary.json",
+      "limitations": "La conclusion est limitée aux familles de flattenings et degrés explicitement calculés; elle ne prouve aucune inclusion de clôtures.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "COMP-007",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Aucun des tests calculés dans cette branche ne fournit le saut de rang requis; tous les rangs certifiés sont plus faible"
+    },
+    {
+      "evidence_path": "01_CANONICAL/padded_rank_reversal/certificates/rank_reversal_summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "RANK-001",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Au point entier X*=((-2,-1,-1),(-1,1,1),(-1,1,1)), per_3(X*)=0 et det Hess(per_3)(X*)=-128, donc le bloc hessien 9×9 de "
+    },
+    {
+      "evidence_path": "01_CANONICAL/padded_rank_reversal/certificates/rank_reversal_summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "RANK-002",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Les rangs exacts du Hessien de det_4 sur les strates de rang matriciel 0,1,2,3,4 sont 0,0,4,8,16; le rang maximal sur de"
+    },
+    {
+      "evidence_path": "01_CANONICAL/padded_rank_reversal/certificates/rank_reversal_summary.json",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "RANK-003",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Pour le covariant quotient-Fitting d’ordre 9, le rang augmenté vaut N pour det_4 et N+1 pour z·per_3, avec N=10 150 394 "
+    },
+    {
+      "evidence_path": "01_CANONICAL/padded_rank_reversal/certificates/rank_reversal_summary.json",
+      "limitations": "Ce cas fixé est ensuite identifié comme une instance de la borne quadratique hessienne connue; aucune nouveauté bibliographique n’est revendiquée.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "textual_proof",
+      "result_id": "RANK-004",
+      "status": "PROOF_AND_CERTIFICATE_INCLUDED",
+      "title": "Il en résulte [z·per_3] ∉ closure(GL_16·[det_4])."
+    },
+    {
+      "evidence_path": "01_CANONICAL/asymptotic_quotient_fitting/report/theoreme_asymptotique.md",
+      "limitations": "Le script vérifie des cas finis; la généralité repose sur la preuve symbolique du rapport.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "textual_proof",
+      "result_id": "ASYM-001",
+      "status": "TEXTUAL_PROOF_PLUS_FINITE_CHECKS",
+      "title": "Sur l’hypersurface det_n=0, le rang du Hessien est au plus 2n; les mineurs d’ordre 2n+1 sont donc divisibles par det_n."
+    },
+    {
+      "evidence_path": "01_CANONICAL/asymptotic_quotient_fitting/report/theoreme_asymptotique.md",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "textual_proof",
+      "result_id": "ASYM-002",
+      "status": "TEXTUAL_PROOF_PLUS_MODULAR_FINITE_CHECKS",
+      "title": "Pour X_m(t)=J_m+(t-1)E_11, per_m(X_m(t))=(m-1)!(t+m-1) et det Hess(per_m)(X_m(t))=K_m(t+m-3)^((m-2)^2), avec K_m non nul"
+    },
+    {
+      "evidence_path": "01_CANONICAL/asymptotic_quotient_fitting/report/theoreme_asymptotique.md",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "textual_proof",
+      "result_id": "ASYM-003",
+      "status": "TEXTUAL_PROOF_PLUS_FINITE_CHECKS",
+      "title": "Pour F_{n,m}=ell^(n-m)per_m, le covariant critique Theta_{2n+1}(F_{n,m}) est non nul si et seulement si 2n<m^2."
+    },
+    {
+      "evidence_path": "01_CANONICAL/asymptotic_quotient_fitting/report/theoreme_asymptotique.md",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "textual_proof",
+      "result_id": "ASYM-004",
+      "status": "PROOF_INCLUDED",
+      "title": "Si 2n<m^2, alors [ell^(n-m)per_m] ∉ closure(GL_{n^2}·[det_n])."
+    },
+    {
+      "evidence_path": "01_CANONICAL/asymptotic_quotient_fitting/report/theoreme_asymptotique.md",
+      "limitations": "La borne quadratique est connue; le paquet fournit une reconstruction/reformulation, pas une nouvelle borne.",
+      "novelty_status": "known_result_reconstructed",
+      "proof_status": "textual_proof",
+      "result_id": "ASYM-005",
+      "status": "PROOF_INCLUDED_NO_NOVELTY_CLAIM",
+      "title": "La conséquence est la borne de complexité déterminantale bordée overline{dc}(per_m) ≥ ceil(m^2/2)."
+    },
+    {
+      "evidence_path": "01_CANONICAL/asymptotic_quotient_fitting/report/theoreme_asymptotique.md",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "textual_proof",
+      "result_id": "ASYM-006",
+      "status": "PROOF_INCLUDED",
+      "title": "La méthode est sharp pour ce covariant: à 2n=m^2 le mineur actif maximal est divisible par la forme paddée, et pour 2n>m"
+    },
+    {
+      "evidence_path": "01_CANONICAL/jet_conormal_program/report/formalisme_jet_conormal.md",
+      "limitations": "La preuve est mathématique; les scripts ne vérifient que le cas pilote.",
+      "novelty_status": "not_audited_or_requires_independent_specialist_review",
+      "proof_status": "textual_proof",
+      "result_id": "JET-001",
+      "status": "TEXTUAL_PROOF_INCLUDED",
+      "title": "Pour n≥3 et 3≤t≤n, le flattening 1|(t−1) du t-ième jet de det_n au point diag(I_{n-1},0) a rang n^2."
+    },
+    {
+      "evidence_path": "01_CANONICAL/jet_conormal_program/report/formalisme_jet_conormal.md",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "JET-002",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Dans le cas det_4 contre ell·per_3, les rangs exacts des jets (ordre/split 2:1|1, 3:1|2, 4:1|3, 4:2|2) sont 8,16,16,36 c"
+    },
+    {
+      "evidence_path": "01_CANONICAL/jet_conormal_program/report/formalisme_jet_conormal.md",
+      "limitations": "",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "JET-003",
+      "status": "FRESH_REPRODUCTION_PASS",
+      "title": "Les dimensions exactes des syzygies jacobiennes linéaires sont 30 pour det_4 et 101 brutes pour ell·per_3; après retrait"
+    },
+    {
+      "evidence_path": "01_CANONICAL/jet_conormal_program/report/formalisme_jet_conormal.md",
+      "limitations": "Aucune séparation n’est déduite de ces sondes modulaires.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "JET-004",
+      "status": "MODULAR_LOWER_BOUNDS_ONLY",
+      "title": "Les premiers brins non saturés du graphe conormal ont été sondés modulo 1009, 10007 et 32003; les valeurs sont des borne"
+    },
+    {
+      "evidence_path": "01_CANONICAL/jet_conormal_program/report/formalisme_jet_conormal.md",
+      "limitations": "Le formalisme conormal proposé n’est pas encore une nouvelle obstruction asymptotique.",
+      "novelty_status": "not_a_novelty_claim",
+      "proof_status": "certificate_or_audit_evidence",
+      "result_id": "JET-005",
+      "status": "PROVED_FIRST_PART_EXPLORATORY_SECOND_PART",
+      "title": "Les Hessiennes supérieures brutes saturent déjà côté déterminant dès l’ordre 3; la piste recommandée devient la résoluti"
+    }
+  ],
+  "schema": "reverse_hessian.results_catalog.v2.1"
+}

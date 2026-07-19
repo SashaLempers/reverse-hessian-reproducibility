@@ -1,0 +1,777 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tikz-cd}
+\usepackage{listings}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\rk}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Span}{span}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Ddet}{D_{\det,n}}
+\newcommand{\Dper}{D_{\mathrm{per},n}}
+\newcommand{\status}[1]{\textsf{#1}}
+
+\title{Reverse Hessian Obstructions, Catalecticant Blindness,\\and a Program Toward VP versus VNP}
+\author{Sasha Lempers\\\small Independent Researcher}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\det_n$ and $\per_n$ denote the determinant and permanent of a generic
+$n\times n$ matrix, and put
+\[
+ D_{\det,n}=\det\Hess(\det_n),\qquad
+ D_{\mathrm{per},n}=\det\Hess(\per_n).
+\]
+We construct a uniform geometric obstruction, based on the Hessian determinant,
+that separates the Hessian images of the determinant and the permanent under
+orbit closure: for every $n\geq3$,
+\[
+ D_{\det,n}\notin\overline{\GL_{n^2}(\C)\cdot D_{\mathrm{per},n}}.
+\]
+The proof combines an exact power identity for the determinant, an explicit
+one-parameter restriction for the permanent, and polystability.  In parallel,
+we certify that ordinary catalecticants do not see this separation for $n=3$:
+the complete rank vectors are
+\[
+(1,9,45,165,270,270,165,45,9,1)
+\quad\text{and}\quad
+(1,9,45,165,414,414,165,45,9,1).
+\]
+Two independently implemented engines reconstruct the forms and ranks, and an
+exact gcd certificate proves that $D_{\mathrm{per},3}$ is squarefree.
+
+We then address the relation to the padded permanent used in geometric
+complexity theory.  For a homogeneous degree-$d$ form $g$ in $N$ variables we
+prove
+\[
+\det\Hess(\ell^k g)
+=-\frac{k(k+d-1)}{d-1}\,
+ \ell^{k(N+1)-2}g\,\det\Hess(g)
+\]
+when the Hessian is taken only in the active variables $(\ell,x)$.  In the
+standard GCT ambient space, however, $\ell^{m-n}\per_n$ has unused variables
+whenever $m>n$, so its full $m^2\times m^2$ Hessian determinant is identically
+zero.  This yields a rigorous barrier: the ordinary full Hessian determinant
+alone cannot produce the standard padded-permanent lower bound.  No claim that
+VP differs from VNP is made.
+\end{abstract}
+
+\section{Introduction}
+
+Valiant's permanent versus determinant problem and the separation of VP from
+VNP remain central open problems in algebraic complexity
+\cite{Valiant1979,BLMW2011}.  Geometric Complexity Theory (GCT) translates a
+strengthened form of the problem into non-containment between orbit closures of
+the determinant and a padded permanent
+\cite{MulmuleySohoni2001,MulmuleySohoni2008}.  This translation makes
+representation theory, invariant theory and algebraic geometry available, but
+it also exposes exact barriers.  In particular, broad occurrence-obstruction
+programs fail in the relevant asymptotic regime
+\cite{IP2017,BIP2019}, while multiplicity obstructions can still be genuinely
+stronger in other natural geometric settings \cite{DIP2020}.
+
+This paper starts from a finite, unpadded Hessian-image separation and asks the
+question that matters for complexity: can it survive the padding and ambient
+embeddings that encode determinantal complexity?  The answer for the ordinary
+full Hessian determinant is negative.  The positive finite theorem is real and
+fully explicit, but the same construction collapses to zero on every genuinely
+padded permanent in the standard ambient space.
+
+The exact contribution is therefore two-sided.
+\begin{enumerate}[leftmargin=2em]
+\item We prove a uniform orbit-closure separation after applying the
+Hessian-determinant covariant in the equal-size unpadded model.
+\item We certify a complete ordinary-catalecticant no-go in size three and
+record finite negative evidence for three shifted-partial-derivative ranks.
+\item We prove an active-variable padding factorisation and a full-ambient
+padding-collapse theorem.
+\item We isolate what an anti-padding covariant would have to accomplish before
+a Hessian program could have consequences for VP versus VNP.
+\end{enumerate}
+
+The status labels used throughout are:
+\status{PROVED} for a complete paper proof;
+\status{CERTIFIED-COMP} for exact reproducible computation;
+\status{LITERATURE} for an external theorem used with a precise citation;
+\status{CONJECTURAL}, \status{FAILED}, and \status{UNKNOWN} otherwise.
+Finite checks never replace the general proofs.
+
+\section{Background on VP, VNP, and GCT}
+
+\subsection{Permanent, determinant and padding}
+
+For a generic $n\times n$ matrix $X=(x_{ij})$, write
+\[
+\det_n(X)=\sum_{\sigma\in S_n}\operatorname{sgn}(\sigma)
+ \prod_i x_{i,\sigma(i)},\qquad
+\per_n(X)=\sum_{\sigma\in S_n}\prod_i x_{i,\sigma(i)}.
+\]
+A determinantal representation of a polynomial $f$ of degree $n$ is an affine
+linear matrix $A(x)$ of size $m$ such that $f=\det A(x)$.  Determinantal
+complexity is the least such $m$; border determinantal complexity allows a
+limit of such representations.  The GCT homogenisation uses the degree-$m$
+form
+\[
+\ell^{m-n}\per_n\in\Sym^m(\C^{m^2})^*,
+\]
+where the $n^2$ permanent variables and a padding variable $\ell$ are embedded
+among $m^2$ ambient variables.  The corresponding determinant form is
+$\det_m\in\Sym^m(\C^{m^2})^*$.
+
+The equal-size comparison between $\det_n$ and $\per_n$ in $n^2$ variables is
+not the standard padded formulation.  Both forms are known to be polystable,
+and their stabilizers are classical; see \cite{BI2017}.  Kumar proves
+nonnormality phenomena for determinant and padded-permanent orbit closures
+\cite{Kumar2013}, and the boundary of the $3\times3$ determinant orbit is
+explicitly described in \cite{HuttenhainLairez2016}.  None of these facts may
+be replaced by an unsupported normality or openness assumption.
+
+\subsection{Logical map to VP versus VNP}
+
+The relevant implications must be separated by computational model.  The
+permanent family is VNP-complete under p-projections, so
+\[
+ \per\notin\mathrm{VP}\quad\Longleftrightarrow\quad
+ \mathrm{VP}\ne\mathrm{VNP}.
+\]
+Polynomial determinantal complexity instead characterises the weakly-skew
+class $\mathrm{VP}_{\mathrm{ws}}$ (equivalently, polynomial-size algebraic
+branching programs up to standard polynomial simulations).  Consequently, a
+super-polynomial lower bound for determinantal complexity of the permanent
+would prove
+$\mathrm{VP}_{\mathrm{ws}}\ne\mathrm{VNP}$, a major lower bound but not, by
+itself, the full separation $\mathrm{VP}\ne\mathrm{VNP}$; see
+\cite{BlaserIkenmeyer2025}.
+
+For the border model, the standard GCT implication has the following direction:
+\[
+ \ell^{m-n}\per_n\in\overline{\GL_{m^2}\cdot\det_m}
+ \quad\Longrightarrow\quad
+ C(\ell^{m-n}\per_n)
+ \in\overline{\GL\cdot C(\det_m)}                         \tag{2.1}
+\]
+for a regular equivariant covariant $C$ with the appropriate character twist.
+Thus the complexity-relevant target obstruction would be
+\[
+ C(\ell^{m-n}\per_n)\notin\overline{\GL\cdot C(\det_m)}. \tag{2.2}
+\]
+The theorem proved in this paper has the opposite orientation,
+$D_{\det,n}\notin\overline{\GL\cdot D_{\mathrm{per},n}}$, and is therefore
+not a GCT lower-bound certificate even before padding is introduced.  After
+padding, the full Hessian determinant has the stronger defect
+$C(\ell^{m-n}\per_n)=0$, while $0$ lies in the closure of every nonzero
+positive-degree homogeneous orbit.  The status map is therefore:
+\begin{center}
+\begin{tabular}{p{0.54\textwidth}p{0.28\textwidth}}
+\toprule
+Statement & Status\\\midrule
+super-polynomial unrestricted circuit lower bound for $\per$ $\Rightarrow$ $\mathrm{VP}\ne\mathrm{VNP}$ & known\\
+super-polynomial determinantal complexity of $\per$ $\Rightarrow$ $\mathrm{VP}_{\mathrm{ws}}\ne\mathrm{VNP}$ & known\\
+padded orbit-closure non-containment for all polynomial $m(n)$ $\Rightarrow$ border determinantal lower bound & known in the precise GCT model\\
+reverse unpadded Hessian-image non-containment $\Rightarrow$ padded permanent non-containment & false direction / missing\\
+ordinary full Hessian determinant $\Rightarrow$ padded lower bound & impossible by \cref{thm:collapse}\\
+anti-padding transverse covariant $\Rightarrow$ standard GCT lower bound & unknown\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The Reverse Hessian Obstruction}
+
+Let $W$ be an $M$-dimensional complex vector space and
+$f\in\Sym^dW^*$.  We use
+\[
+(g\cdot f)(x)=f(g^{-1}x),\qquad g\in\GL(W),
+\]
+and write $\mathcal D(f)=\det\Hess(f)$ in fixed linear coordinates.
+
+\begin{lemma}[Hessian covariance]\label{lem:covariance}
+For every $g\in\GL(W)$,
+\[
+\mathcal D(g\cdot f)=\det(g)^{-2}\,g\cdot\mathcal D(f).
+\]
+In particular, $\mathcal D$ is $\SL(W)$-equivariant.
+\end{lemma}
+\begin{proof}
+The chain rule gives
+$\Hess(g\cdot f)(x)=g^{-T}\Hess(f)(g^{-1}x)g^{-1}$.
+Taking determinants proves the claim.
+\end{proof}
+
+\subsection{Exact determinant identity}
+
+\begin{theorem}\label{thm:det-hessian}
+For every $n\ge2$,
+\[
+\det\Hess(\det_n)=
+(n-1)(-1)^{(n-1)(n+2)/2}\det_n^{\,n(n-2)}.
+\]
+In particular, $\det\Hess(\det_3)=-2\det_3^3$.
+\end{theorem}
+\begin{proof}
+For $X\in\GL_n$ and $U,V\in M_n$, Jacobi's formula gives
+\[
+d^2(\det)_X(U,V)=\det(X)\bigl(
+\tr(X^{-1}U)\tr(X^{-1}V)-\tr(X^{-1}UX^{-1}V)\bigr).
+\]
+At $I_n$ the Hessian bilinear form is
+$B(U,V)=\tr(U)\tr(V)-\tr(UV)$.  At general $X$, the Hessian is
+$\det(X)$ times the pullback of $B$ by left multiplication
+$L_{X^{-1}}$.  Since $\det(L_{X^{-1}})=\det(X)^{-n}$ and the Hessian
+has size $n^2$,
+\[
+\det\Hess(\det_n)(X)=\det(B)\det(X)^{n^2-2n}.
+\]
+The identity extends polynomially from $\GL_n$ to $M_n$.
+
+On the diagonal subspace, $B$ has matrix $J_n-I_n$ and determinant
+$(n-1)(-1)^{n-1}$.  For every unordered pair $i<j$, the span of
+$E_{ij},E_{ji}$ contributes the block
+$\left(\begin{smallmatrix}0&-1\\-1&0\end{smallmatrix}\right)$,
+with determinant $-1$.  Multiplying the $n(n-1)/2$ off-diagonal blocks gives
+\[
+\det(B)=(n-1)(-1)^{n-1+n(n-1)/2}
+=(n-1)(-1)^{(n-1)(n+2)/2}.
+\]
+\end{proof}
+The power shape is compatible with the general theory of relative invariants
+and Hessian determinants \cite{Fox2016}; the proof above fixes the exact scalar.
+
+\subsection{A permanent line restriction}
+
+Let $X(t)=J_n+(t-1)E_{11}$, $A=J_n-I_n$, and
+$C=0\oplus(J_{n-1}-I_{n-1})$.
+
+\begin{theorem}[Exact line restriction]\label{thm:per-line}
+For every $n\ge3$,
+\[
+\det\Hess(\per_n)(X(t))=
+\frac{((n-2)!)^{n^2}(n-1)^{2n}}{(n-2)^{(n-2)^2}}
+(t+n-3)^{(n-2)^2}.
+\]
+\end{theorem}
+\begin{proof}
+Index the Hessian by pairs $(i,j)$.  Multilinearity gives zero whenever two
+differentiated variables share a row or column.  Otherwise the entry is the
+permanent of the complementary $(n-2)\times(n-2)$ minor.  At $X(t)$ this is
+$(n-2)!$, except when neither row $1$ nor column $1$ is removed, where it is
+$(n-3)!(t+n-3)$.  Hence
+\[
+\Hess(\per_n)(X(t))=(n-2)!A\otimes A+(t-1)(n-3)!C\otimes C.
+\]
+Put $B=A^{-1}C$.  Since
+$A^{-1}=-I_n+\frac1{n-1}J_n$, the map $B$ is the identity on
+\[
+U_0=\{(0,u_2,\dots,u_n):u_2+\cdots+u_n=0\},
+\]
+of dimension $n-2$, and is nilpotent on
+$\langle e_1,e_2+\cdots+e_n\rangle$.  Its eigenvalues are therefore $1$ with
+multiplicity $n-2$ and $0$ with algebraic multiplicity $2$.  Factoring the
+Kronecker expression and setting $\alpha=(t-1)/(n-2)$ yields
+\begin{align*}
+\det\Hess(\per_n)(X(t))
+&=((n-2)!)^{n^2}\det(A\otimes A)\det(I+\alpha B\otimes B)\\
+&=((n-2)!)^{n^2}(n-1)^{2n}(1+\alpha)^{(n-2)^2},
+\end{align*}
+which is the stated formula.
+\end{proof}
+
+\begin{corollary}\label{cor:not-power}
+For $n\ge3$, $D_{\mathrm{per},n}$ is not a nonzero scalar multiple of an
+$n(n-2)$-th power of a degree-$n$ form.
+\end{corollary}
+\begin{proof}
+An $r$-th power has every nonzero line-restriction root with multiplicity
+divisible by $r=n(n-2)$.  The restriction in \cref{thm:per-line} has a root of
+multiplicity $(n-2)^2$, and
+$0<(n-2)^2<n(n-2)$.
+\end{proof}
+
+\subsection{Polystability and closure}
+
+We use the support-cone criterion of
+\cite[Proposition~2.8]{BI2017}.
+
+\begin{proposition}\label{prop:poly}
+For every $n\ge3$, $D_{\det,n}$ and $D_{\mathrm{per},n}$ are
+$\SL(M_n)$-polystable.
+\end{proposition}
+\begin{proof}
+Let $R$ be the row-column diagonal torus
+$E_{ij}\mapsto a_ib_jE_{ij}$ with
+$\prod_i a_i=\prod_j b_j=1$.  It lies in $\SL(M_n)$ and stabilizes both
+$\det_n$ and $\per_n$, hence both Hessian forms by \cref{lem:covariance}.
+Its weights on the one-dimensional spaces $\C E_{ij}$ are pairwise distinct,
+so its centralizer is diagonal.
+
+The group $S_n\times S_n$ acts transitively on the $n^2$ variables and
+preserves each Hessian support.  Both supports are nonempty by
+\cref{thm:det-hessian,thm:per-line}.  Each Hessian form has degree
+$q=n^2(n-2)$.  Averaging any support exponent under the transitive permutation
+group gives $(n-2)(1,\ldots,1)$; therefore the support cone contains the
+all-ones vector.  The cited criterion gives polystability.
+\end{proof}
+
+\begin{lemma}[Homogeneous GL closure lemma]\label{lem:glsl}
+Let $U$ be a homogeneous polynomial representation of $\GL_M$ whose center
+generates nonzero scalar multiplication.  If nonzero $u,v\in U$ are
+$\SL_M$-polystable and $u\in\overline{\GL_M\cdot v}$, then
+$u\in\GL_M\cdot v$.
+\end{lemma}
+\begin{proof}
+Write $\GL_M\cdot v=\C^*(\SL_M\cdot v)$ and choose
+$c_j\in\C^*$, $g_j\in\SL_M$ with $c_jg_jv\to u$.  Since $u$ is nonzero and
+polystable, an $\SL_M$-invariant homogeneous polynomial $P$ of positive degree
+satisfies $P(u)\ne0$.  Then
+$c_j^{\deg P}P(v)\to P(u)$, so $P(v)\ne0$ and, after taking a subsequence,
+$c_j\to c\ne0$.  Thus $g_jv\to c^{-1}u$.  The $\SL_M$ orbit of $v$ is closed,
+so $c^{-1}u\in\SL_M\cdot v$.
+\end{proof}
+
+\begin{theorem}[Uniform reverse-Hessian separation]\label{thm:reverse}
+For every $n\ge3$,
+\[
+D_{\det,n}\notin\overline{\GL(M_n)\cdot D_{\mathrm{per},n}}.
+\]
+\end{theorem}
+\begin{proof}
+By \cref{thm:det-hessian}, $D_{\det,n}$ is an $n(n-2)$-th power up to a
+nonzero scalar.  By \cref{cor:not-power}, $D_{\mathrm{per},n}$ is not.
+Thus they are not in the same $\GL(M_n)$ orbit.  If the displayed containment
+held, \cref{prop:poly,lem:glsl} would force orbit equivalence, a contradiction.
+\end{proof}
+
+\begin{warning}[Direction mismatch]
+\Cref{thm:reverse} concerns Hessian images in an equal-size unpadded model and
+has the reverse orientation from the complexity-relevant obstruction in
+\textup{(2.2)}.  It neither proves a non-containment for the original padded
+permanent nor gives a circuit, determinantal-complexity, or border-
+determinantal-complexity lower bound.
+\end{warning}
+
+\section{Reproducible Certification}
+
+The new certification chain does not trust historical JSON outputs.  It
+reconstructs all relevant polynomials from monomial data and separates
+mathematical certificates from machine-dependent runtime logs.
+
+\subsection{Two independent catalecticant engines}
+
+The primary engine builds $\det_3$, $\per_3$, their $9\times9$ Hessian
+determinants, and ordinary apolar catalecticant matrices.  It computes ranks for
+orders $0$ through $4$ exactly over $\Q$ using sparse domain matrices; orders
+$5$ through $9$ follow from the proved transpose/factorial duality.
+
+The clean-room engine imports no code from the primary engine.  It represents
+polynomials as exponent dictionaries, differentiates them directly,
+reconstructs both Hessian determinants, builds all ten matrices, and performs
+its own sparse Gaussian elimination modulo
+$1009$, $32003$, and $65521$.  The orchestration script rejects the run unless
+polynomial hashes, direct matrix hashes and every modular rank agree with the
+primary exact rank.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{c@{\qquad}r@{\qquad}r}
+\toprule
+$a$ & $\rk C_a(D_{\det,3})$ & $\rk C_a(D_{\mathrm{per},3})$\\
+\midrule
+0&1&1\\1&9&9\\2&45&45\\3&165&165\\4&270&414\\
+5&270&414\\6&165&165\\7&45&45\\8&9&9\\9&1&1\\
+\bottomrule
+\end{tabular}
+\caption{Exact ordinary catalecticant rank vectors.}
+\label{tab:ranks}
+\end{table}
+
+\subsection{Squarefreeness}
+
+\begin{lemma}[Derivative gcd criterion]\label{lem:squarefree}
+Let $K$ be a characteristic-zero field and $0\ne F\in K[x_1,\ldots,x_N]$.
+If $\gcd(\partial_1F,\ldots,\partial_NF)=1$, then $F$ is squarefree.
+\end{lemma}
+\begin{proof}
+If an irreducible polynomial $h$ occurred in $F$ with multiplicity at least
+$2$, writing $F=h^2q$ would show that $h$ divides every first derivative of
+$F$, contradicting the gcd hypothesis.
+\end{proof}
+
+A separate deterministic script reconstructs $D_{\mathrm{per},3}$ over
+$\mathbb Z$, computes all nine first partial derivatives, and obtains gcd $1$
+over $\Q$.  By \cref{lem:squarefree}, this certifies squarefreeness over $\Q$.
+Squarefreeness is preserved by the field extension $\Q\subset\C$, hence also
+holds over $\C$.  The integer content gcd of the partial derivatives is $2$;
+the modular data are sanity checks, not the proof.
+
+\subsection{Bit-for-bit reproducibility}
+
+Certificates contain no absolute paths, elapsed times, hostnames, or timestamps.
+Running
+\begin{lstlisting}[language=bash]
+python run_all.py
+python scripts/check_reproducibility.py
+\end{lstlisting}
+rebuilds the certificates in a fresh temporary directory and compares all eight
+certificate files byte for byte.  \path{certificates/SHA256SUMS.txt} hashes the
+mathematical outputs; runtime metadata is isolated under \path{runtime_logs/}.
+
+\section{Catalecticant Blindness}
+
+For a degree-nine form $F\in\Sym^9V^*$, the ordinary apolar catalecticant is
+\[
+C_a(F):\Sym^aV\longrightarrow\Sym^{9-a}V^*,\qquad
+\theta\longmapsto\theta\cdot F.
+\]
+It is equivariant, and its rank is upper semicontinuous.
+
+\begin{lemma}[Catalecticant duality]\label{lem:catduality}
+For every degree-$d$ form $F$ and every $0\le a\le d$,
+\[
+ \rk C_a(F)=\rk C_{d-a}(F).
+\]
+\end{lemma}
+\begin{proof}
+Use divided-power monomial bases in $\Sym^aV$ and $\Sym^{d-a}V$.
+The coefficient of a monomial indexed by $\beta$ in
+$C_a(F)(\partial^\alpha)$ is the coefficient of the degree-$d$ monomial
+indexed by $\alpha+\beta$ in $F$.  The same coefficient is the
+$(\alpha,\beta)$ entry of the transpose matrix for $C_{d-a}(F)$.  In ordinary
+monomial bases the two matrices differ only by invertible diagonal factorial
+scalings.  Their ranks are therefore equal.
+\end{proof}
+
+\begin{theorem}[Complete ordinary-catalecticant no-go]\label{thm:catblind}
+Every ordinary catalecticant rank condition that contains
+$\overline{\GL(V)\cdot D_{\mathrm{per},3}}$ also contains
+$D_{\det,3}$.
+\end{theorem}
+\begin{proof}
+For each $a$, the closed rank locus containing the permanent orbit closure has
+threshold at least $\rk C_a(D_{\mathrm{per},3})$.  The certified table gives
+\[
+\rk C_a(D_{\det,3})\le\rk C_a(D_{\mathrm{per},3})
+\quad(0\le a\le9).
+\]
+Thus $D_{\det,3}$ lies in every such locus and in every intersection of them.
+\end{proof}
+
+This theorem concerns rank conditions only.  It does not rule out non-rank
+equations in catalecticant entries, Young or Koszul flattenings, apolar
+syzygies, singular-locus invariants, or multiplicity obstructions.  Such
+constructions are central in the geometry of secant and complexity varieties
+\cite{LandsbergOttaviani2013,Guan2017}.
+
+There is also a distinct asymptotic limitation in the literature:
+Efremenko--Landsberg--Schenck--Weyman prove that shifted partial derivatives
+alone cannot separate the standard padded permanent from the determinant orbit
+closure in their stated parameter range \cite{ELSW2016}.  The finite tests below
+concern the two Hessian-image forms and neither reprove nor strengthen that
+result.
+
+Three exact shifted-partial tests were also run.  Their ranks are
+\[
+\begin{array}{c|cc}
+(k,\ell)&D_{\det,3}&D_{\mathrm{per},3}\\\hline
+(1,1)&65&77\\
+(2,1)&270&369\\
+(1,2)&270&369
+\end{array}
+\]
+and again have the wrong inequality for the desired reverse separation.  These
+are finite \status{CERTIFIED-COMP} failures, not a general theorem about shifted
+partial derivatives.
+
+\section{Relation to Padded Permanent Orbit Closures}
+
+\subsection{What covariance does and does not imply}
+
+Because $\mathcal D$ is a polynomial covariant up to a determinant character,
+an original orbit containment forces a target containment after the appropriate
+twist.  A target non-containment can therefore obstruct an original
+containment when both target values are meaningful.  No converse holds: target
+containment, equality, or vanishing need not reflect the original geometry.
+
+The standard padded permanent exhibits the worst possible loss: its full
+Hessian determinant is zero.
+
+\subsection{Exact active-variable padding formula}
+
+\begin{theorem}[One-padding-variable Hessian factorisation]\label{thm:paddingfactor}
+Let $g\in\C[x_1,\ldots,x_N]$ be homogeneous of degree $d>1$, let $k\ge1$, and
+put $F(\ell,x)=\ell^kg(x)$.  Then
+\[
+\det\Hess_{(\ell,x)}(F)
+=-\frac{k(k+d-1)}{d-1}\,
+\ell^{k(N+1)-2}g(x)\det\Hess_x(g).
+\]
+The identity holds as a polynomial even when $\Hess_x(g)$ is generically
+singular.
+\end{theorem}
+\begin{proof}
+Put $H=\Hess_x(g)$ and $u=\nabla g$.  The full Hessian has block form
+\[
+\begin{pmatrix}
+k(k-1)\ell^{k-2}g & k\ell^{k-1}u^T\\
+k\ell^{k-1}u & \ell^kH
+\end{pmatrix}.
+\]
+For a scalar $a$, a column $b$ and a square matrix $D$, the polynomial block
+identity
+\[
+\det\begin{pmatrix}a&b^T\\b&D\end{pmatrix}
+=a\det D-b^T\operatorname{adj}(D)b
+\]
+holds without any invertibility hypothesis.  Factoring the powers of $\ell$
+therefore gives
+\[
+\det\Hess(F)=\ell^{k(N+1)-2}
+\left(k(k-1)g\det H-k^2u^T\operatorname{adj}(H)u\right).
+\]
+Differentiating Euler's identity $x^Tu=dg$ gives $Hx=(d-1)u$.
+Multiplication by $\operatorname{adj}(H)$ yields
+\[
+\det(H)x=(d-1)\operatorname{adj}(H)u.
+\]
+Taking the scalar product with $u$ and using $u^Tx=dg$ gives the polynomial
+identity
+\[
+u^T\operatorname{adj}(H)u=\frac{d}{d-1}g\det H.
+\]
+Substitution now gives
+\[
+ k(k-1)-\frac{k^2d}{d-1}
+ =-\frac{k(k+d-1)}{d-1},
+\]
+which proves the formula everywhere, including when $H$ is generically
+singular.
+\end{proof}
+
+This formula recovers a canonical trace of $g\det\Hess(g)$ only when the padding
+line and the active quotient are already marked.  It is not, by itself, a
+regular $\GL$-covariant on unmarked forms.
+
+\subsection{Full-ambient collapse}
+
+\begin{lemma}[Unused-variable collapse]\label{lem:unused}
+If a polynomial in $M$ ambient variables is independent of one variable, its
+full $M\times M$ Hessian determinant is zero.
+\end{lemma}
+\begin{proof}
+The row and column indexed by that variable are zero.
+\end{proof}
+
+\begin{theorem}[Padding-collapse barrier]\label{thm:collapse}
+Let $m>n$ and regard
+$F_{n,m}=\ell^{m-n}\per_n$ as a degree-$m$ form in $m^2$ variables in the
+standard padded GCT model.  Then
+\[
+\det\Hess_{\C^{m^2}}(F_{n,m})=0.
+\]
+Consequently, the ordinary full Hessian-determinant covariant alone cannot
+separate the padded permanent orbit closure from the determinant orbit closure
+or imply an asymptotic determinantal-complexity lower bound.
+\end{theorem}
+\begin{proof}
+The form $F_{n,m}$ depends on at most $n^2+1$ variables: the $n^2$ permanent
+variables and $\ell$.  Since
+\[
+m^2-(n^2+1)=(m-n)(m+n)-1>0
+\]
+for $m>n$, there is an unused ambient variable.  The determinant vanishes by
+\cref{lem:unused}.
+
+The image of the padded permanent is therefore the zero form.  For any nonzero
+positive-degree form $H$, the center of $\GL_{m^2}$ scales $H$, and zero belongs
+to $\overline{\GL_{m^2}\cdot H}$.  Thus the zero target cannot exclude the
+padded permanent from any determinant target orbit closure.  A lower bound
+would need a different covariant or a canonical active-space refinement.
+\end{proof}
+
+\section{Beyond Ordinary Catalecticants}
+
+The barrier does not rule out differential covariants that retain all Hessian
+minors, the polar map, Fitting ideals of the derivative module, or a marked
+transverse Hessian.  It only rules out the scalar determinant of the full
+ambient Hessian.
+
+A viable anti-padding construction must satisfy all of the following:
+\begin{enumerate}[leftmargin=2em]
+\item be regular and equivariant on a space stable under the relevant
+$\GL_{m^2}$ action, or explicitly work in a restricted marked model;
+\item survive unused ambient variables without making a noncanonical choice;
+\item retain a permanent-side invariant that scales uniformly with $n,m$;
+\item constrain determinant images by a theorem that is stable under orbit
+closure;
+\item evade the known occurrence-obstruction limitations
+\cite{IP2017,BIP2019}; and
+\item be connected by a proved reduction to a standard complexity model.
+\end{enumerate}
+
+A first concrete object is the incidence variety of pairs $(F,U)$ with
+$F\in\Sym^mU^*$ and $U\subset\C^{m^2}$ an active subspace.  On a fixed stratum,
+the maximal nonzero Hessian minors are polynomial, and
+\cref{thm:paddingfactor} identifies their marked padding behaviour.  The
+unresolved issue is descent: the minimal active subspace can jump in a
+ degeneration, and choosing it need not be regular.
+
+\section{A Candidate Asymptotic Obstruction / Barrier Theorem}
+
+The publishable formal result produced by the upgrade is the negative theorem
+\cref{thm:collapse}.  It is more useful than an unsupported positive claim
+because it removes the ordinary full Hessian determinant from the list of
+possible direct GCT covariants for the padded model.
+
+\begin{conjecture}[Canonical active-space extraction]\label{conj:active}
+There exists a finite regular equivariant incidence construction whose value on
+padded-permanent orbits determines the active subspace and the transverse
+Hessian data of the induced active form.
+\end{conjecture}
+This conjecture is not equivalent to VP versus VNP.  Even if proved, one would
+still need an asymptotic determinant-versus-permanent separation in its target
+and a reduction back to the standard unmarked model.
+
+\begin{conjecture}[Marked transverse-Hessian multiplicity gap]
+In a suitable parabolic model retaining the padding line, an explicit family of
+highest weights has a multiplicity gap between transverse-Hessian images of the
+padded permanent and determinant families.
+\end{conjecture}
+No partition is presently certified.  The conjecture is motivated only by the
+fact that multiplicity obstructions can be stronger than occurrence
+obstructions in other natural varieties \cite{DIP2020}.  Its plausibility is
+low until a size-$3$ decomposition is computed exactly.
+
+\section{Consequences and Limitations}
+
+\subsection{Exact consequences}
+
+\begin{itemize}[leftmargin=2em]
+\item The reverse Hessian images are separated uniformly in the unpadded
+same-size model; this is explicitly the opposite orientation from the
+complexity-relevant padded obstruction.
+\item All ordinary catalecticant rank tests are blind to that separation for
+$n=3$.
+\item The standard padded permanent is annihilated by the full ordinary Hessian
+determinant for every genuine padding $m>n$.
+\item A marked active-variable Hessian retains the factor
+$g\det\Hess(g)$ with an explicit scalar and padding exponent.
+\end{itemize}
+
+\subsection{What is not proved}
+
+There is no proof of VP versus VNP, no separation of
+$\mathrm{VP}_{\mathrm{ws}}$ from VNP, no unrestricted arithmetic-circuit lower
+bound, no super-polynomial determinantal- or border-determinantal-complexity
+lower bound, no padded orbit
+non-containment obtained from the full Hessian determinant, no Young/Koszul
+separation, and no coordinate-ring multiplicity gap.  The historical degree-six
+C0 sweep is archived but is not promoted into the claims of this paper.
+
+Recent unconditional lower bounds for symmetric arithmetic circuits show that
+natural restricted models can be separated: the permanent has exponential
+lower bounds in the symmetric model of \cite{DawarWilsenach2025}, and the
+homomorphism-polynomial characterisations of
+\cite{DPS2026,DwivediPagoSeppelt2026} develop a broader symmetric algebraic
+complexity theory.  These results do not imply unrestricted VP versus VNP, and
+the present Hessian barrier should be compared to them only after a precise
+restricted model is defined.  Algebraic-natural-proofs barriers provide a
+second warning against promoting an efficiently checkable finite property to a
+general lower-bound method without testing its largeness and usefulness
+\cite{GKSS2017}.
+
+\appendix
+\section{Exact Scripts and Certificates}
+
+The active files are:
+\begin{longtable}{p{0.36\textwidth}p{0.56\textwidth}}
+\toprule
+File & Role\\\midrule
+\path{scripts/certify_catalecticant_ranks.py} & exact rational primary engine\\
+\path{scripts/independent_catalecticant_check.py} & independent clean-room modular engine\\
+\path{scripts/certify_squarefree_Dper3.py} & exact gcd certificate\\
+\path{scripts/verify_uniform_formulas.py} & finite implementation checks\\
+\path{scripts/transverse_hessian_experiments.py} & exact padding-factor checks\\
+\path{scripts/exploratory_flattenings.py} & finite shifted-partial ranks\\
+\path{scripts/check_reproducibility.py} & isolated byte-for-byte rebuild\\
+\path{certificates/SHA256SUMS.txt} & deterministic output manifest\\
+\bottomrule
+\end{longtable}
+
+The exact certificate hashes are recorded in
+\path{research_notes/RESULT_REPRODUCTION_TABLE.md}.  The complete 202-file source
+archive inventory is in \path{research_notes/AUDIT_ARCHIVE.md}.
+
+\section{Literature Audit}
+
+The literature review was performed before assigning any novelty status.
+The distinction between VP, weakly-skew VP, determinantal complexity and the
+padded border model follows \cite{BlaserIkenmeyer2025}.  GCT
+I/II establish the orbit-closure program \cite{MulmuleySohoni2001,MulmuleySohoni2008};
+\cite{IP2017,BIP2019} rule out broad occurrence-obstruction strategies,
+while \cite{DIP2020} shows that multiplicity obstructions can be strictly
+stronger in natural Chow/secant settings; \cite{BI2017} supplies the polystability/support criterion and fundamental
+invariant context; \cite{Kumar2013} and \cite{HuttenhainLairez2016} constrain
+claims about determinant and padded-permanent orbit closures; and
+\cite{KadishLandsberg2014} studies padded polynomial varieties directly.
+The shifted-partial limitation \cite{ELSW2016}, the algebraic-natural-proofs
+program \cite{GKSS2017}, and the recent symmetric-circuit results
+\cite{DawarWilsenach2025,DPS2026,DwivediPagoSeppelt2026} delimit the relevant
+barrier and restricted-model landscape.
+
+No searched source was found to state the exact combination of
+\cref{thm:per-line,thm:reverse,thm:catblind,thm:collapse}.  Search failure is
+not proof of novelty.  The absolute novelty status is therefore
+\status{UNKNOWN} pending specialist review and peer review.  Full titles, years,
+DOIs and URLs are listed in \path{research_notes/literature_review.md}.
+
+\begin{thebibliography}{99}
+\bibitem{Valiant1979} L.~G. Valiant, \emph{Completeness Classes in Algebra}, STOC 1979, 249--261. DOI: \href{https://doi.org/10.1145/800135.804419}{10.1145/800135.804419}.
+\bibitem{MulmuleySohoni2001} K.~D. Mulmuley and M. Sohoni, \emph{Geometric Complexity Theory I: An Approach to the P vs. NP and Related Problems}, SIAM J. Comput. 31 (2001), 496--526. DOI: \href{https://doi.org/10.1137/S009753970038715X}{10.1137/S009753970038715X}.
+\bibitem{MulmuleySohoni2008} K.~D. Mulmuley and M. Sohoni, \emph{Geometric Complexity Theory II: Towards Explicit Obstructions for Embeddings among Class Varieties}, SIAM J. Comput. 38 (2008), 1175--1206. DOI: \href{https://doi.org/10.1137/080718115}{10.1137/080718115}.
+\bibitem{BLMW2011} P. B{\"u}rgisser, J.~M. Landsberg, L. Manivel and J. Weyman, \emph{An Overview of Mathematical Issues Arising in the Geometric Complexity Theory Approach to VP versus VNP}, SIAM J. Comput. 40 (2011), 1179--1209. DOI: \href{https://doi.org/10.1137/090765328}{10.1137/090765328}.
+\bibitem{BlaserIkenmeyer2025} M. Bl{\"a}ser and C. Ikenmeyer, \emph{Introduction to Geometric Complexity Theory}, Theory of Computing Graduate Surveys 10 (2025), 1--166. \url{https://theoryofcomputing.org/articles/gs010/}.
+\bibitem{GesmundoIkenmeyerPanova2017} F. Gesmundo, C. Ikenmeyer and G. Panova, \emph{Geometric Complexity Theory and Matrix Powering}, Differential Geom. Appl. 55 (2017), 106--127. DOI: \href{https://doi.org/10.1016/j.difgeo.2017.07.001}{10.1016/j.difgeo.2017.07.001}.
+\bibitem{IP2017} C. Ikenmeyer and G. Panova, \emph{Rectangular Kronecker Coefficients and Plethysms in Geometric Complexity Theory}, Adv. Math. 319 (2017), 40--66. DOI: \href{https://doi.org/10.1016/j.aim.2017.08.024}{10.1016/j.aim.2017.08.024}.
+\bibitem{BIP2019} P. B{\"u}rgisser, C. Ikenmeyer and G. Panova, \emph{No Occurrence Obstructions in Geometric Complexity Theory}, J. Amer. Math. Soc. 32 (2019), 163--193. DOI: \href{https://doi.org/10.1090/jams/908}{10.1090/jams/908}.
+\bibitem{DIP2020} J. D{\"o}rfler, C. Ikenmeyer and G. Panova, \emph{On Geometric Complexity Theory: Multiplicity Obstructions Are Stronger than Occurrence Obstructions}, SIAM J. Appl. Algebra Geom. 4(2) (2020), 354--376. DOI: \href{https://doi.org/10.1137/19M1287638}{10.1137/19M1287638}.
+\bibitem{BI2017} P. B{\"u}rgisser and C. Ikenmeyer, \emph{Fundamental Invariants of Orbit Closures}, J. Algebra 477 (2017), 390--434. DOI: \href{https://doi.org/10.1016/j.jalgebra.2016.12.035}{10.1016/j.jalgebra.2016.12.035}.
+\bibitem{Kumar2013} S. Kumar, \emph{Geometry of Orbits of Permanents and Determinants}, Comment. Math. Helv. 88 (2013), 759--788. DOI: \href{https://doi.org/10.4171/CMH/302}{10.4171/CMH/302}.
+\bibitem{HuttenhainLairez2016} J. H{\"u}ttenhain and P. Lairez, \emph{The Boundary of the Orbit of the 3-by-3 Determinant Polynomial}, C. R. Math. 354 (2016), 931--935. DOI: \href{https://doi.org/10.1016/j.crma.2016.07.002}{10.1016/j.crma.2016.07.002}.
+\bibitem{KadishLandsberg2014} H. Kadish and J.~M. Landsberg, \emph{Padded Polynomials, Their Cousins, and Geometric Complexity Theory}, Comm. Algebra 42 (2014), 2171--2180. DOI: \href{https://doi.org/10.1080/00927872.2012.758268}{10.1080/00927872.2012.758268}.
+\bibitem{Fox2016} D.~J.~F. Fox, \emph{Functions Dividing Their Hessian Determinants and Affine Spheres}, Asian J. Math. 20 (2016), 503--530. DOI: \href{https://doi.org/10.4310/AJM.2016.v20.n3.a5}{10.4310/AJM.2016.v20.n3.a5}.
+\bibitem{LandsbergOttaviani2013} J.~M. Landsberg and G. Ottaviani, \emph{Equations for Secant Varieties of Veronese and Other Varieties}, Ann. Mat. Pura Appl. 192 (2013), 569--606. DOI: \href{https://doi.org/10.1007/s10231-011-0238-6}{10.1007/s10231-011-0238-6}.
+\bibitem{Guan2017} Y.~Q. Guan, \emph{Flattenings and Koszul Young Flattenings Arising in Complexity Theory}, Comm. Algebra 45 (2017), 4002--4017. DOI: \href{https://doi.org/10.1080/00927872.2016.1253706}{10.1080/00927872.2016.1253706}.
+\bibitem{ELSW2016} K. Efremenko, J. M. Landsberg, H. Schenck and J. Weyman, \emph{The Method of Shifted Partial Derivatives Cannot Separate the Permanent from the Determinant}, arXiv:1609.02103 (2016), DOI: \href{https://doi.org/10.48550/arXiv.1609.02103}{10.48550/arXiv.1609.02103}.
+\bibitem{GKSS2017} J.~A. Grochow, M. Kumar, M. Saks and S. Saraf, \emph{Towards an Algebraic Natural Proofs Barrier via Polynomial Identity Testing}, arXiv:1701.01717 (2017), \url{https://arxiv.org/abs/1701.01717}.
+\bibitem{DawarWilsenach2025} A. Dawar and G. Wilsenach, \emph{Symmetric Arithmetic Circuits}, Theory of Computing 21(14) (2025). DOI: \href{https://doi.org/10.4086/toc.2025.v021a014}{10.4086/toc.2025.v021a014}.
+\bibitem{DPS2026} A. Dawar, B. Pago and T. Seppelt, \emph{Symmetric Algebraic Circuits and Homomorphism Polynomials}, ITCS 2026, LIPIcs 362, pp. 46:1--46:15. DOI: \href{https://doi.org/10.4230/LIPIcs.ITCS.2026.46}{10.4230/LIPIcs.ITCS.2026.46}.
+\bibitem{DwivediPagoSeppelt2026} P. Dwivedi, B. Pago and T. Seppelt, \emph{Lower Bounds in Algebraic Complexity via Symmetry and Homomorphism Polynomials}, arXiv:2601.09343 (2026), \url{https://arxiv.org/abs/2601.09343}.
+\end{thebibliography}
+\end{document}

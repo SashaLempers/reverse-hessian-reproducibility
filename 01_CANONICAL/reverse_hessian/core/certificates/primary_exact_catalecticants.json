@@ -1,0 +1,261 @@
+{
+  "basis_order": "weak compositions; first coordinate increasing recursively",
+  "engine": "SymPy 1.14 DomainMatrix over ZZ/QQ",
+  "identity": "det Hess(det_3) = -2 det_3^3",
+  "nonclaims": [
+    "The rank inequalities do not prove orbit-closure membership.",
+    "No Young, Koszul, or representation-multiplicity obstruction is certified here."
+  ],
+  "polynomial_monomial_counts": {
+    "Ddet": 54,
+    "Dper": 55
+  },
+  "polynomial_sha256": {
+    "Ddet": "b5cbf2f3af5e3c5c744b83916042bb4334ec05f643c77528bd5b9374c4169121",
+    "Dper": "d49eb99c92b98dbc46be82d7ed22db6fada2423c437bfdd6eaeced0de2af4494",
+    "det3": "32ac7f65cd15ca25f4bffdca0a1302b16cdcb2b88782bfa28d01b69ad65e74f3",
+    "per3": "2dd8fd4018c49a94f1e0be6a78a06e84cb5376e8b505c7d5d1dc4a62af59b0fa"
+  },
+  "rank_vectors": {
+    "Ddet": [
+      1,
+      9,
+      45,
+      165,
+      270,
+      270,
+      165,
+      45,
+      9,
+      1
+    ],
+    "Dper": [
+      1,
+      9,
+      45,
+      165,
+      414,
+      414,
+      165,
+      45,
+      9,
+      1
+    ]
+  },
+  "rows": [
+    {
+      "matrix_sha256": {
+        "Ddet": "98122df64e2ecaf25803db9acded28986885bf9e81f43283a958bb5b1ed99afe",
+        "Dper": "f8784ff84368a8f6bf00ba49b5e060ab0bb9417a5375d0515a0324dfece35417"
+      },
+      "method": "direct exact DomainMatrix rank over Q",
+      "nnz": {
+        "Ddet": 54,
+        "Dper": 55
+      },
+      "order": 0,
+      "ranks_Q": {
+        "Ddet": 1,
+        "Dper": 1
+      },
+      "shape": [
+        1,
+        24310
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "341b7ec0b6817aed438756b431099eb4c22a52dccbf76efe50d4d1e7c034419e",
+        "Dper": "d3ee9ed894c34179cdde7b5c85c0b935b39a589e0780e50766bf57c95124d6cb"
+      },
+      "method": "direct exact DomainMatrix rank over Q",
+      "nnz": {
+        "Ddet": 306,
+        "Dper": 315
+      },
+      "order": 1,
+      "ranks_Q": {
+        "Ddet": 9,
+        "Dper": 9
+      },
+      "shape": [
+        9,
+        12870
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "ba6c36fd14fcccdb90ff93a55895cff8a5c366c91d9afe58da52b1941ad7f1fe",
+        "Dper": "ee742932de912420679e51a6bbab022bb320df2e2deebdcb2673828a58c79200"
+      },
+      "method": "direct exact DomainMatrix rank over Q",
+      "nnz": {
+        "Ddet": 900,
+        "Dper": 936
+      },
+      "order": 2,
+      "ranks_Q": {
+        "Ddet": 45,
+        "Dper": 45
+      },
+      "shape": [
+        45,
+        6435
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "240d6814b50ebc6cba5793834c36660222c22f277eba48309e56101883016840",
+        "Dper": "5a89e07397e6a6d7ce75ff957e80b05b8b3ba9a55e56ecb8bf5302983f5e9b8a"
+      },
+      "method": "direct exact DomainMatrix rank over Q",
+      "nnz": {
+        "Ddet": 1740,
+        "Dper": 1824
+      },
+      "order": 3,
+      "ranks_Q": {
+        "Ddet": 165,
+        "Dper": 165
+      },
+      "shape": [
+        165,
+        3003
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "857c7f7ec853ac732df457613da9e721aaf0765a0f3ba010b9aefad7219af17f",
+        "Dper": "5182f73fab45a5206ef49d95315bbf5b18db7b185d5b538387373d415bc6ea17"
+      },
+      "method": "direct exact DomainMatrix rank over Q",
+      "nnz": {
+        "Ddet": 2376,
+        "Dper": 2502
+      },
+      "order": 4,
+      "ranks_Q": {
+        "Ddet": 270,
+        "Dper": 414
+      },
+      "shape": [
+        495,
+        1287
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "transpose-factorial-dual-of:857c7f7ec853ac732df457613da9e721aaf0765a0f3ba010b9aefad7219af17f",
+        "Dper": "transpose-factorial-dual-of:5182f73fab45a5206ef49d95315bbf5b18db7b185d5b538387373d415bc6ea17"
+      },
+      "method": "proved catalecticant duality from order 4",
+      "nnz": {
+        "Ddet": 2376,
+        "Dper": 2502
+      },
+      "order": 5,
+      "ranks_Q": {
+        "Ddet": 270,
+        "Dper": 414
+      },
+      "shape": [
+        1287,
+        495
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "transpose-factorial-dual-of:240d6814b50ebc6cba5793834c36660222c22f277eba48309e56101883016840",
+        "Dper": "transpose-factorial-dual-of:5a89e07397e6a6d7ce75ff957e80b05b8b3ba9a55e56ecb8bf5302983f5e9b8a"
+      },
+      "method": "proved catalecticant duality from order 3",
+      "nnz": {
+        "Ddet": 1740,
+        "Dper": 1824
+      },
+      "order": 6,
+      "ranks_Q": {
+        "Ddet": 165,
+        "Dper": 165
+      },
+      "shape": [
+        3003,
+        165
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "transpose-factorial-dual-of:ba6c36fd14fcccdb90ff93a55895cff8a5c366c91d9afe58da52b1941ad7f1fe",
+        "Dper": "transpose-factorial-dual-of:ee742932de912420679e51a6bbab022bb320df2e2deebdcb2673828a58c79200"
+      },
+      "method": "proved catalecticant duality from order 2",
+      "nnz": {
+        "Ddet": 900,
+        "Dper": 936
+      },
+      "order": 7,
+      "ranks_Q": {
+        "Ddet": 45,
+        "Dper": 45
+      },
+      "shape": [
+        6435,
+        45
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "transpose-factorial-dual-of:341b7ec0b6817aed438756b431099eb4c22a52dccbf76efe50d4d1e7c034419e",
+        "Dper": "transpose-factorial-dual-of:d3ee9ed894c34179cdde7b5c85c0b935b39a589e0780e50766bf57c95124d6cb"
+      },
+      "method": "proved catalecticant duality from order 1",
+      "nnz": {
+        "Ddet": 306,
+        "Dper": 315
+      },
+      "order": 8,
+      "ranks_Q": {
+        "Ddet": 9,
+        "Dper": 9
+      },
+      "shape": [
+        12870,
+        9
+      ]
+    },
+    {
+      "matrix_sha256": {
+        "Ddet": "transpose-factorial-dual-of:98122df64e2ecaf25803db9acded28986885bf9e81f43283a958bb5b1ed99afe",
+        "Dper": "transpose-factorial-dual-of:f8784ff84368a8f6bf00ba49b5e060ab0bb9417a5375d0515a0324dfece35417"
+      },
+      "method": "proved catalecticant duality from order 0",
+      "nnz": {
+        "Ddet": 54,
+        "Dper": 55
+      },
+      "order": 9,
+      "ranks_Q": {
+        "Ddet": 1,
+        "Dper": 1
+      },
+      "shape": [
+        24310,
+        1
+      ]
+    }
+  ],
+  "schema": "reverse-hessian.primary-exact-catalecticants.v3",
+  "script_sha256": "d038e0af7ae9e662e7f5d451394bbc8dbb3975452902bb79239ed4f769b42c48",
+  "status": "CERTIFIED-COMP (exact reproducible computation; not a proof-assistant certificate)",
+  "variable_order": [
+    "x11",
+    "x12",
+    "x13",
+    "x21",
+    "x22",
+    "x23",
+    "x31",
+    "x32",
+    "x33"
+  ]
+}

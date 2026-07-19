@@ -1,0 +1,110 @@
+
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=2.25cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs,longtable,tabularx,enumitem}
+\usepackage[hidelinks]{hyperref}
+\definecolor{proved}{HTML}{006100}
+\definecolor{computed}{HTML}{1F4E78}
+\definecolor{known}{HTML}{7F6000}
+\definecolor{negative}{HTML}{9C0006}
+\definecolor{open}{HTML}{7030A0}
+\newcommand{\proved}{\textcolor{proved}{\textbf{[PROUVÉ DANS LA SOURCE]}}}
+\newcommand{\computed}{\textcolor{computed}{\textbf{[CALCULÉ / CERTIFIÉ]}}}
+\newcommand{\known}{\textcolor{known}{\textbf{[CONNU / À ATTRIBUER]}}}
+\newcommand{\negative}{\textcolor{negative}{\textbf{[RÉSULTAT NÉGATIF]}}}
+\newcommand{\openstatus}{\textcolor{open}{\textbf{[OUVERT / EXPLORATOIRE]}}}
+\title{NvsNVP / Reverse-Hessian\\Résultats, certificats reproductibles, résultats négatifs et limites actuelles}
+\author{Sasha Lempers}
+\date{Release corrective v2.1.0 --- 19 juillet 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Ce document organise le statut du programme Reverse-Hessian et de ses extensions calculatoires. Il relie deux manuscrits autonomes, cinq modules scientifiques, vingt-sept claims actifs, leurs certificats et leurs limitations. Il ne revendique ni une preuve de $VP\neq VNP$, ni une borne super-polynomiale de complexité déterminantale. La reproductibilité décrite ici vérifie des procédures, des fichiers et des calculs finis; elle ne remplace ni la revue experte des preuves, ni l'audit bibliographique de nouveauté.
+\end{abstract}
+
+\section{Convention de statut et non-claims}
+\begin{itemize}[leftmargin=*]
+  \item \proved{} : le paquet contient une démonstration textuelle; son contrôle mathématique indépendant reste nécessaire.
+  \item \computed{} : un calcul exact ou modulaire est relié à un script et à un certificat.
+  \item \known{} : l'énoncé est connu, reconstruit ou demande une attribution bibliographique précise.
+  \item \negative{} : une famille d'invariants testée ne produit pas la séparation recherchée dans le régime indiqué.
+  \item \openstatus{} : proposition, programme ou nouveauté non établie.
+\end{itemize}
+
+Les non-claims obligatoires sont : aucune preuve de $VP\neq VNP$; aucune borne super-polynomiale; aucune assimilation d'un test fini à une preuve générale; aucune assimilation d'un rang modulaire à une égalité sur $\mathbb{Q}$ sans certificat rationnel; aucune nouveauté déduite de la seule reproductibilité.
+
+\section{Architecture scientifique}
+Le papier \emph{A Uniform Line Formula and Hessian Orbit Incomparability} traite le coeur égal-taille. Le papier \emph{Reverse-Hessian VP/VNP Upgrade} traite le comportement sous padding et formule une barrière pour le déterminant de la Hessienne ordinaire. Ils restent autonomes parce qu'ils répondent à des questions différentes et portent des non-claims différents.
+
+\section{Coeur égal-taille}
+\proved{} Le claim \texttt{CORE-THM-001} renvoie à l'argument d'incomparabilité des clôtures d'orbites de $D(\det_n)$ et $D(\mathrm{per}_n)$, avec $D(f)=\det H_f$, pour le régime exact défini dans le manuscrit. La nouveauté n'est pas auditée par la présente release.
+
+\computed{} Pour $n=3$, le certificat primaire donne les suites de rangs catalectiques
+\[
+(1,9,45,165,270,270,165,45,9,1)
+\]
+pour $D(\det_3)$ et
+\[
+(1,9,45,165,414,414,165,45,9,1)
+\]
+pour $D(\mathrm{per}_3)$. Ces valeurs sont régénérées et comparées byte-for-byte par le module core.
+
+\section{Padding et barrière de la Hessienne ordinaire}
+\negative{} L'extension VP/VNP explique pourquoi le déterminant de la Hessienne ordinaire se comporte mal sous le padding standard : l'invariant peut s'effondrer et ne fournit pas, à lui seul, une obstruction VP/VNP. Ce résultat de barrière est une conclusion scientifique positive sur la limite de la méthode, non une séparation de classes.
+
+\section{Compound Hessian, Schur et Fitting}
+\computed{} Le module compound vérifie des rangs catalectiques, des dimensions d'idéaux gradués, des noyaux avant minimalisation, des rangs de flattenings de Young et une borne modulaire pour $I_3$. Les certificats distinguent les égalités exactes, les bornes inférieures modulaires et les calculs non minimalisés.
+
+\negative{} Dans les familles calculées, aucun test ne produit le saut de rang recherché en faveur de la permanente paddée; les valeurs permanentes sont plus petites dans les comparaisons enregistrées. La conclusion est strictement limitée aux familles et degrés testés.
+
+\section{Renversement de rang paddé}
+\computed{} Le module fournit un témoin exact $X_*$ avec $\mathrm{per}_3(X_*)=0$ et $\det H_{\mathrm{per}_3}(X_*)=-128$, les rangs de la Hessienne de $\det_4$ sur les strates de rang, et un certificat quotient--Fitting d'ordre neuf. Il conclut une non-inclusion pour le cas fixe documenté, sans revendiquer une conséquence asymptotique générale.
+
+\section{Reconstruction asymptotique quotient--Fitting}
+\proved{} Les sources donnent la borne de rang de la Hessienne sur $\det_n=0$, les formules le long de lignes et un critère de non-annulation pour le covariant d'ordre $2n+1$.
+
+\known{} La borne $\lceil m^2/2\rceil$ de complexité déterminantale obtenue par cette reconstruction est connue dans la littérature. La release documente une reconstruction et son domaine d'efficacité, pas une nouvelle borne super-polynomiale.
+
+\section{Programme jet-conormal}
+\proved{} La première partie établit un rang $n^2$ pour un flattening de jet du déterminant dans le cadre énoncé.
+
+\computed{} Des rangs fixes, des syzygies jacobiennes et des bornes modulaires conormales sont enregistrés par certificats.
+
+\openstatus{} Le passage aux algèbres de Rees et au programme conormal supérieur reste exploratoire. Les rangs modulaires sont des bornes inférieures et ne constituent pas une séparation d'adhérences d'orbites.
+
+\section{Reproductibilité}
+Le profil \texttt{quick} vérifie le manifeste, la sécurité, les formats, les claims et les cinq modules. Le profil \texttt{full} ajoute les régénérations fraîches et les PDF déterministes. Le profil \texttt{heavy} tente les contrôles Sage lorsqu'ils sont disponibles. Toute dépendance absente reste explicitement marquée \texttt{BLOCKED\_NOT\_EXECUTED}.
+
+\section{Limitations et questions ouvertes}
+\begin{enumerate}[leftmargin=*]
+  \item validation experte indépendante des démonstrations textuelles;
+  \item audit bibliographique de la nouveauté des claims signalés;
+  \item passage de cas fixes à des familles asymptotiques;
+  \item remplacement des bornes modulaires par des certificats rationnels lorsque nécessaire;
+  \item formalisation éventuelle dans un assistant de preuve;
+  \item identification d'invariants stables sous padding capables de dépasser les barrières négatives observées.
+\end{enumerate}
+
+\section{Matrice des vingt-sept claims actifs}
+\small
+\input{claim_matrix.tex}
+\normalsize
+
+\section{Provenance et citation}
+La source canonique est le tag \texttt{v2.1.0-corrective}. Le manifeste actif se trouve dans \texttt{07\_MANIFEST}. Les archives forensiques, l'audit initial et les anciens registres mixtes sont des assets de release avec SHA-256. Citer le manuscrit concerné, le module exact, le tag et, lorsqu'il existe, le DOI d'archive.
+
+\begin{thebibliography}{9}
+\bibitem{Valiant1979} L. G. Valiant, \emph{Completeness classes in algebra}, STOC, 1979.
+\bibitem{BLMW2011} P. Bürgisser, J. M. Landsberg, L. Manivel, J. Weyman, \emph{An overview of mathematical issues arising in the Geometric Complexity Theory approach to VP vs. VNP}, SIAM J. Comput., 2011.
+\bibitem{BIP2019} P. Bürgisser, C. Ikenmeyer, G. Panova, \emph{No occurrence obstructions in Geometric Complexity Theory}, JAMS, 2019.
+\bibitem{Kumar2013} S. Kumar, \emph{Geometry of orbits of permanents and determinants}, Comment. Math. Helv., 2013.
+\bibitem{Landsberg2017} J. M. Landsberg, \emph{Geometry and Complexity Theory}, Cambridge University Press, 2017.
+\end{thebibliography}
+\end{document}

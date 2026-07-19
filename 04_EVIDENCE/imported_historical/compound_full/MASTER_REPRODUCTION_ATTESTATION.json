@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "files": [
+    {
+      "path": "certificates/compound_hessian_r2_three_primes.json",
+      "size": 6802,
+      "sha256": "0696d22cc2dd3c3181740b58fdf5df87ea328f02f349289d696e38ed104c9aa1"
+    },
+    {
+      "path": "certificates/compound_hessian_r3_per_s0.json",
+      "size": 421,
+      "sha256": "4f8ae7abc6e858904c028b7a4988288b62ef72af12d21fbbf94aede3d8253b8a"
+    },
+    {
+      "path": "certificates/exact_det_sym51_rank36_rep.json",
+      "size": 977,
+      "sha256": "17523a54317aa52a792d1f81c9d390111a2f5695a8f68310b38b44661365cad1"
+    },
+    {
+      "path": "certificates/exact_fitting_s0.json",
+      "size": 411,
+      "sha256": "4301c92f32d663dcd72b9e458aa97f6cd44c38c7f280077a0e0c4be7a238b80b"
+    },
+    {
+      "path": "certificates/exact_fitting_s1.json",
+      "size": 447,
+      "sha256": "c4f3dcf5d0a92d082f3ce001d779ade92c4e4c0e09719856837740c6540723de"
+    },
+    {
+      "path": "certificates/exact_fitting_s2.json",
+      "size": 452,
+      "sha256": "a46bc752f9c050111afa157bc98f648820aabd2eccf18470a6133f7199054c1e"
+    },
+    {
+      "path": "certificates/exact_per_wedge_cross_sym_51_i0.json",
+      "size": 454,
+      "sha256": "35e5914074b2c58b179f3f5ddaa1fa4388f45952ed6181bb9b209adb52159ed5"
+    },
+    {
+      "path": "certificates/representation_decomposition.json",
+      "size": 5749,
+      "sha256": "d29a9403b4d8921b14d849024da0f2e3b50379d05edf6bac68d5e58a1f4ebfe4"
+    },
+    {
+      "path": "certificates/young_contractions_manifest.json",
+      "size": 4496,
+      "sha256": "cc5064dd858963edba3866c723660fef50e79bd9f1d7dacc9520730dd073590f"
+    },
+    {
+      "path": "certificates/young_det_L2_to_S51.json",
+      "size": 113,
+      "sha256": "1e20f889c7b2e8bbeb9103c039d091397306f7bbbce01f0486b609d9a3fdb3b3"
+    },
+    {
+      "path": "certificates/young_det_S2_to_S42.json",
+      "size": 113,
+      "sha256": "195abc9e46218c9fdb9afadb15f209bfd48042b665d5a605fcb16f4e6f817e03"
+    },
+    {
+      "path": "certificates/young_det_S2_to_S51_modular.json",
+      "size": 111,
+      "sha256": "12255a831071681f2e6eb135d0ecaed35e75d0176a3e6be1bdfda5176c31131f"
+    },
+    {
+      "path": "certificates/young_det_S2_to_S6.json",
+      "size": 109,
+      "sha256": "c8ab260d7aa023afeea4d49fd565aa89b204b3495d75b465d33fb30a2a0b898f"
+    },
+    {
+      "path": "certificates/young_per_L2_to_S51.json",
+      "size": 371,
+      "sha256": "199104b46a42a444d5bc8516d1d1c5a7512a515ad4e2fa4d57d532949a9d1609"
+    },
+    {
+      "path": "certificates/young_per_S2_to_S42.json",
+      "size": 629,
+      "sha256": "b014ba8b5402726af72c330c1cb83ed8937228810956e02b9448a4baabf6c2e1"
+    },
+    {
+      "path": "certificates/young_per_S2_to_S51_modular.json",
+      "size": 369,
+      "sha256": "d8c31bac30f846dc68e3da26e21c32d05010c3e4447a47fbc747ed695fc85074"
+    },
+    {
+      "path": "certificates/young_per_S2_to_S6.json",
+      "size": 107,
+      "sha256": "451b40dd0f89e0e62255f289978b1fc2ed7df4edfb085a5293027c099c509f8e"
+    },
+    {
+      "path": "forensic/r3_det_rank_lower_6832_full_witness.json",
+      "size": 836166,
+      "sha256": "78fe50ccecb34dac50633cf548abf7e1a59ec1b53ff16b17e22de2bb0248af8f"
+    },
+    {
+      "path": "logs/compound_hessian_r2.log",
+      "size": 344,
+      "sha256": "ba68412b0c51bed36067dd913b53a520a839c75e3c3eec965c934e054095999b"
+    },
+    {
+      "path": "logs/compound_hessian_r3_per.log",
+      "size": 664,
+      "sha256": "5391325ccda0428310fe126b9b5958ad96bee780326426885bbfb94416237a08"
+    },
+    {
+      "path": "logs/exact_det_S2_to_S51.log",
+      "size": 845,
+      "sha256": "1f371109f8f0666b9afa3f5ca1cfbfecd4ea49fe67213b1b29e6caf7c17746fc"
+    },
+    {
+      "path": "logs/exact_fitting_s0.log",
+      "size": 273,
+      "sha256": "886c6bee4e80430a75792011e34a88519f22974e18827cbb31c54965dc512589"
+    },
+    {
+      "path": "logs/exact_fitting_s1.log",
+      "size": 232,
+      "sha256": "67345f49120284f6de00bcd2171bb168698c89ab0c966d59afa04899b03810a5"
+    },
+    {
+      "path": "logs/exact_fitting_s2.log",
+      "size": 237,
+      "sha256": "6b574fb42aa276713d3afb73c4aa287ef47955a75a0596d301c60c5065883c40"
+    },
+    {
+      "path": "logs/exact_per_S2_to_S51.log",
+      "size": 329,
+      "sha256": "eef2b7bf7410625eeb420684d4d3a341afe4514a44c96a37cd818100e3c4dcdb"
+    },
+    {
+      "path": "logs/export_young_contractions.log",
+      "size": 3749,
+      "sha256": "7787f81b19acc01a1b699242ad0f66f7affc557a74d2c6dee5dab3145c6c4993"
+    },
+    {
+      "path": "logs/final_verify.log",
+      "size": 303,
+      "sha256": "7710daf87977a7d23d3c93db512a419f4dbc6c4a73dcdd679c356150e8676fe0"
+    },
+    {
+      "path": "logs/r3_det_lower_bound.log",
+      "size": 374,
+      "sha256": "987a0453003aa48ea00e8eae64bb78280bc8fde7c3e9b73591cce5d7f71b8827"
+    },
+    {
+      "path": "logs/representation_decomposition.log",
+      "size": 103,
+      "sha256": "85c1e037dc7e919019d9671186dc5b161ba05c716d04d0f77a618ae88386f130"
+    },
+    {
+      "path": "scripts/representation_decomposition_fast.py",
+      "size": 5421,
+      "sha256": "40c970dae9965dd8979ca09ba36e159a66f09899c98530cf5ac9ca297e8b272c"
+    }
+  ]
+}

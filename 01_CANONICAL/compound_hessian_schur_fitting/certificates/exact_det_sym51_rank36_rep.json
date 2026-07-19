@@ -1,0 +1,35 @@
+{
+  "conclusion_rank_Q_exact": 36,
+  "conclusion_reason": "The Young flattening is GL(A)xGL(B)-equivariant. Each of the two source summands is irreducible; the first is killed and the second maps nontrivially, hence injectively.",
+  "exterior_exterior_highest_weight": {
+    "nnz": 25200,
+    "projected_nonzero": true,
+    "sha256": "ad829223e28827371e3746ec73636e80fa5a39428aaeb4fe14d480e262083fab",
+    "source": "x11*x22-x12*x21"
+  },
+  "partition": [
+    5,
+    1
+  ],
+  "schema": "reverse_hessian.det_sym51_rep_certificate.v1",
+  "source_decomposition": "Sym^2(A tensor B)=Sym^2 A tensor Sym^2 B direct_sum Lambda^2 A tensor Lambda^2 B, dim A=dim B=4",
+  "symmetric_symmetric_highest_weight": {
+    "nnz": 0,
+    "projected_zero": true,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "source": "x11^2"
+  },
+  "tableau_rows": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "young_terms": 240
+}

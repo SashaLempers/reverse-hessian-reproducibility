@@ -1,0 +1,14 @@
+{
+  "certificate_environment": {
+    "pytest": "9.0.2",
+    "python": "3.13.5",
+    "pythonhashseed": "0",
+    "sympy": "1.14.0"
+  },
+  "note": "Runtime paths, host names, and elapsed times are intentionally excluded from mathematical certificates.",
+  "paper_environment": {
+    "engine": "pdfTeX 3.141592653-2.6-1.40.26",
+    "source_date_epoch": "1784160000",
+    "tex_live": "2025/dev"
+  }
+}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and exact module/version used."
+title: "Reverse Hessian: Combined Audited Equal-Size Core and VP/VNP Extension"
+type: software
+authors:
+  - family-names: Lempers
+    given-names: Sasha
+version: 4.0.0-combined
+date-released: 2026-07-16
+license: MIT

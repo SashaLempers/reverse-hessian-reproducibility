@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite it."
+title: "Reverse Hessian Obstructions, Catalecticant Blindness, and a Program Toward VP versus VNP"
+type: software
+authors:
+  - family-names: Lempers
+    given-names: Sasha
+version: 1.0.0
+date-released: 2026-07-16
+license: MIT

@@ -1,0 +1,41 @@
+{
+  "Dper3_monomials": 55,
+  "Dper3_sha256": "d49eb99c92b98dbc46be82d7ed22db6fada2423c437bfdd6eaeced0de2af4494",
+  "characteristic_for_proof": 0,
+  "conclusion": "Dper3 is squarefree over Q (hence over C) because gcd(Dper3, all first partial derivatives)=1; equivalently the gcd of its first partials is constant for this homogeneous polynomial.",
+  "degree": 9,
+  "deterministic": true,
+  "gcd_of_partial_derivatives_over_Q": "1",
+  "gcd_total_degree_over_Q": 0,
+  "integer_content_gcd_of_partials": 2,
+  "mathematical_output_sha256": "84bd66e3150f5cd3302e2169430a6794cba424fcc3c27253030e2767ebdfa67e",
+  "method": "construct Dper3 exactly over ZZ and compute the gcd of all first partial derivatives over QQ; modular reductions are supplementary sanity checks",
+  "modular_checks": {
+    "1009": {
+      "Dper3_monomials_mod_p": 55,
+      "Dper3_total_degree_mod_p": 9,
+      "nonzero_first_partials": 9,
+      "role": "sanity check only; the squarefreeness proof is the exact QQ gcd"
+    },
+    "32003": {
+      "Dper3_monomials_mod_p": 55,
+      "Dper3_total_degree_mod_p": 9,
+      "nonzero_first_partials": 9,
+      "role": "sanity check only; the squarefreeness proof is the exact QQ gcd"
+    },
+    "65521": {
+      "Dper3_monomials_mod_p": 55,
+      "Dper3_total_degree_mod_p": 9,
+      "nonzero_first_partials": 9,
+      "role": "sanity check only; the squarefreeness proof is the exact QQ gcd"
+    }
+  },
+  "number_of_variables": 9,
+  "primes_used": [
+    1009,
+    32003,
+    65521
+  ],
+  "schema": "reverse_hessian.squarefree_Dper3.v2",
+  "script_sha256": "d6aa7f118445594f0b5351c314567e54340c81bb6954c0f64947b9f55f243bc8"
+}

@@ -1,0 +1,7 @@
+platform_or_tool,status,evidence_or_reason
+Python 3.13 / SymPy 1.14,PASS_LOCAL,quick and module verifiers
+g++ C++17 / GMP,PASS_LOCAL,syntax and exact rank/integrality support
+pdfTeX / latexmk,PASS_LOCAL,three active PDFs compiled
+GitHub Actions Linux,CONFIGURED_NOT_YET_REMOTE,.github/workflows/verify.yml
+Sage,NOT_EXECUTED,engine absent from builder
+Windows,NOT_EXECUTED,no Windows runner connected

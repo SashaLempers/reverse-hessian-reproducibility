@@ -1,0 +1,119 @@
+{
+  "determinant_hessian_constant_checks": [
+    {
+      "actual_det_at_identity": 1,
+      "n": 2,
+      "predicted_constant": 1,
+      "verified": true
+    },
+    {
+      "actual_det_at_identity": -2,
+      "n": 3,
+      "predicted_constant": -2,
+      "verified": true
+    },
+    {
+      "actual_det_at_identity": -3,
+      "n": 4,
+      "predicted_constant": -3,
+      "verified": true
+    },
+    {
+      "actual_det_at_identity": 4,
+      "n": 5,
+      "predicted_constant": 4,
+      "verified": true
+    },
+    {
+      "actual_det_at_identity": 5,
+      "n": 6,
+      "predicted_constant": 5,
+      "verified": true
+    },
+    {
+      "actual_det_at_identity": -6,
+      "n": 7,
+      "predicted_constant": -6,
+      "verified": true
+    },
+    {
+      "actual_det_at_identity": -7,
+      "n": 8,
+      "predicted_constant": -7,
+      "verified": true
+    }
+  ],
+  "deterministic": true,
+  "direct_minor_formula_checks": [
+    {
+      "direct_determinant": "64*t",
+      "direct_matrix_equals_structured_matrix": true,
+      "n": 3
+    },
+    {
+      "direct_determinant": "26873856*(t + 1)**4",
+      "direct_matrix_equals_structured_matrix": true,
+      "n": 4
+    }
+  ],
+  "finite_checks_are_not_general_proofs": true,
+  "formula_sha256": "8b99dc515bdb00c116146c3a3a6b377e199780fec6ef5b1fe9e47295b30fcff4",
+  "general_proof_location": "paper/reverse_hessian_VP_VNP_upgrade.tex",
+  "permanent_hessian_line_checks": [
+    {
+      "n": 3,
+      "numeric_exact_checks": [
+        {
+          "actual": "0",
+          "predicted": "0",
+          "t": 0,
+          "verified": true
+        },
+        {
+          "actual": "128",
+          "predicted": "128",
+          "t": 2,
+          "verified": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "n": 4,
+      "numeric_exact_checks": [
+        {
+          "actual": "26873856",
+          "predicted": "26873856",
+          "t": 0,
+          "verified": true
+        },
+        {
+          "actual": "2176782336",
+          "predicted": "2176782336",
+          "t": 2,
+          "verified": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "n": 5,
+      "numeric_exact_checks": [
+        {
+          "actual": "775460786620486819774464",
+          "predicted": "775460786620486819774464",
+          "t": 0,
+          "verified": true
+        },
+        {
+          "actual": "397035922749689251724525568",
+          "predicted": "397035922749689251724525568",
+          "t": 2,
+          "verified": true
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "schema": "reverse_hessian.uniform_formula_checks.v2"
+}

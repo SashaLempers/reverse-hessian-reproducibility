@@ -1,0 +1,353 @@
+{
+  "checks": [
+    {
+      "a": 0,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 1,
+          "matrix_sha256": "078023fc60f96c3fe8d55c28163a20b1538a9804ece766dcd3f9592bc37ec565",
+          "nnz": 54,
+          "ranks_mod_p": {
+            "1009": 1,
+            "32003": 1,
+            "65521": 1
+          },
+          "shape": [
+            1,
+            24310
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 1,
+          "matrix_sha256": "ee39733a59d3fb9793f9618c3098c773ce6e1d488814e078aec93e91ea5744e8",
+          "nnz": 55,
+          "ranks_mod_p": {
+            "1009": 1,
+            "32003": 1,
+            "65521": 1
+          },
+          "shape": [
+            1,
+            24310
+          ]
+        }
+      }
+    },
+    {
+      "a": 1,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 9,
+          "matrix_sha256": "91bd07831cd0512ffe12fdd9963d8f4da097f269a5799f02c4fd5b3503e1199f",
+          "nnz": 306,
+          "ranks_mod_p": {
+            "1009": 9,
+            "32003": 9,
+            "65521": 9
+          },
+          "shape": [
+            9,
+            12870
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 9,
+          "matrix_sha256": "78bbe34e9bf04d05e603096d4637a89e60c76b1d4e7912bb238915dd84da43a5",
+          "nnz": 315,
+          "ranks_mod_p": {
+            "1009": 9,
+            "32003": 9,
+            "65521": 9
+          },
+          "shape": [
+            9,
+            12870
+          ]
+        }
+      }
+    },
+    {
+      "a": 2,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 45,
+          "matrix_sha256": "dfddfb02fa8c3ea097f9fa2c31a68175476821435ce70f9eec964fe6488a9e18",
+          "nnz": 900,
+          "ranks_mod_p": {
+            "1009": 45,
+            "32003": 45,
+            "65521": 45
+          },
+          "shape": [
+            45,
+            6435
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 45,
+          "matrix_sha256": "48d4a0ddd4649963f99f44b7f5c507b4bdbcd0b199f4c53dc8611f3b5037d5fc",
+          "nnz": 936,
+          "ranks_mod_p": {
+            "1009": 45,
+            "32003": 45,
+            "65521": 45
+          },
+          "shape": [
+            45,
+            6435
+          ]
+        }
+      }
+    },
+    {
+      "a": 3,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 165,
+          "matrix_sha256": "86a79eafaa7166d4a31c3f6d42c19011aa0529604739e5819128bd9a89186aeb",
+          "nnz": 1740,
+          "ranks_mod_p": {
+            "1009": 165,
+            "32003": 165,
+            "65521": 165
+          },
+          "shape": [
+            165,
+            3003
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 165,
+          "matrix_sha256": "08f4850499873af7a46d714d88711cba40b2b1760d9b8989d0ce57c4ca7a0c5c",
+          "nnz": 1824,
+          "ranks_mod_p": {
+            "1009": 165,
+            "32003": 165,
+            "65521": 165
+          },
+          "shape": [
+            165,
+            3003
+          ]
+        }
+      }
+    },
+    {
+      "a": 4,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 270,
+          "matrix_sha256": "97f6aebc0965bda40ed1f3014f66be9502055fb293c49b1d311bdd2c311a44b4",
+          "nnz": 2376,
+          "ranks_mod_p": {
+            "1009": 270,
+            "32003": 270,
+            "65521": 270
+          },
+          "shape": [
+            495,
+            1287
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 414,
+          "matrix_sha256": "db0491bc961574d5ffd136419342a6f784f1ac327a7a8cdc1cbb829d8f67e578",
+          "nnz": 2502,
+          "ranks_mod_p": {
+            "1009": 414,
+            "32003": 414,
+            "65521": 414
+          },
+          "shape": [
+            495,
+            1287
+          ]
+        }
+      }
+    },
+    {
+      "a": 5,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 270,
+          "matrix_sha256": "ef233cc619456a7ea7b56b3731a029256a12c365f00ad69a84ea30821da6d5cf",
+          "nnz": 2376,
+          "ranks_mod_p": {
+            "1009": 270,
+            "32003": 270,
+            "65521": 270
+          },
+          "shape": [
+            1287,
+            495
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 414,
+          "matrix_sha256": "63ef23e57686d5dfc1a2bb99cc973c235755111e1c1bd9039ecca67fc3482d82",
+          "nnz": 2502,
+          "ranks_mod_p": {
+            "1009": 414,
+            "32003": 414,
+            "65521": 414
+          },
+          "shape": [
+            1287,
+            495
+          ]
+        }
+      }
+    },
+    {
+      "a": 6,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 165,
+          "matrix_sha256": "e7494f77a0e75d3803774c0c5d67d1da67292832c54e4f48b24ad874f87f088c",
+          "nnz": 1740,
+          "ranks_mod_p": {
+            "1009": 165,
+            "32003": 165,
+            "65521": 165
+          },
+          "shape": [
+            3003,
+            165
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 165,
+          "matrix_sha256": "827d6aa659766aa9275c7c20e3a11bbb3de16eeaf92e5e6cc4576d30a5c6ae99",
+          "nnz": 1824,
+          "ranks_mod_p": {
+            "1009": 165,
+            "32003": 165,
+            "65521": 165
+          },
+          "shape": [
+            3003,
+            165
+          ]
+        }
+      }
+    },
+    {
+      "a": 7,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 45,
+          "matrix_sha256": "89707c01655b9000550d3a6f067f06426aabdacaf994b6fda081e86806ca564f",
+          "nnz": 900,
+          "ranks_mod_p": {
+            "1009": 45,
+            "32003": 45,
+            "65521": 45
+          },
+          "shape": [
+            6435,
+            45
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 45,
+          "matrix_sha256": "ca6c89e0ff172cfa9619d74a9f91739ad94b82a08ae327ec98e7173f51116229",
+          "nnz": 936,
+          "ranks_mod_p": {
+            "1009": 45,
+            "32003": 45,
+            "65521": 45
+          },
+          "shape": [
+            6435,
+            45
+          ]
+        }
+      }
+    },
+    {
+      "a": 8,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 9,
+          "matrix_sha256": "61104a70c8269128a57490ff708f9f418a2a8154e6152ee51edcb9f609d360cb",
+          "nnz": 306,
+          "ranks_mod_p": {
+            "1009": 9,
+            "32003": 9,
+            "65521": 9
+          },
+          "shape": [
+            12870,
+            9
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 9,
+          "matrix_sha256": "c2522854bcd2ca16139a1cbffca62e9512c32833069f9737c75b5e6007c34d63",
+          "nnz": 315,
+          "ranks_mod_p": {
+            "1009": 9,
+            "32003": 9,
+            "65521": 9
+          },
+          "shape": [
+            12870,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "a": 9,
+      "forms": {
+        "Ddet": {
+          "expected_rank_Q_from_primary": 1,
+          "matrix_sha256": "69bdc8715911c16741209954522177676085e0b43b444c6014ee09848c6862ae",
+          "nnz": 54,
+          "ranks_mod_p": {
+            "1009": 1,
+            "32003": 1,
+            "65521": 1
+          },
+          "shape": [
+            24310,
+            1
+          ]
+        },
+        "Dper": {
+          "expected_rank_Q_from_primary": 1,
+          "matrix_sha256": "b9f4919d03dcee5bf4104159ada732007fc4c9a3089e9443bdf5728179f06ae9",
+          "nnz": 55,
+          "ranks_mod_p": {
+            "1009": 1,
+            "32003": 1,
+            "65521": 1
+          },
+          "shape": [
+            24310,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "comparison_to_primary": {
+    "all_modular_ranks_equal_exact_Q_ranks": true,
+    "direct_matrix_hashes_equal_where_available": true,
+    "polynomial_hashes_equal": true
+  },
+  "deterministic": true,
+  "polynomial_hashes": {
+    "Ddet3": "b5cbf2f3af5e3c5c744b83916042bb4334ec05f643c77528bd5b9374c4169121",
+    "Dper3": "d49eb99c92b98dbc46be82d7ed22db6fada2423c437bfdd6eaeced0de2af4494",
+    "det3": "32ac7f65cd15ca25f4bffdca0a1302b16cdcb2b88782bfa28d01b69ad65e74f3",
+    "per3": "2dd8fd4018c49a94f1e0be6a78a06e84cb5376e8b505c7d5d1dc4a62af59b0fa"
+  },
+  "primes": [
+    1009,
+    32003,
+    65521
+  ],
+  "result": "all independently reconstructed modular ranks equal the primary exact-Q ranks",
+  "schema": "reverse_hessian.modular_crosscheck.v2"
+}

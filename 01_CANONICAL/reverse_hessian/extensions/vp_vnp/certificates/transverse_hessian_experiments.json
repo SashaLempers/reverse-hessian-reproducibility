@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "actual_total_degree": 6,
+      "degree_g": 3,
+      "k": 1,
+      "name": "binary_cubic",
+      "residual_zero": true,
+      "variables_g": 2
+    },
+    {
+      "actual_total_degree": 9,
+      "degree_g": 3,
+      "k": 2,
+      "name": "binary_cubic_k2",
+      "residual_zero": true,
+      "variables_g": 2
+    },
+    {
+      "actual_total_degree": 12,
+      "degree_g": 3,
+      "k": 2,
+      "name": "ternary_cubic",
+      "residual_zero": true,
+      "variables_g": 3
+    }
+  ],
+  "deterministic": true,
+  "identity_checked": "det Hess(l^k g)=-k(k+d-1)/(d-1) l^(k(N+1)-2) g det Hess(g)",
+  "interpretation": "The standard padded permanent in m^2 variables has unused variables for m>n, hence its full m^2-variable Hessian determinant is identically zero.",
+  "schema": "reverse_hessian.transverse_hessian_experiments.v1",
+  "unused_variable_check": {
+    "active_variables": 4,
+    "ambient_variables": 5,
+    "full_hessian_determinant_zero": true
+  }
+}

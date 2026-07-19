@@ -1,0 +1,34 @@
+{
+  "arithmetic": "exact over Q via DomainMatrix over ZZ",
+  "records": [
+    {
+      "form": "det4",
+      "linear_syzygies_after_removing_zero_generator_summands": 30,
+      "matrix_shape": [
+        256,
+        3876
+      ],
+      "nonzero_jacobian_generators": 16,
+      "nonzero_rows": 256,
+      "rank_Q_exact": 226,
+      "raw_linear_syzygy_dimension": 30,
+      "trivial_syzygies_from_zero_generators": 0,
+      "zero_jacobian_generators": 0
+    },
+    {
+      "form": "ell_per3",
+      "linear_syzygies_after_removing_zero_generator_summands": 5,
+      "matrix_shape": [
+        256,
+        3876
+      ],
+      "nonzero_jacobian_generators": 10,
+      "nonzero_rows": 160,
+      "rank_Q_exact": 155,
+      "raw_linear_syzygy_dimension": 101,
+      "trivial_syzygies_from_zero_generators": 96,
+      "zero_jacobian_generators": 6
+    }
+  ],
+  "schema": "reverse_hessian.jacobian_linear_syzygies.v1"
+}

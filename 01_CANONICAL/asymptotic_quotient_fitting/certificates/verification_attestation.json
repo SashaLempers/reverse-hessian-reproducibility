@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "script": "scripts/verify_asymptotic_obstruction.py",
+  "checks": {
+    "determinant_strata_n_3_to_10": true,
+    "permanent_line_m_3_to_12_two_primes": true,
+    "pair_threshold_m_3_to_16": true
+  },
+  "sha256": {
+    "asymptotic_obstruction_checks.json": "dca4011f6a9ad1c70b6d6a4ccadce61a46da99bbb3597c2d747a5884a474c88e"
+  }
+}

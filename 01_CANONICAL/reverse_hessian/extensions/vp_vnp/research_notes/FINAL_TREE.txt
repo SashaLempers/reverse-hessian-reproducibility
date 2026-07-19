@@ -1,0 +1,123 @@
+.github/
+.github/workflows/
+.github/workflows/verify.yml	409 bytes
+CITATION.cff	313 bytes
+CLAIMS.md	4633 bytes
+LICENSE	1070 bytes
+README.md	1633 bytes
+certificates/
+certificates/SHA256SUMS.txt	748 bytes
+certificates/catalecticant_ranks.json	4516 bytes
+certificates/exploratory_flattenings.json	2777 bytes
+certificates/independent_catalecticant_check.json	8857 bytes
+certificates/modular_crosscheck.json	8712 bytes
+certificates/squarefree_Dper3.json	1638 bytes
+certificates/transverse_hessian_experiments.json	986 bytes
+certificates/uniform_formulas.json	2605 bytes
+forensic_archive/
+forensic_archive/README.md	311 bytes
+forensic_archive/final_output_file_list.txt	5379 bytes
+forensic_archive/full_file_list.txt	24484 bytes
+forensic_archive/internal_hash_report.json	119695 bytes
+forensic_archive/public_repo_file_list.txt	1282 bytes
+forensic_archive/reverse_hessian_full_reproducible_package.zip	10770974 bytes
+forensic_archive/reverse_hessian_full_reproducible_package.zip.sha256	112 bytes
+logs/
+logs/full_run.log	671 bytes
+logs/independent_catalecticant_check.log	485 bytes
+logs/squarefree_Dper3.log	233 bytes
+paper/
+paper/references.bib	6205 bytes
+paper/reverse_hessian_VP_VNP_upgrade.pdf	329922 bytes
+paper/reverse_hessian_VP_VNP_upgrade.tex	36431 bytes
+public_repo/
+public_repo/.github/
+public_repo/.github/workflows/
+public_repo/.github/workflows/verify.yml	409 bytes
+public_repo/CITATION.cff	313 bytes
+public_repo/CLAIMS.md	4633 bytes
+public_repo/LICENSE	1070 bytes
+public_repo/README.md	1633 bytes
+public_repo/certificates/
+public_repo/certificates/SHA256SUMS.txt	748 bytes
+public_repo/certificates/catalecticant_ranks.json	4516 bytes
+public_repo/certificates/exploratory_flattenings.json	2777 bytes
+public_repo/certificates/independent_catalecticant_check.json	8857 bytes
+public_repo/certificates/modular_crosscheck.json	8712 bytes
+public_repo/certificates/squarefree_Dper3.json	1638 bytes
+public_repo/certificates/transverse_hessian_experiments.json	986 bytes
+public_repo/certificates/uniform_formulas.json	2605 bytes
+public_repo/paper/
+public_repo/paper/references.bib	6205 bytes
+public_repo/paper/reverse_hessian_VP_VNP_upgrade.pdf	329922 bytes
+public_repo/paper/reverse_hessian_VP_VNP_upgrade.tex	36431 bytes
+public_repo/requirements.txt	14 bytes
+public_repo/run_all.py	157 bytes
+public_repo/scripts/
+public_repo/scripts/certify_catalecticant_ranks.py	7048 bytes
+public_repo/scripts/certify_squarefree_Dper3.py	4572 bytes
+public_repo/scripts/check_reproducibility.py	1565 bytes
+public_repo/scripts/exploratory_flattenings.py	4814 bytes
+public_repo/scripts/independent_catalecticant_check.py	7772 bytes
+public_repo/scripts/independent_catalecticant_check.sage	2395 bytes
+public_repo/scripts/normalize_certificates.py	918 bytes
+public_repo/scripts/run_all.py	5108 bytes
+public_repo/scripts/transverse_hessian_experiments.py	2262 bytes
+public_repo/scripts/verify_uniform_formulas.py	3522 bytes
+public_repo/tests/
+public_repo/tests/test_certificates.py	1429 bytes
+requirements.txt	14 bytes
+research_notes/
+research_notes/AUDIT_ARCHIVE.md	54121 bytes
+research_notes/CLAIMS.md	4633 bytes
+research_notes/EXECUTION_REPORT.md	1609 bytes
+research_notes/FILES_TO_DELETE_OR_ARCHIVE.md	996 bytes
+research_notes/FINAL_TREE.txt	5379 bytes
+research_notes/FORENSIC_ARCHIVE_PLAN.md	643 bytes
+research_notes/PUBLIC_REPO_PLAN.md	815 bytes
+research_notes/RESULT_REPRODUCTION_TABLE.md	1983 bytes
+research_notes/anti_padding_covariants.md	2634 bytes
+research_notes/beyond_catalecticants_search.md	2629 bytes
+research_notes/breakthrough_axis_A_hessian_to_lower_bounds.md	3495 bytes
+research_notes/failed_attempts.md	1178 bytes
+research_notes/final_verdict.md	2070 bytes
+research_notes/literature_review.md	10969 bytes
+research_notes/multiplicity_obstruction_candidate.md	1800 bytes
+research_notes/new_conjectures_toward_VPneqVNP.md	2635 bytes
+run_all.py	157 bytes
+runtime_logs/
+runtime_logs/exploratory_flattenings.log	389 bytes
+runtime_logs/independent_catalecticants.log	403 bytes
+runtime_logs/paper_build.log	14137 bytes
+runtime_logs/paper_build_pass1.log	14648 bytes
+runtime_logs/paper_build_pass2.log	14063 bytes
+runtime_logs/primary_catalecticants.log	401 bytes
+runtime_logs/public_repo_repro.log	46 bytes
+runtime_logs/public_repo_run.log	45 bytes
+runtime_logs/public_repo_sha256.log	314 bytes
+runtime_logs/public_repo_tests.log	534 bytes
+runtime_logs/reproducibility_pass1.log	46 bytes
+runtime_logs/reproducibility_pass2.log	46 bytes
+runtime_logs/run_all_pass1.log	45 bytes
+runtime_logs/run_all_pass2.log	45 bytes
+runtime_logs/run_all_runtime.log	136 bytes
+runtime_logs/sha256_check_pass1.log	314 bytes
+runtime_logs/sha256_check_pass2.log	314 bytes
+runtime_logs/squarefree.log	318 bytes
+runtime_logs/tests_pass1.log	534 bytes
+runtime_logs/transverse_hessian.log	357 bytes
+runtime_logs/two_run_hash_diff.log	0 bytes
+runtime_logs/uniform_formulas.log	334 bytes
+scripts/
+scripts/certify_catalecticant_ranks.py	7048 bytes
+scripts/certify_squarefree_Dper3.py	4572 bytes
+scripts/check_reproducibility.py	1565 bytes
+scripts/exploratory_flattenings.py	4814 bytes
+scripts/independent_catalecticant_check.py	7772 bytes
+scripts/independent_catalecticant_check.sage	2395 bytes
+scripts/normalize_certificates.py	918 bytes
+scripts/run_all.py	5108 bytes
+scripts/transverse_hessian_experiments.py	2262 bytes
+scripts/verify_uniform_formulas.py	3522 bytes
+tests/
+tests/test_certificates.py	1429 bytes

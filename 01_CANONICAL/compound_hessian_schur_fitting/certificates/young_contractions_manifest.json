@@ -1,0 +1,194 @@
+[
+  {
+    "bytes": 11659344,
+    "contraction": "poly_poly_sym",
+    "file": "det4_poly_poly_sym.bin",
+    "form": "det4",
+    "max_row_nnz": 14080,
+    "nonzero_rows": 136,
+    "rows": 136,
+    "sha256": "12863e6d5584814eed64cf99afe6eb3661ae7e6624a23e3227c6654751a39645",
+    "source_slots": [
+      6,
+      7
+    ],
+    "source_type": "sym",
+    "total_nnz": 1457280
+  },
+  {
+    "bytes": 11405776,
+    "contraction": "wedge_same_alt",
+    "file": "det4_wedge_same_alt.bin",
+    "form": "det4",
+    "max_row_nnz": 12744,
+    "nonzero_rows": 120,
+    "rows": 120,
+    "sha256": "f5e46f3d5406ce5b8a225f0f5e1534107c3f020266375f8cf4e8baea643b6f1d",
+    "source_slots": [
+      0,
+      1
+    ],
+    "source_type": "alt",
+    "total_nnz": 1425600
+  },
+  {
+    "bytes": 17488464,
+    "contraction": "wedge_cross_sym",
+    "file": "det4_wedge_cross_sym.bin",
+    "form": "det4",
+    "max_row_nnz": 21120,
+    "nonzero_rows": 136,
+    "rows": 136,
+    "sha256": "9928cb358dbbd1a8beab1ede9b8d161592f05d19d87955bdb092ba6511da6977",
+    "source_slots": [
+      0,
+      2
+    ],
+    "source_type": "sym",
+    "total_nnz": 2185920
+  },
+  {
+    "bytes": 11405776,
+    "contraction": "wedge_cross_alt",
+    "file": "det4_wedge_cross_alt.bin",
+    "form": "det4",
+    "max_row_nnz": 12744,
+    "nonzero_rows": 120,
+    "rows": 120,
+    "sha256": "3353c54a1654929082468bd36b47c8085a20e96a680ccc85952e1ab7934f43d4",
+    "source_slots": [
+      0,
+      2
+    ],
+    "source_type": "alt",
+    "total_nnz": 1425600
+  },
+  {
+    "bytes": 15732816,
+    "contraction": "wedge_poly_sym",
+    "file": "det4_wedge_poly_sym.bin",
+    "form": "det4",
+    "max_row_nnz": 19584,
+    "nonzero_rows": 136,
+    "rows": 136,
+    "sha256": "51de8b3e05536886cd8d14a597ea9bd38aaf66c1280f3517c536990d88568aea",
+    "source_slots": [
+      0,
+      4
+    ],
+    "source_type": "sym",
+    "total_nnz": 1966464
+  },
+  {
+    "bytes": 11405776,
+    "contraction": "wedge_poly_alt",
+    "file": "det4_wedge_poly_alt.bin",
+    "form": "det4",
+    "max_row_nnz": 12744,
+    "nonzero_rows": 120,
+    "rows": 120,
+    "sha256": "31d911b190bca18e4d791843163086ca6930e3fa5e43b4d2647d54e5c5163561",
+    "source_slots": [
+      0,
+      4
+    ],
+    "source_type": "alt",
+    "total_nnz": 1425600
+  },
+  {
+    "bytes": 536784,
+    "contraction": "poly_poly_sym",
+    "file": "z_per3_poly_poly_sym.bin",
+    "form": "z_per3",
+    "max_row_nnz": 3960,
+    "nonzero_rows": 55,
+    "rows": 136,
+    "sha256": "14562ab7efb2f6faa838d14cb2b226781ac280807af6fabee5bb59a725aa50fe",
+    "source_slots": [
+      6,
+      7
+    ],
+    "source_type": "sym",
+    "total_nnz": 66960
+  },
+  {
+    "bytes": 509008,
+    "contraction": "wedge_same_alt",
+    "file": "z_per3_wedge_same_alt.bin",
+    "form": "z_per3",
+    "max_row_nnz": 3528,
+    "nonzero_rows": 45,
+    "rows": 120,
+    "sha256": "7cea2cb7007a4079e4746375a2c01493dd4df42e863fb67777f8b6e43cf84d0b",
+    "source_slots": [
+      0,
+      1
+    ],
+    "source_type": "alt",
+    "total_nnz": 63504
+  },
+  {
+    "bytes": 804624,
+    "contraction": "wedge_cross_sym",
+    "file": "z_per3_wedge_cross_sym.bin",
+    "form": "z_per3",
+    "max_row_nnz": 5940,
+    "nonzero_rows": 55,
+    "rows": 136,
+    "sha256": "5c467f004038a784b88c3f7ecf792dc539adcf5a1c6d3ff87746bec0a10416b6",
+    "source_slots": [
+      0,
+      2
+    ],
+    "source_type": "sym",
+    "total_nnz": 100440
+  },
+  {
+    "bytes": 509008,
+    "contraction": "wedge_cross_alt",
+    "file": "z_per3_wedge_cross_alt.bin",
+    "form": "z_per3",
+    "max_row_nnz": 3528,
+    "nonzero_rows": 45,
+    "rows": 120,
+    "sha256": "22546b9cc23a1921f18d0f83fe765d509d4505020d1e0aeb031951e805e27efe",
+    "source_slots": [
+      0,
+      2
+    ],
+    "source_type": "alt",
+    "total_nnz": 63504
+  },
+  {
+    "bytes": 647376,
+    "contraction": "wedge_poly_sym",
+    "file": "z_per3_wedge_poly_sym.bin",
+    "form": "z_per3",
+    "max_row_nnz": 4968,
+    "nonzero_rows": 55,
+    "rows": 136,
+    "sha256": "82fdede8ad3173370bd2de9f4ab6416b03d24be577177c8674099e69a9120019",
+    "source_slots": [
+      0,
+      4
+    ],
+    "source_type": "sym",
+    "total_nnz": 80784
+  },
+  {
+    "bytes": 509008,
+    "contraction": "wedge_poly_alt",
+    "file": "z_per3_wedge_poly_alt.bin",
+    "form": "z_per3",
+    "max_row_nnz": 3528,
+    "nonzero_rows": 45,
+    "rows": 120,
+    "sha256": "b601679e6ff500cb033cac5bed7979db5f41e329e8485972d26c15f910489773",
+    "source_slots": [
+      0,
+      4
+    ],
+    "source_type": "alt",
+    "total_nnz": 63504
+  }
+]

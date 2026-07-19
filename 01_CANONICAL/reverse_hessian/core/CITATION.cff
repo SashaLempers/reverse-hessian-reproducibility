@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and the exact repository version used."
+title: "A Uniform Line Formula for the Hessian Determinant of the Permanent and Equal-Size Hessian-Orbit Incomparability"
+type: software
+authors:
+  - family-names: Lempers
+    given-names: Sasha
+version: 3.0.0-audit-revised
+date-released: 2026-07-16
+license: MIT

@@ -1,0 +1,39 @@
+{
+  "comparison": "det_4 versus z*per_3 in Sym^4(C^16)^*",
+  "covariant": "Phi_9(f)=C_9(Hess(f))",
+  "deep_I2_relation": "I_9(Hess(f)) is contained in I_2(Hess(f)); this is a degree-18 Fitting subpiece inside the I_2 tower.",
+  "universal_two_term_complex": "A_9 tensor S^14(V*) --multiplication by f--> A_9 tensor S^18(V*)",
+  "A_9_dimension_using_ordered_minors": 130873600,
+  "S14_dimension": 77558760,
+  "baseline_multiplication_rank_for_nonzero_f": 10150394132736000,
+  "det4_augmented_rank": 10150394132736000,
+  "padded_permanent_augmented_rank": 10150394132736001,
+  "rank_reversal": 1,
+  "closed_condition": "rank([mu_f | Phi_9(f)]) <= baseline",
+  "det4_property": "Phi_9(det_4) belongs to det_4*(A_9 tensor S^14(V*)).",
+  "padded_permanent_property": "Phi_9(z*per_3) does not belong to (z*per_3)*(A_9 tensor S^14(V*)).",
+  "orbit_closure_conclusion": "z*per_3 is not in the projective GL_16 orbit closure of det_4.",
+  "exact_permanent_witness": {
+    "point_z": 1,
+    "point_matrix_row_major": [
+      -2,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "permanent": 0,
+    "nonzero_9x9_minor": -128
+  },
+  "det4_singular_hessian_rank_max": 8,
+  "degrees": {
+    "form_degree": 4,
+    "hessian_entry_degree": 2,
+    "Phi9_component_degree": 18,
+    "quotient_degree_if_divisible_by_f": 14
+  }
+}

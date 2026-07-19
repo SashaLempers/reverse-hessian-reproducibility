@@ -1,0 +1,43 @@
+PDF: /mnt/data/reverse_hessian_nxn_audit_revised_full/public_repo/paper/a_uniform_line_formula_and_hessian_orbit_incomparability.pdf
+Pages: 8
+Encrypted: False
+Page sizes (pt, rounded):
+  - 612 x 792 (8 page(s))
+Metadata:
+  /Author: 
+  /Creator: LaTeX with hyperref
+  /Keywords: 
+  /Producer: pdfTeX-1.40.26
+  /Subject: 
+  /Title: 
+  /Trapped: /False
+Outline items: 10
+Form fields: 0
+Attachments: 0
+Annotations: 28
+
+Fonts (pdffonts, first 25 lines):
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+EMDMSN+CMR17                         Type 1            Builtin          yes yes yes     48  0
+QCINJI+CMR12                         Type 1            Builtin          yes yes yes     49  0
+GLNTUO+CMBX10                        Type 1            Builtin          yes yes yes     50  0
+RKXCEY+CMR10                         Type 1            Builtin          yes yes yes     51  0
+HQLQUX+CMMI10                        Type 1            Builtin          yes yes yes     52  0
+TGDJVR+CMMI7                         Type 1            Builtin          yes yes yes     53  0
+CMWZBH+MSBM10                        Type 1            Builtin          yes yes yes     54  0
+VLNRLK+CMSY10                        Type 1            Builtin          yes yes yes     55  0
+PHLDZE+CMEX10                        Type 1            Builtin          yes yes yes     56  0
+MQYKRD+CMR7                          Type 1            Builtin          yes yes yes     57  0
+THGOAZ+CMR5                          Type 1            Builtin          yes yes yes     58  0
+PXBGHL+CMSY7                         Type 1            Builtin          yes yes yes     59  0
+HPSOXA+CMBX12                        Type 1            Builtin          yes yes yes     60  0
+LMOMHX+CMMI8                         Type 1            Builtin          yes yes yes     61  0
+VBYVQQ+CMR8                          Type 1            Builtin          yes yes yes     62  0
+XYBSMX+CMSY8                         Type 1            Builtin          yes yes yes     63  0
+GVNWJN+CMTI10                        Type 1            Builtin          yes yes yes     72  0
+HBIEHQ+CMSY6                         Type 1            Builtin          yes yes yes     81  0
+XTJZVU+CMR6                          Type 1            Builtin          yes yes yes     82  0
+MXCAJA+CMMI6                         Type 1            Builtin          yes yes yes    125  0
+MRRPUK+SFRM1095                      Type 1            Custom           yes yes yes    126  0
+KBWBGI+CMTT10                        Type 1            Builtin          yes yes yes    137  0

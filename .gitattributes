@@ -1,0 +1,6 @@
+# Preserve byte-level reproducibility across clones: do not rewrite line endings.
+* -text
+*.pdf binary
+*.png binary
+*.zip binary
+*.bin binary

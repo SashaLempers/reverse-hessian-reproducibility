@@ -1,0 +1,17 @@
+{
+  "default_jobs": 1,
+  "g++": "14.2.0",
+  "gmp_dev": "6.3.0",
+  "latexmk": "4.86",
+  "locale": "C.UTF-8",
+  "os": "Debian GNU/Linux 13",
+  "pdftex": "1.40.26 (TeX Live 2025/dev/Debian)",
+  "python": "3.13.5",
+  "sage": "not installed in builder",
+  "schema": "reverse_hessian.environment_lock.v2.1",
+  "source_date_epoch": "1784419200",
+  "sympy": "1.14.0",
+  "timezone": "UTC",
+  "unzip": "Info-ZIP 6.00",
+  "zip": "Info-ZIP 3.0"
+}

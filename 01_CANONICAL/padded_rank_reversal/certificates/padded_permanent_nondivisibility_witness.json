@@ -1,0 +1,143 @@
+{
+  "polynomial": "per_3",
+  "padding": "F=z*per_3 in 16 variables",
+  "point_z": 1,
+  "point_matrix_row_major": [
+    -2,
+    -1,
+    -1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    1
+  ],
+  "permanent_at_point": 0,
+  "gradient_permanent_at_point": [
+    2,
+    -2,
+    -2,
+    -2,
+    -1,
+    -1,
+    -2,
+    -1,
+    -1
+  ],
+  "hessian_permanent_at_point": [
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      1,
+      -1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1
+    ],
+    [
+      1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      -2
+    ],
+    [
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -2,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      -1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      -1,
+      -1,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      0,
+      -1,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "hessian_rank_over_Q": 9,
+  "hessian_pivot_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "determinant_of_9_by_9_hessian_minor": -128,
+  "interpretation": "At (z,X)=(1,X_*), F=0 while the x-variable 9x9 Hessian minor of F equals z^9 det Hess(per_3)=-128."
+}
