@@ -1,6 +1,13 @@
 
 # Changelog
 
+## v2.1.1-corrective — 2026-07-19
+
+- made the source-tree attestation hash depend only on Git-tracked paths and Git index modes;
+- excluded root `.work/` and `runtime_logs/` paths explicitly from tree hashing;
+- regenerated the immutable quick attestation with the portable tree hash;
+- added the primary Mignon–Ressayre (2004) and Landsberg–Manivel–Ressayre (2013) references to the status synthesis and rebuilt its PDF.
+
 ## v2.1.0-corrective — 2026-07-19
 
 - separated the Prime multiplicative-walk project from Reverse-Hessian;

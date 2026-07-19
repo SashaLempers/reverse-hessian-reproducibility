@@ -6,7 +6,7 @@ type: software
 authors:
   - family-names: Lempers
     given-names: Sasha
-version: 2.1.0-corrective
+version: 2.1.1-corrective
 date-released: 2026-07-19
 license: MIT
 repository-code: "https://github.com/SashaLempers/reverse-hessian-reproducibility"

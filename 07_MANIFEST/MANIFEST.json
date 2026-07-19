@@ -1356,15 +1356,15 @@
       "mode": "0o644",
       "path": "01_CANONICAL/synthesis_report/reverse_hessian_status_synthesis.pdf",
       "role": "canonical",
-      "sha256": "f7a952ba5edb465f0379c19de5eab2b76d26b6f08a7d2b564a56988355799688",
-      "size_bytes": 339837
+      "sha256": "7c82e164732e6b0ae657698c71a296f6796c4209ef60abe9cd6cd0b99d4081cd",
+      "size_bytes": 69916
     },
     {
       "mode": "0o644",
       "path": "01_CANONICAL/synthesis_report/reverse_hessian_status_synthesis.tex",
       "role": "canonical",
-      "sha256": "eb3080b5eda8b972e8bdbc6cd0423af31faf5a96ac1e50c8e13847890d468ef6",
-      "size_bytes": 8182
+      "sha256": "5c47a0585d8d2d29c26f56e1158f5c1ac06c6d154d61c6db10cf6971abe6bd08",
+      "size_bytes": 8572
     },
     {
       "mode": "0o644",
@@ -1482,15 +1482,15 @@
       "mode": "0o755",
       "path": "03_REPRODUCE/build_manifest.py",
       "role": "metadata_or_reproduction",
-      "sha256": "7bcba62f2d31e4f8ae277ebec639f770db1d818c2f3fa387e7e1aeb8dc41341c",
-      "size_bytes": 2157
+      "sha256": "bde016a597083f8f787f326bb38680ce3c31fa1677324469ad127bf52e6bba93",
+      "size_bytes": 3507
     },
     {
       "mode": "0o755",
       "path": "03_REPRODUCE/build_provenance_map.py",
       "role": "metadata_or_reproduction",
-      "sha256": "ace27f4796c0e406e014c18015cf783c4513fdd66083b0016f22d2129b91ca17",
-      "size_bytes": 1419
+      "sha256": "b838d49c1eb773a0e68cc688e464a2a9156bd9cc84139e26f8800f5e7d31cdd5",
+      "size_bytes": 2112
     },
     {
       "mode": "0o644",
@@ -1538,8 +1538,8 @@
       "mode": "0o644",
       "path": "03_REPRODUCE/treehash.py",
       "role": "metadata_or_reproduction",
-      "sha256": "e0bfcc5c924909fcc70dbcd671c7af0afd771ae9f71b6c809071d89d5b63daed",
-      "size_bytes": 1350
+      "sha256": "60822f4df48e70a981ead28070f2d7a1703823f80c17a07584aa012078fecf0d",
+      "size_bytes": 3442
     },
     {
       "mode": "0o644",
@@ -1629,8 +1629,8 @@
       "mode": "0o644",
       "path": "05_PROVENANCE/PROVENANCE_MAP.csv",
       "role": "metadata_or_reproduction",
-      "sha256": "67f3bb1dda5edaf2f63dcf8ea7f0a4f0124b8fb1a20f09460fbe60a094234704",
-      "size_bytes": 40164
+      "sha256": "b9b075926d9cdff9ba25aedc2c9aae66db3d7715025c7f877f07ea4be4d22ab8",
+      "size_bytes": 39913
     },
     {
       "mode": "0o644",
@@ -1643,14 +1643,14 @@
       "mode": "0o644",
       "path": "CHANGELOG.md",
       "role": "metadata_or_reproduction",
-      "sha256": "da1c0bf3b1822c0ccd27c9c65391860f17a550d0004ff726443590bf0a1b8d58",
-      "size_bytes": 845
+      "sha256": "6b933aa0215aede89b53759a01a7d75aae6513e4aa5e801e8e2dddd9d607bf3c",
+      "size_bytes": 1276
     },
     {
       "mode": "0o644",
       "path": "CITATION.cff",
       "role": "metadata_or_reproduction",
-      "sha256": "9af60cc3a6a60c20318ef3e533e7f372a9a6a09614e57f7349fc43ed80b1e3b2",
+      "sha256": "e055a2278828d3b2251738132c8527e26a9ccf219a79cf1ca9d7cbababdb6038",
       "size_bytes": 388
     },
     {
@@ -1731,6 +1731,6 @@
       "size_bytes": 28
     }
   ],
-  "payload_bytes": 2865583,
+  "payload_bytes": 2600367,
   "schema": "reverse_hessian.manifest.v2.1"
 }
